@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Css | Poorlife</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "个人博客Ayu";
+  mashiro_option.author_name = "Ayu";
+  mashiro_option.site_url = "";
+  mashiro_option.v_appId = "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz";
+  mashiro_option.v_appKey = "9m413jYIug2cFvhs6TtILisl";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+
+  <body
+    class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar">
+    </div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+      <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="">
+          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>
+          谁给我一滴水，我便回报他整个大海。
+        </p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                  <li>
+                    <a href="https://github.com/PoorlifeAyu" target="_blank" class="social-github" title="github">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/github.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://weibo.com/u/6030188226" target="_blank" class="social-github" title="sina">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/sina.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://music.163.com/" target="_blank" class="social-github" title="wangyiyun">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wangyiyun.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://mail.qq.com/cgi-bin/frame_html?sid=0j3LVIvsrSzKXR5_&amp;r=c8c502b38f105671c3cf4b6fb70a0ebd" target="_blank" class="social-github" title="email">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/email.svg">
+                    </a>
+                  </li>
+                  
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/wechat.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/qq.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                  <li>
+                    <a href="https://blog.csdn.net/Ayuzz?spm=1000.2115.3001.5343" target="_blank" class="social-github" title="csdn">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/csdn.png">
+                    </a>
+                  </li>
+                  
+                    
+                      
+                        <li id="bg-next">
+                          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+                        </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+        <div id="page" class="site wrapper">
+          <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">个人博客</span>
+            <span class="shironeko">Ayu</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/管理/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          管理
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          个人
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+            <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/css.jpg);"
+      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/css.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+        Css
+      </h1>
+      <p class="entry-census">
+        <span>
+          <a href="javascript:;">
+            <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="javascript:;">
+            Ayu
+          </a>
+        </span>
+        <span class="bull">
+          ·</span>
+        2020-11-23<span class="bull">
+            ·</span>
+          <span id="busuanzi_value_page_pv"></span>次阅读
+      </p>
+    </header>
+  </div>
+  
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <article id="post-1"
+            class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+            <div class="toc"></div>
+            <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+            
+                <div class="entry-content">
+                  <h1 id="CSS入门基础与选择器"><a href="#CSS入门基础与选择器" class="headerlink" title="CSS入门基础与选择器"></a>CSS入门基础与选择器</h1><h2 id="web网页构成的四个部分与作用（面试题）"><a href="#web网页构成的四个部分与作用（面试题）" class="headerlink" title="web网页构成的四个部分与作用（面试题）"></a>web网页构成的四个部分与作用<strong>（面试题）</strong></h2><ul>
+<li><p>web—–网站</p>
+</li>
+<li><p>H5—–狭义(html5)—–广义(html5,css3,JavaScript)</p>
+</li>
+<li><h3 id="web的四个构成部分"><a href="#web的四个构成部分" class="headerlink" title="web的四个构成部分"></a>web的四个构成部分</h3><ul>
+<li><h4 id="内容：超文本"><a href="#内容：超文本" class="headerlink" title="内容：超文本"></a>内容：超文本</h4></li>
+<li><h4 id="结构：html4-0-1-XHTML1-0-html5"><a href="#结构：html4-0-1-XHTML1-0-html5" class="headerlink" title="结构：html4.0.1 XHTML1.0 html5"></a>结构：html4.0.1 XHTML1.0 html5</h4></li>
+<li><h4 id="表现：css2-1-3"><a href="#表现：css2-1-3" class="headerlink" title="表现：css2.1    3"></a>表现：css2.1    3</h4></li>
+<li><h4 id="行为：JavaScript"><a href="#行为：JavaScript" class="headerlink" title="行为：JavaScript"></a>行为：JavaScript</h4></li>
+</ul>
+</li>
+</ul>
+<h2 id="css的相关迭代历史与css的基本书写结构及三种引用方式"><a href="#css的相关迭代历史与css的基本书写结构及三种引用方式" class="headerlink" title="css的相关迭代历史与css的基本书写结构及三种引用方式"></a>css的相关迭代历史与css的基本书写结构及三种引用方式</h2><ul>
+<li><p>就是用来实现网页中超文本细节设置的代码，中文名叫层叠样式表，简称样式表<br>层叠：由于html标签有嵌套关系，也叫做父子关系，在css中就把这个关系叫层叠，父辈级拥有的css样式，子级同样也拥有</p>
+</li>
+<li><p>三种引用方式：</p>
+<ol>
+<li><p>内嵌式：语法结构：&lt;标签名 style=”样式名1:样式值1;样式名2:样式值2;”&gt;文本内容&lt;/标签名&gt;</p>
+</li>
+<li><p>内部式：1.在head标签中书写一对style标签</p>
+<pre><code>2.在style标签中书写css的基本结构
+</code></pre></li>
+</ol>
+</li>
+</ul>
+<h3 id="css的基本语法结构：—–-重点"><a href="#css的基本语法结构：—–-重点" class="headerlink" title="css的基本语法结构：—–(重点)"></a>css的基本语法结构：—–<strong>(重点)</strong></h3><p> 选择器{<br>                            样式名1:样式值1;<br>                            样式名2:样式值2;<br>                            样式名3:样式值3;<br>                        }</p>
+<h3 id="外链式—–强烈推荐—–【重点】"><a href="#外链式—–强烈推荐—–【重点】" class="headerlink" title="外链式—–强烈推荐—–【重点】"></a>外链式—–<strong><em>强烈推荐</em></strong>—–【重点】</h3><pre><code>- #### 1.创建一个后缀名为css的文件
+
+- #### 2.把写在内部式中的css结构直接写在创建好的文件中保存
+
+- #### 3.通过head中使用link标签把对应的css文件引入html中使用
+</code></pre><h2 id="css选择器的使用"><a href="#css选择器的使用" class="headerlink" title="css选择器的使用"></a>css选择器的使用</h2><ul>
+<li>选择器的概念：就是我们给指定标签设置的名字，用来获取以后执行设置的样式细节效果</li>
+</ul>
+<h4 id="基本选择器—–重点"><a href="#基本选择器—–重点" class="headerlink" title="基本选择器—–重点"></a>基本选择器—–<strong>重点</strong></h4><ul>
+<li><p>id选择器—设置一个独一无二的名字来代替这个标签做样式设置的名字</p>
+<blockquote>
+<p>获取指定的单个标签使用 (#id的值—选择器)</p>
+</blockquote>
+</li>
+<li><p>class类选择器—给多个需要统一设置样式的标签统一取一个名字来操作</p>
+<blockquote>
+<p> .class的值—选择器</p>
+</blockquote>
+<blockquote>
+<p>tag（标签选择器）—-以标签的名字作为选择器来使用<br>*（通用标签）—-所有标签都会执行这个样式设置<br>,—-分组</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="层次选择器—–重点"><a href="#层次选择器—–重点" class="headerlink" title="层次选择器—–重点"></a>层次选择器—–<strong>重点</strong></h4><ul>
+<li><p>子级选择器</p>
+<blockquote>
+<p>父级标签&gt;子级标签—-获取父级下的第一层子级元素标签</p>
+</blockquote>
+</li>
+<li><p>后代选择器</p>
+</li>
+<li><p>空格   父级标签 后代级标签—–获取父级下所有满足后代级标签的标签</p>
+</li>
+</ul>
+<ul>
+<li><p>伪类选择器:表现的一种状态的操作</p>
+<pre><code class="html">  a标签：
+                选择器:伪类
+                :link----未访问的状态
+                :visited---访问后状态
+                :active----点击状态
+
+ 重点认识：----（重点）
+                :hover----鼠标放置状态（鼠标移入移出状态）
+
+                a{
+                    color: black;
+                    /* 取消下划线 */
+                    text-decoration: none;
+                }
+                a:hover{
+                    color: blue;
+                }
+
+                font-weight:bold;----文字加粗
+                text-align:center---文字水平居中
+</code></pre>
+</li>
+</ul>
+<h1 id="CSS的继承与优先级及文字样式"><a href="#CSS的继承与优先级及文字样式" class="headerlink" title="CSS的继承与优先级及文字样式"></a>CSS的继承与优先级及文字样式</h1><h2 id="继承的定义与权重值"><a href="#继承的定义与权重值" class="headerlink" title="继承的定义与权重值"></a>继承的定义与权重值</h2><ul>
+<li>继承的定义：在父辈级设置的css样式子级和后代级都会拥有这个样式，这就叫做继承</li>
+</ul>
+<h4 id="权重值—–重点"><a href="#权重值—–重点" class="headerlink" title="权重值—–重点"></a>权重值—–<strong>重点</strong></h4><ul>
+<li>定义：人为规定的一些数值，用来帮助我们计算优先级的操作</li>
+<li>!important&gt;内嵌式&gt;id&gt;class&gt;tag,*,继承，其他</li>
+</ul>
+<h2 id="字体属性中的重点样式"><a href="#字体属性中的重点样式" class="headerlink" title="字体属性中的重点样式"></a>字体属性中的重点样式</h2><h3 id="重点掌握—–重点"><a href="#重点掌握—–重点" class="headerlink" title="重点掌握—–重点"></a>重点掌握—–<strong><em>重点</em></strong></h3><pre><code class="html">font-family----设置字体样式
+            font-size----改变字体大小
+            font-weight---字体加粗
+            color----改变字体颜色
+
+            line-height----设置行高
+                特殊操作：
+                    在一个有宽高的盒子（标签）里如果只有一行文字，我们可以使用text-align做水平文字居中
+                    使用line-height设置为和高度一样就可以实现竖直方向居中
+             text-decoration: none取消任何线条 underline添加下划线 line-through添加贯穿线
+
+        了解
+            font---复合属性
+            font-style----字体倾斜
+</code></pre>
+<h2 id="文本属性中的重点样式"><a href="#文本属性中的重点样式" class="headerlink" title="文本属性中的重点样式"></a>文本属性中的重点样式</h2><h3 id="重点掌握—–重点-1"><a href="#重点掌握—–重点-1" class="headerlink" title="重点掌握—–重点"></a>重点掌握—–<strong><em>重点</em></strong></h3><pre><code class="html">          text-align----文字水平对齐
+            text-indent---文字首行缩进
+            段落2em
+            输入框的操作文字后移
+
+
+   了解：
+            vertical-align----垂直布局（top|middle|bottom）只能用于图片和td中
+            text-overflow----生成省略号
+</code></pre>
+<h2 id="字体阴影的使用与设置"><a href="#字体阴影的使用与设置" class="headerlink" title="字体阴影的使用与设置"></a>字体阴影的使用与设置</h2><ul>
+<li>text-shadow: 阴影的水平位移 阴影的竖直位移 阴影的浓淡 阴影的颜色;</li>
+</ul>
+<h1 id="CSS背景盒子模型基础"><a href="#CSS背景盒子模型基础" class="headerlink" title="CSS背景盒子模型基础"></a>CSS背景盒子模型基础</h1><h2 id="盒子模型的概念（区分块元素标签div与行内元素标签span的差别）"><a href="#盒子模型的概念（区分块元素标签div与行内元素标签span的差别）" class="headerlink" title="盒子模型的概念（区分块元素标签div与行内元素标签span的差别）"></a>盒子模型的概念（区分块元素标签div与行内元素标签span的差别）</h2><ul>
+<li><p>盒子模型的概念</p>
+<ul>
+<li>布局标签：div span</li>
+<li>布局标签主要用来规划布局内容，和我们使用盒子装东西是一个概念，所以我们把布局标签就看成一个盒子</li>
+</ul>
+</li>
+<li><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><ul>
+<li>内容（超文本）设置尺寸 内边距 边框 外边距 背景</li>
+</ul>
+</li>
+</ul>
+<h3 id="块级元素标签和行内元素标签的区别—–重点—–面试题"><a href="#块级元素标签和行内元素标签的区别—–重点—–面试题" class="headerlink" title="块级元素标签和行内元素标签的区别—–重点—–面试题"></a>块级元素标签和行内元素标签的区别—–<strong>重点</strong>—–<strong><em>面试题</em></strong></h3><pre><code>1. 块级元素默认有一个宽度100%，没有高度，行内元素没有宽高
+2. 块级元素默认独占一行，行内元素默认水平排列
+3. 块级元素可以设置宽高，行内元素不能设置宽高--由内容撑开
+4. 块级元素可以使用外边距，行内元素，只有左右可以使用
+</code></pre><h2 id="标签的尺寸操作【重点】"><a href="#标签的尺寸操作【重点】" class="headerlink" title="标签的尺寸操作【重点】"></a>标签的尺寸操作<strong>【重点】</strong></h2><ul>
+<li><h4 id="width—设置高度-height—设置宽度-min-height—设置最小高度【注意】只有块级元素才可以操作"><a href="#width—设置高度-height—设置宽度-min-height—设置最小高度【注意】只有块级元素才可以操作" class="headerlink" title="width—设置高度  height—设置宽度  min-height—设置最小高度【注意】只有块级元素才可以操作"></a>width—设置高度  height—设置宽度  min-height—设置最小高度<strong>【注意】</strong>只有块级元素才可以操作</h4></li>
+</ul>
+<h2 id="标签背景设置的符合央视以及分支样式的使用【重点】"><a href="#标签背景设置的符合央视以及分支样式的使用【重点】" class="headerlink" title="标签背景设置的符合央视以及分支样式的使用【重点】"></a>标签背景设置的符合央视以及分支样式的使用<strong>【重点】</strong></h2><ul>
+<li><p>分支样式</p>
+<ul>
+<li>background-color:设置标签背景颜色</li>
+<li>background-image: url(“文件路径”);—设置背景图片</li>
+<li>background-repeat: no-repeat;—取消背景图平铺效果</li>
+<li>background-position: 水平位移 竖直位移;移动背景图片的位移  居中：50%;center;</li>
+<li>css3:<ul>
+<li>background-size: 调整背景图大小尺寸</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>复合样式</p>
+<ul>
+<li>backgroud: 颜色 url(“文件路径”) no-repeat center;</li>
+</ul>
+</li>
+</ul>
+<h2 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h2><ul>
+<li><p>内边距的定义：是内容和标签边框之间的距离</p>
+</li>
+<li><h4 id="特点：一旦添加内边距，标准的标签会改变大小，我们为了保证原始设置的大小会在你设置的大小中减去设置的内边距"><a href="#特点：一旦添加内边距，标准的标签会改变大小，我们为了保证原始设置的大小会在你设置的大小中减去设置的内边距" class="headerlink" title="特点：一旦添加内边距，标准的标签会改变大小，我们为了保证原始设置的大小会在你设置的大小中减去设置的内边距"></a><strong>特点</strong>：一旦添加内边距，标准的标签会改变大小，我们为了保证原始设置的大小会在你设置的大小中减去设置的内边距</h4></li>
+<li><p>复合样式</p>
+<ul>
+<li>padding<ul>
+<li>一个值：上下左右</li>
+<li>两个值：上下 左右</li>
+<li>三个值：上 左右 下</li>
+<li>四个值：上 右 下 左</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分支样式</p>
+<ul>
+<li><p>padding-top:上</p>
+</li>
+<li><p>padding-bottom：下</p>
+</li>
+<li><p>padding-left:左</p>
+</li>
+<li><p>padding-right:右</p>
+</li>
+<li><h4 id="【注意】块级标签都可以使用，行内标签上下使用会出现问题"><a href="#【注意】块级标签都可以使用，行内标签上下使用会出现问题" class="headerlink" title="【注意】块级标签都可以使用，行内标签上下使用会出现问题"></a><strong>【注意】</strong>块级标签都可以使用，行内标签上下使用会出现问题</h4></li>
+</ul>
+</li>
+</ul>
+<h2 id="外边距【重点】"><a href="#外边距【重点】" class="headerlink" title="外边距【重点】"></a>外边距<strong>【重点】</strong></h2><ul>
+<li><p>外边距的定义：是标签与标签之间的距离，我们有时候使用这个外边距来实现移动标签</p>
+</li>
+<li><p>复合样式</p>
+<ul>
+<li>margin<ul>
+<li>一个值：上下左右</li>
+<li>两个值：上下 左右</li>
+<li>三个值：上 左右 下</li>
+<li>四个值：上 右 下 左</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分支样式</p>
+<ul>
+<li>margin-top:上</li>
+<li>margin-bottom：下</li>
+<li>margin-left:左</li>
+<li>margin-right:右</li>
+</ul>
+</li>
+<li><p>margin: auto;—–标签居中</p>
+<ul>
+<li><h4 id="特点：使用居中的样式的标签必须是div，需要有一个小于父级标签宽度的值"><a href="#特点：使用居中的样式的标签必须是div，需要有一个小于父级标签宽度的值" class="headerlink" title="特点：使用居中的样式的标签必须是div，需要有一个小于父级标签宽度的值"></a><strong>特点</strong>：使用居中的样式的标签必须是div，需要有一个小于父级标签宽度的值</h4></li>
+</ul>
+</li>
+<li><p>外边距塌陷（沉降）</p>
+<ul>
+<li>父级和子级的上边框重合</li>
+<li>方法：父级实现透明边框或者使用内边距撑开距离</li>
+</ul>
+</li>
+<li><p>外边距重合</p>
+<ul>
+<li>把距离设置给一个元素</li>
+</ul>
+</li>
+</ul>
+<h2 id="边框的使用"><a href="#边框的使用" class="headerlink" title="边框的使用"></a>边框的使用</h2><ul>
+<li><strong>注意：</strong>边框的设置也会改变标签的大小</li>
+<li><p>复合样式</p>
+<ul>
+<li>border：边框粗细 边线样式 颜色</li>
+</ul>
+</li>
+<li><p>分支样式</p>
+<ul>
+<li>border-top:上</li>
+<li>border-bottom：下</li>
+<li>border-left:左</li>
+<li>border-right:右</li>
+</ul>
+</li>
+</ul>
+<h1 id="CSS盒子模式与浮动布局"><a href="#CSS盒子模式与浮动布局" class="headerlink" title="CSS盒子模式与浮动布局"></a>CSS盒子模式与浮动布局</h1><h2 id="标准盒子与怪异盒子的区别"><a href="#标准盒子与怪异盒子的区别" class="headerlink" title="标准盒子与怪异盒子的区别"></a>标准盒子与怪异盒子的区别</h2><ul>
+<li>PC端使用的标签都是标准盒子<ul>
+<li>有声明（标准） 没有声明（怪异）</li>
+</ul>
+</li>
+</ul>
+<h4 id="标准盒子—–重点"><a href="#标准盒子—–重点" class="headerlink" title="标准盒子—–重点"></a>标准盒子—–<strong>重点</strong></h4><ul>
+<li>实际盒子的宽高 = 设置的宽高 + 设置的内边距 + 设置的边框</li>
+</ul>
+<h4 id="怪异盒子—–重点"><a href="#怪异盒子—–重点" class="headerlink" title="怪异盒子—–重点"></a>怪异盒子—–<strong>重点</strong></h4><ul>
+<li>实际盒子的宽高 = 设置的宽高</li>
+</ul>
+<h4 id="css转换—–重点"><a href="#css转换—–重点" class="headerlink" title="css转换—–重点"></a>css转换—–<strong>重点</strong></h4><ul>
+<li>box-sizing: content-box;—<strong><em>标准盒子</em></strong></li>
+<li>box-sizing: border-box;—<strong><em>怪异盒子</em></strong></li>
+</ul>
+<ul>
+<li>移动端使用怪异盒子模型—–<strong><em>flex布局</em></strong></li>
+</ul>
+<h2 id="浮动的基本操作"><a href="#浮动的基本操作" class="headerlink" title="浮动的基本操作"></a>浮动的基本操作</h2><ul>
+<li>浮动的概念：在当前的平层上如果一个标签元素实现的浮动，那么它会脱离文本流，去到另外一个平层中，那么它原来占据的位置会被后来的标签替代。这个是使用浮动的基本状态。</li>
+<li>语法结构：float：left || right<ul>
+<li>作用：浮动就是让我们之前的块级元素可以进行水平从左往右排列或者从右往左排列的操作。</li>
+</ul>
+</li>
+</ul>
+<h2 id="浮动的清除方式"><a href="#浮动的清除方式" class="headerlink" title="浮动的清除方式"></a>浮动的清除方式</h2><ol>
+<li><p>在最后做完浮动的元素同级的后面添加一个div实现css：clear：both；</p>
+</li>
+<li><p>给包裹所有浮动元素的父级设置一个和元素一样的高度</p>
+</li>
+<li><p>给包裹所有浮动元素的父级设置一个overflow：hidden；</p>
+</li>
+<li><h3 id="通过父级设置伪元素来实现清除浮动的操作"><a href="#通过父级设置伪元素来实现清除浮动的操作" class="headerlink" title="通过父级设置伪元素来实现清除浮动的操作"></a>通过父级设置伪元素来实现清除浮动的操作</h3><ul>
+<li>伪类：：伪类状态  伪元素： ：：伪元素（before || after || placehoder）</li>
+<li>伪元素的原理： 在父级的最后里面使用一个虚拟生成的标签，我们可以控制标签的形态再使用css添加clear：both<ul>
+<li><strong>优势：</strong>虚拟标签下不会影响页面结构布局和样式设置</li>
+</ul>
+</li>
+</ul>
+<pre><code class="html">  .clearfix::after{----(重点)
+                content:&quot;&quot;;
+                display: block;
+                clear: both;
+         height: 0;
+        visibility: hidden;
+            }
+解决浏览器兼容问题
+.clearfix {
+    *zoom: 1;
+}
+</code></pre>
+</li>
+</ol>
+<h2 id="浮动实现的常用布局状态"><a href="#浮动实现的常用布局状态" class="headerlink" title="浮动实现的常用布局状态"></a>浮动实现的常用布局状态</h2><ul>
+<li>列表布局</li>
+<li>左右结构布局</li>
+<li>左中右结构布局</li>
+</ul>
+<h1 id="CSS定位"><a href="#CSS定位" class="headerlink" title="CSS定位"></a>CSS定位</h1><h2 id="定位的基本使用状态（先激活在使用）"><a href="#定位的基本使用状态（先激活在使用）" class="headerlink" title="定位的基本使用状态（先激活在使用）"></a>定位的基本使用状态<strong>（先激活在使用）</strong></h2><ul>
+<li><p>定位的概念：就是吧我们需要的元素指定移动到某一个位置上去，实现一些元素的重叠操作。</p>
+</li>
+<li><p>position: absolute(绝对定位) || relative(相对定位) || fixed(固定定位)\</p>
+</li>
+<li><p>使用定位的步骤</p>
+<ol>
+<li>先使用position激活定位，目前你是看不见移动的变化的</li>
+<li>使用方向位移来实现元素的移动<ul>
+<li>先确定起始点</li>
+<li>再从这个起始点开始进行移动</li>
+</ul>
+</li>
+</ol>
+<pre><code class="html"> 语法结构：---(重点)
+            XXX{
+                position:absolute;
+                top:0px;
+                left:0px;
+            }
+</code></pre>
+</li>
+</ul>
+<h2 id="三种定位的特性与操作方式"><a href="#三种定位的特性与操作方式" class="headerlink" title="三种定位的特性与操作方式"></a>三种定位的特性与操作方式</h2><ul>
+<li><p>absolute(绝对定位)</p>
+<ol>
+<li>元素会脱离文本流</li>
+<li>因为使用绝对定位会出现布局错乱，我们使用父级包裹（父级要有高度）来避免布局错乱</li>
+<li>如果父级没有做定位，子级定位按照浏览器来操作</li>
+<li>父级有相对定位，子级就会按照父级的四个点来定位操作</li>
+</ol>
+</li>
+<li><p>relative(相对定位)</p>
+<ol>
+<li>使用相对定位不会脱离文本流！</li>
+<li>从目前所在的位置为起点开始进行位移操作</li>
+</ol>
+</li>
+<li><p>fixed(固定定位)</p>
+<ol>
+<li>脱离文本流，一般写在最末尾</li>
+<li>不会随着浏览器的滚动而移动</li>
+</ol>
+</li>
+</ul>
+<h2 id="子绝父相的定位方式与相对居中的操作方式【重点】"><a href="#子绝父相的定位方式与相对居中的操作方式【重点】" class="headerlink" title="子绝父相的定位方式与相对居中的操作方式【重点】"></a>子绝父相的定位方式与相对居中的操作方式<strong>【重点】</strong></h2><ul>
+<li><p>子绝父相：子级元素使用绝对定位，父级元素使用相对定位保障后面布局不会错乱</p>
+<pre><code class="html">父级元素{
+            position：relative
+        }
+        子级元素{
+             position：absolute
+             top：xxpx;
+             left:xxpx;
+        }
+</code></pre>
+</li>
+<li><p>绝对居中：利用定位把要居中的元素移动整个宽度的一般和高度的一半，然后配合margin把元素的中心点移动到父级的中心点</p>
+<pre><code class="html"> #father&gt;.son{
+                width: 300px;
+                height: 200px;
+                background: rgb(179, 43, 88);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -100px;
+                margin-left: -150px;
+            }
+</code></pre>
+</li>
+<li><h4 id="相对居中：把子级元素先用margin：auto移动到左右居中的位置，然后使用定位四个方向设置同样的值来实现一种可以理解为受力平衡来达到定位到中间的概念【重点】"><a href="#相对居中：把子级元素先用margin：auto移动到左右居中的位置，然后使用定位四个方向设置同样的值来实现一种可以理解为受力平衡来达到定位到中间的概念【重点】" class="headerlink" title="相对居中：把子级元素先用margin：auto移动到左右居中的位置，然后使用定位四个方向设置同样的值来实现一种可以理解为受力平衡来达到定位到中间的概念【重点】"></a>相对居中：把子级元素先用margin：auto移动到左右居中的位置，然后使用定位四个方向设置同样的值来实现一种可以理解为受力平衡来达到定位到中间的概念<strong>【重点】</strong></h4><pre><code class="html"> #father&gt;.son{
+                width: 300px;
+                height: 200px;
+                background: rgb(179, 43, 88);
+                margin: auto;
+                /* 相对居中 受力平衡 */
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+</code></pre>
+</li>
+</ul>
+<h1 id="CSS3的常用样式"><a href="#CSS3的常用样式" class="headerlink" title="CSS3的常用样式"></a>CSS3的常用样式</h1><h2 id="CSS3中的child系列与type系列的区别【重点】"><a href="#CSS3中的child系列与type系列的区别【重点】" class="headerlink" title="CSS3中的child系列与type系列的区别【重点】"></a>CSS3中的child系列与type系列的区别<strong>【重点】</strong></h2><ul>
+<li><p>作用：如果我们要选择父级下一个同级存在的队列（同级关系）元素的任意一个元素的时候，不需要添加单独的id或者类名，只要知道这个标签的排列顺序就可以获取到它来操作了。</p>
+<p><code>`</code>html<br> css3—结构伪类选择器</p>
+<pre><code>        child系列：---（重点）
+            :first-child-------获取纯队列中第一个元素标签
+            :last-child-------获取纯队列中最后一个元素标签
+            :nth-child(index)----index代表当前想要获取的标签在纯队列中的序号
+</code></pre></li>
+</ul>
+<pre><code>          type系列：----（重点）
+              :first-of-type-------获取（纯|杂）队列中第一个元素标签
+              :last-of-type-------获取（纯|杂）队列中最后一个元素标签
+              :nth-of-type(index)----index代表当前想要获取的标签在（纯|杂）队列中的序号
+</code></pre><p>  <code>`</code></p>
+<ul>
+<li><strong>总结：</strong>只要是child系列能获取的队列type系列都可以操作。在杂队列中，只有type系列可以获取内容，child不行。杂队列的类名不能取成相同的类名。</li>
+</ul>
+<h2 id="css3中过渡动画的操作"><a href="#css3中过渡动画的操作" class="headerlink" title="css3中过渡动画的操作"></a>css3中过渡动画的操作</h2><ul>
+<li>过度：tarnsition:[transition-property(参与过渡的样式)] || [transition-duration(设置过渡时间)] || [transition-timing-function(过渡特效)] || [transition-delay(延时)]</li>
+<li>特点：过渡必须写在原来的css设置中，必须填写前两个值</li>
+</ul>
+<h2 id="display的了解"><a href="#display的了解" class="headerlink" title="display的了解"></a>display的了解</h2><ul>
+<li>display：none（隐藏）|| block（显示） || inline-block（转化为行内块元素）</li>
+</ul>
+<h1 id="Css常见样式"><a href="#Css常见样式" class="headerlink" title="Css常见样式"></a>Css常见样式</h1><h2 id="文字与图片对齐"><a href="#文字与图片对齐" class="headerlink" title="文字与图片对齐"></a>文字与图片对齐</h2><blockquote>
+<p>vertical-align:bottom —–<strong>文字与图片底部对齐</strong></p>
+<p>vertical-align:top—–<strong>文字与图片顶部对齐</strong></p>
+<p>vertical-align:middle—–<strong>文字与图片垂直居中对齐</strong></p>
+</blockquote>
+<h2 id="文本溢出隐藏"><a href="#文本溢出隐藏" class="headerlink" title="文本溢出隐藏"></a>文本溢出隐藏</h2><h3 id="单行文本"><a href="#单行文本" class="headerlink" title="单行文本"></a>单行文本</h3><blockquote>
+<p>white-space: nowrap;<br>overflow: hidden;<br>text-overflow: ellipsis;</p>
+</blockquote>
+<h3 id="多行文本"><a href="#多行文本" class="headerlink" title="多行文本"></a>多行文本</h3><blockquote>
+<p>display: -webkit-box;<br>-webkit-box-orient: vertical;<br>-webkit-line-clamp: 2;<br>overflow: hidden;</p>
+<p>&amp;lt；小于符号 &amp;gt；大于符号</p>
+</blockquote>
+
+                </div>
+                <!-- .entry-content -->
+                <div class="single-reward">
+                  <div class="reward-open">赏
+                    <div class="reward-main">
+                      <ul class="reward-row">
+                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/zfbQR.jpg"></li>
+                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/weixinQR.jpg"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center; width: 100%" class="social-share share-mobile"
+                  data-disabled="diandian, tencent"></div>
+                <!-- <footer class="post-footer">
+                  <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+                      target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+                      岂能尽如人意，但求无愧我心！</a></div>
+                  <div class="post-tags">
+                  </div>
+                  <div class="post-share">
+                    <div class="social-share sharehidden share-component"></div>
+                    <i class="iconfont show-share icon-forward"></i>
+                  </div>
+                </footer>.entry-footer -->
+          </article>
+          <!-- #post-## -->
+          <div class="toc" style="background: none;"></div>
+          <section class="post-squares nextprev">
+            
+              
+                <div class="post-nepre half previous">
+                  
+                        <a href="/2020/12/30/Js初阶/" rel="prev">
+                          <div class="background">
+                            <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsone.jpg"
+                              style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                              onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsone.jpg">
+                          </div>
+                          <span class="label">
+                            Previous Post</span>
+                          <div class="info">
+                            <h3>
+                              Javascript
+                            </h3>
+                            <hr>
+                          </div>
+                        </a>
+                    </div>
+                    
+                      
+                        
+                          <div class="post-nepre half next">
+                            
+                                  <a href="/2020/10/15/Html/" rel="next">
+                                    <div class="background">
+                                      <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
+                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/html.jpg"
+                                        style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/html.jpg">
+                                    </div>
+                                    <span class="label">
+                                      Next Post</span>
+                                    <div class="info">
+                                      <h3>
+                                        HTML
+                                      </h3>
+                                      <hr>
+                                    </div>
+                                  </a>
+                              </div>
+                              
+          </section>
+          
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function () {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz",
+        appKey: "9m413jYIug2cFvhs6TtILisl",
+        path: window.location.pathname,
+        placeholder: "想说什么，你就说吧 ...",
+        avatar: 'robohash',
+      })
+    }
+  </script>
+  
+            <section class="author-profile">
+              <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                <a href="javascript:;" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg" itemprop="image"
+                    alt="Ayu" height="70" width="70"></a>
+                <div class="meta">
+                  <span class="title">Author</span>
+                  <h3 itemprop="name">
+                    <a href="javascript:;" itemprop="url" rel="author">
+                      Ayu
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <hr>
+              <p><i class="iconfont icon-write"></i>
+                时间抓起来说是金子，抓不住就是流水。
+              </p>
+            </section>
+        </main><!-- #main -->
+      </div><!-- #primary -->
+    </div>
+
+    
+        </div>
+        <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+          <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ayu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;"><i class="iconfont icon-sakura rotating"
+          style="color: #ffc0cb;display:inline-block"></i>
+        <span style="color: #b9b9b9;">Where <a href="javascript:;"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">there</a> is a <a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);"></a><a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">will</a>,
+          there is a way</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "close" }, "windowheight": "fixed", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  } else {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "open" }, "windowheight": "auto", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  }
+/* ]]> */
+
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+            <div class="openNav no-select" style="height: 50px;">
+              <div class="iconflat no-select" style="width: 50px; height: 50px;">
+                <div class="icon"></div>
+              </div>
+              <div class="site-branding search-form-submit">
+                <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+              </div>
+            </div>
+    </section>
+    <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+        <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+          <div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn">
+        <span id="open-skinMenu"> 切换主题
+            <i class="iconfont icon-gear inline-block rotating"></i>
+        </span>
+    </div>
+</div>
+            <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  </body>
+
+  </html>

@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Vue2.0 | Poorlife</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "个人博客Ayu";
+  mashiro_option.author_name = "Ayu";
+  mashiro_option.site_url = "";
+  mashiro_option.v_appId = "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz";
+  mashiro_option.v_appKey = "9m413jYIug2cFvhs6TtILisl";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+
+  <body
+    class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar">
+    </div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+      <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="">
+          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>
+          谁给我一滴水，我便回报他整个大海。
+        </p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                  <li>
+                    <a href="https://github.com/PoorlifeAyu" target="_blank" class="social-github" title="github">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/github.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://weibo.com/u/6030188226" target="_blank" class="social-github" title="sina">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/sina.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://music.163.com/" target="_blank" class="social-github" title="wangyiyun">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wangyiyun.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://mail.qq.com/cgi-bin/frame_html?sid=0j3LVIvsrSzKXR5_&amp;r=c8c502b38f105671c3cf4b6fb70a0ebd" target="_blank" class="social-github" title="email">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/email.svg">
+                    </a>
+                  </li>
+                  
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/wechat.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/qq.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                  <li>
+                    <a href="https://blog.csdn.net/Ayuzz?spm=1000.2115.3001.5343" target="_blank" class="social-github" title="csdn">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/csdn.png">
+                    </a>
+                  </li>
+                  
+                    
+                      
+                        <li id="bg-next">
+                          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+                        </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+        <div id="page" class="site wrapper">
+          <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">个人博客</span>
+            <span class="shironeko">Ayu</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/管理/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          管理
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          个人
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+            <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/vuetwo.jpg);"
+      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/vuetwo.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+        Vue2.0
+      </h1>
+      <p class="entry-census">
+        <span>
+          <a href="javascript:;">
+            <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="javascript:;">
+            Ayu
+          </a>
+        </span>
+        <span class="bull">
+          ·</span>
+        2021-6-11<span class="bull">
+            ·</span>
+          <span id="busuanzi_value_page_pv"></span>次阅读
+      </p>
+    </header>
+  </div>
+  
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <article id="post-1"
+            class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+            <div class="toc"></div>
+            <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+            
+                <div class="entry-content">
+                  <h1 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h1><h2 id="vue的介绍"><a href="#vue的介绍" class="headerlink" title="vue的介绍"></a>vue的介绍</h2><ul>
+<li><p>vue：Vue是一个构建用户界面（UI）的JS库。</p>
+</li>
+<li><p>vue是一个构建<strong>数据驱动</strong>的渐进式框架，Vue.js 的目标是通过尽可能<strong>简单</strong>的 API 实现响应的数据绑定,视图<strong>组件化开发</strong>。基于<strong>MVVM</strong>设计模式书写。</p>
+</li>
+<li><p><strong>Vue是建立于 Angular和React的基础之上，它保留了Angular和React的优点并添加了自己的独特成分</strong>，让框架的使用变得更加简单，这保证了Vue足够的美好来吸引JS开发人员的胃口。</p>
+</li>
+<li><p>特性</p>
+<ol>
+<li><h4 id="轻量-Vue库的体积非常小的，并且不依赖其他基础库。"><a href="#轻量-Vue库的体积非常小的，并且不依赖其他基础库。" class="headerlink" title="轻量:Vue库的体积非常小的，并且不依赖其他基础库。"></a><strong>轻量:</strong>Vue库的体积非常小的，并且不依赖其他基础库。</h4></li>
+<li><h4 id="数据驱动-对于一些富交互、状态机类似的前端UI界面，数据绑定非常简单、方便。"><a href="#数据驱动-对于一些富交互、状态机类似的前端UI界面，数据绑定非常简单、方便。" class="headerlink" title="数据驱动:对于一些富交互、状态机类似的前端UI界面，数据绑定非常简单、方便。"></a><strong>数据驱动:</strong>对于一些富交互、状态机类似的前端UI界面，数据绑定非常简单、方便。</h4></li>
+<li><h4 id="指令（简化代码）：内置指令统一为-v—-，也可以自定义指令，通过对应表达值的变化就可以修改对应的DOM。"><a href="#指令（简化代码）：内置指令统一为-v—-，也可以自定义指令，通过对应表达值的变化就可以修改对应的DOM。" class="headerlink" title="指令（简化代码）：内置指令统一为(v—*)，也可以自定义指令，通过对应表达值的变化就可以修改对应的DOM。"></a><strong>指令（简化代码）：</strong>内置指令统一为(v—*)，也可以自定义指令，通过对应表达值的变化就可以修改对应的DOM。</h4></li>
+<li><h4 id="插件化：Vue-js核心不包含Router、AJAX、表单验证等功能，但是可以非常方便地根据需要加载对应插件。"><a href="#插件化：Vue-js核心不包含Router、AJAX、表单验证等功能，但是可以非常方便地根据需要加载对应插件。" class="headerlink" title="插件化：Vue.js核心不包含Router、AJAX、表单验证等功能，但是可以非常方便地根据需要加载对应插件。"></a><strong>插件化：</strong>Vue.js核心不包含Router、AJAX、表单验证等功能，但是可以非常方便地根据需要加载对应插件。</h4></li>
+<li><h4 id="组件化：组件可以扩展-HTML-元素，封装可重用的代码。允许我们使用小型、自包含和通常可复用的组件构建大型应用"><a href="#组件化：组件可以扩展-HTML-元素，封装可重用的代码。允许我们使用小型、自包含和通常可复用的组件构建大型应用" class="headerlink" title="组件化：组件可以扩展 HTML 元素，封装可重用的代码。允许我们使用小型、自包含和通常可复用的组件构建大型应用"></a><strong>组件化：</strong>组件可以扩展 HTML 元素，封装可重用的代码。允许我们使用小型、自包含和通常可复用的组件构建大型应用</h4></li>
+</ol>
+</li>
+</ul>
+<h2 id="Vue项目环境搭建（安装步骤）"><a href="#Vue项目环境搭建（安装步骤）" class="headerlink" title="Vue项目环境搭建（安装步骤）"></a>Vue项目环境搭建（安装步骤）</h2><h3 id="1-全局安装"><a href="#1-全局安装" class="headerlink" title="1.全局安装"></a>1.全局安装</h3><pre><code class="js">yarn global add @vue/cli
+npm i @vue/cli -g
+</code></pre>
+<h3 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h3><ul>
+<li>vue create 项目名(<strong>项目名只能全部小写</strong>)</li>
+<li>** 选择default 2即可（第一个选项）</li>
+</ul>
+<h3 id="3-进入项目"><a href="#3-进入项目" class="headerlink" title="3.进入项目"></a>3.进入项目</h3><ul>
+<li>cd 项目名</li>
+</ul>
+<h3 id="4-启动服务"><a href="#4-启动服务" class="headerlink" title="4.启动服务"></a>4.启动服务</h3><pre><code class="js">yarn serve
+npm run serve
+</code></pre>
+<h2 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h2><p>vue中我们常用项目结构如下（部分目录是后续自己创建的）：</p>
+<ul>
+<li><p>public</p>
+<ul>
+<li>静态文件目录</li>
+<li>主要包含index.html文件，和ico图标</li>
+<li>public中的index.html就是单页面应用内的唯一那个html文件</li>
+</ul>
+</li>
+<li><p>src</p>
+<ul>
+<li>项目开发主目录</li>
+<li>所有vue开发相关内容都在src中</li>
+<li><strong>下文会仔细解析</strong></li>
+</ul>
+</li>
+<li><p>.gitignore</p>
+<ul>
+<li>git忽略文件配置</li>
+</ul>
+</li>
+<li><p>babel.config.js</p>
+<ul>
+<li>babel是一个js的编译器，可以将浏览器不支持的预编译语言编译成浏览器能支持的结果</li>
+<li>babel.config.js主要的作用是配置vue项目内的编译</li>
+</ul>
+</li>
+<li><p>package.json</p>
+<ul>
+<li>依赖管理</li>
+</ul>
+</li>
+<li><p>yarn.lock(小重点)</p>
+<ul>
+<li>这个文件的作用是记录yarn安装的所有依赖地址</li>
+<li>以后使用yarn安装会首选.lock中的地址</li>
+<li>有时候npm服务资源不稳定，就导致原本lock中的地址失效，从而多次yarn也会失败</li>
+<li>此时，我们应该，删除.lock文件，再重新yarn一次</li>
+</ul>
+</li>
+<li><p>vue.config.js</p>
+<ul>
+<li>vue脚手架配置工具</li>
+<li>默认安装的项目并没有这个文件，需要手动创建</li>
+<li>主要作用是——<ul>
+<li>设置代理</li>
+<li>设置编译</li>
+<li>配置多页面</li>
+<li>配置本地服务</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="重点！！！"><a href="#重点！！！" class="headerlink" title="重点！！！"></a><strong>重点！！！</strong></h1></li>
+<li><p>在vue中我们更多接触的目录是——src</p>
+</li>
+<li><p>src是vue里面最重要的开发目录，我们需要在src中规划我们的开发资源，那么常用的src目录如下：</p>
+</li>
+<li><p>assets</p>
+<ul>
+<li>静态文件——css，js，img，font（字体）</li>
+</ul>
+</li>
+<li><p>components</p>
+<ul>
+<li>组件</li>
+</ul>
+</li>
+<li><p>api</p>
+<ul>
+<li>业务接口</li>
+<li>推荐大家开发规范是：</li>
+<li>一个页面的接口就是一个目录</li>
+<li>目录内当前接口文件命名xxx.api.js</li>
+<li>但，去了单位，还是遵循别人的规范吧</li>
+</ul>
+</li>
+<li><p>utils</p>
+<ul>
+<li>工具类</li>
+</ul>
+</li>
+<li><p>router</p>
+<ul>
+<li>路由</li>
+</ul>
+</li>
+<li><p>store</p>
+<ul>
+<li>数据仓库</li>
+</ul>
+</li>
+<li><p>plugins</p>
+<ul>
+<li>插件</li>
+</ul>
+</li>
+<li><p>备注：需要安装<strong>vetur</strong>插件，支持vue代码高亮显示。</p>
+</li>
+</ul>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="组件的定义"><a href="#组件的定义" class="headerlink" title="组件的定义"></a>组件的定义</h3><ul>
+<li>所谓组件，<strong>即封装起来的具有独立功能的UI部件</strong>。开发者从功能的角度出发，将UI分成不同的组件，每个组件都独立封装。</li>
+<li>组件特点：<strong>可重用</strong>、<strong>可组合</strong>、<strong>易维护</strong></li>
+<li>命名规则：大驼峰</li>
+</ul>
+<h3 id="vue组件使用步骤"><a href="#vue组件使用步骤" class="headerlink" title="vue组件使用步骤"></a>vue组件使用步骤</h3><h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><ul>
+<li>import引入自己定义的组件</li>
+</ul>
+<h4 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h4><ul>
+<li>使用components属性注册你的组件</li>
+</ul>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><ul>
+<li><p>将组件标签放到template中使用</p>
+</li>
+<li><p><strong>上面三步必须严格执行，否则eslint会报错</strong></p>
+</li>
+</ul>
+<h3 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h3><pre><code class="js">XXX.vue
+
+&lt;template&gt;
+&lt;h1&gt;Hello!&lt;/h1&gt;
+//HTML
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+//JS
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+//样式
+&lt;/style&gt;
+</code></pre>
+<h3 id="使用自定义组件"><a href="#使用自定义组件" class="headerlink" title="使用自定义组件"></a>使用自定义组件</h3><pre><code class="js">//使用组件，先导入组件，注册到自己组件中，然后就可以像标签一样使用。
+&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;Hello /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Hello from &#39;./components/Hello.vue&#39;
+
+export default {
+  components: {
+    Hello
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h3 id="组件化开发"><a href="#组件化开发" class="headerlink" title="组件化开发"></a>组件化开发</h3><ul>
+<li>项目中有公共的部分，就把公共的部分提出来单独做一个组件，哪里要使用就在哪里调用。</li>
+</ul>
+<pre><code class="js">语法结构:
+A.vue
+B.vue
+Index.vue
+    &lt;template&gt;
+        &lt;div&gt;
+            &lt;A/&gt;
+            &lt;B/&gt;
+        &lt;/div&gt;
+        &lt;/template&gt;
+    &lt;script&gt;
+        import A from &#39;xxx/A.vue&#39;
+        import B from &#39;xxx/B.vue&#39;
+        export default {
+                //组件
+                components:{
+                    A,//A:A
+                    B
+                }
+        }
+    &lt;/script&gt;
+</code></pre>
+<h3 id="定义数据"><a href="#定义数据" class="headerlink" title="定义数据"></a>定义数据</h3><ul>
+<li>vue定义数据在data中定义，data中的数据可以在组件内部的script中参与计算，也可以在template模板中使用</li>
+</ul>
+<pre><code class="js">&lt;template&gt;
+
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      words: &quot;这是定义的数据&quot;,
+    };
+  },
+};
+&lt;/script&gt;
+
+&lt;style&gt;
+&lt;/style&gt;
+</code></pre>
+<h3 id="Mustach模板编译语法"><a href="#Mustach模板编译语法" class="headerlink" title="Mustach模板编译语法"></a>Mustach模板编译语法</h3><ul>
+<li>Mustach语法让我们可以将组件内部定义的数据渲染到视图template木板上</li>
+</ul>
+<pre><code class="js">&lt;template&gt;
+  &lt;div&gt;{{ words }}&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      words: &quot;这是我自己创建的组件&quot;,
+    };
+  },
+};
+&lt;/script&gt;
+
+&lt;style&gt;
+&lt;/style&gt;
+</code></pre>
+<pre><code class="js">//案例
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;Header /&gt;
+    &lt;div&gt;
+      &lt;p&gt;{{ city }}&lt;/p&gt;
+      &lt;p&gt;{{ msg }}&lt;/p&gt;
+      &lt;h1&gt;{{ sex === 0 ? "男" : "女" }}&lt;/h1&gt;
+      &lt;button @click=&quot;changeCity&quot;&gt;定位&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Header from &quot;./components/Header&quot;;
+export default {
+  components: {
+    Header,
+  },
+  data() {
+    return {
+      city: &quot;重庆&quot;,
+      msg: &quot;用户名或密码错误&quot;,
+      sex: 1,
+    };
+  },
+  methods: {
+    changeCity() {
+      this.city = &quot;上海&quot;;
+      this.msg = &quot;登陆成功&quot;;
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+&lt;/style&gt;
+</code></pre>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><ul>
+<li><p>vue给了我们一个很大的福利——指令。</p>
+</li>
+<li><p>vue的指令非常强大，能帮助我们减少极其多的复杂工作。</p>
+</li>
+<li><p>一句话概括：</p>
+</li>
+</ul>
+<p style="background:#ff3300;text-align:center;color:#fff">vue指令是专门用于dom处理的，所有指令都只能用在dom身上</p>
+
+<h3 id="常用的vue指令："><a href="#常用的vue指令：" class="headerlink" title="常用的vue指令："></a>常用的vue指令：</h3><h4 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h4><ul>
+<li>v-text——渲染文本</li>
+<li>v-html——渲染html（包括文本）</li>
+</ul>
+<h4 id="显隐"><a href="#显隐" class="headerlink" title="显隐"></a>显隐</h4><ul>
+<li>v-show——基于css控制<ul>
+<li>频繁操作中，使用show更合理</li>
+</ul>
+</li>
+<li>v-if——基于渲染控制<ul>
+<li>不频繁操作的时候，使用if更安全</li>
+</ul>
+</li>
+</ul>
+<h4 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h4><ul>
+<li>v-if<ul>
+<li>if判断</li>
+</ul>
+</li>
+<li>v-else-if<ul>
+<li>else if分支</li>
+</ul>
+</li>
+<li>v-else<ul>
+<li>else分支</li>
+</ul>
+</li>
+<li>if，else if，else如果要凑成一个分支，那相关dom一定要紧挨着书写</li>
+</ul>
+<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><ul>
+<li><p>v-for</p>
+<ul>
+<li><p>v-for在实际界面渲染中显得非常重要，其基本语法和嵌套语法如下：</p>
+</li>
+<li><pre><code class="vue">&lt;ul&gt;
+    &lt;li v-for=&quot;(item, index) in stus&quot; :key=&quot;index&quot;&gt;{{ item }}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul&gt;
+    &lt;li v-for=&quot;(item, index) in workers&quot; :key=&quot;index&quot;&gt;
+        &lt;p&gt;{{ item.name }}&lt;/p&gt;
+        &lt;p&gt;{{ item.job }}&lt;/p&gt;
+        &lt;p&gt;
+            &lt;span v-for=&quot;(_item, _index) in item.skills&quot; :key=&quot;_index&quot;&gt;{{
+                    _item
+                    }}&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h4><ul>
+<li>vue中使用v-model进行数据和视图的绑定，在表单应用中使用尤其多</li>
+<li>input——收集input输入内容</li>
+<li>radio<ul>
+<li>收集radio本身的value</li>
+</ul>
+</li>
+<li>checkbox<ul>
+<li>收集checkbox本身的value<ul>
+<li>当v-model绑定的数据是数组时，收集value</li>
+</ul>
+</li>
+<li>收集true和false<ul>
+<li>当v-model绑定的数据是非数组时，收集true和false</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>textarea——收集文本域的value</li>
+<li>select——收集option的value</li>
+</ul>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><ul>
+<li><p>在vue中的事件处理监听方式和传统事件监听有一定区别，高度封装的vue将事件的监听方式也进行了一个封装</p>
+<p><u>在使用事件的时候，同时需要知道一个组件的方法只能定义在【methods】属性内</u></p>
+</li>
+</ul>
+<h3 id="事件监听语法有两种："><a href="#事件监听语法有两种：" class="headerlink" title="事件监听语法有两种："></a>事件监听语法有两种：</h3><h4 id="v-on监听"><a href="#v-on监听" class="headerlink" title="v-on监听"></a>v-on监听</h4><ul>
+<li><pre><code class="vue">&lt;button v-on:click=&quot;doAlert&quot;&gt;点击按钮，弹窗&lt;/button&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="监听"><a href="#监听" class="headerlink" title="@监听"></a>@监听</h4><ul>
+<li><pre><code class="vue">&lt;button @click=&quot;doAlert&quot;&gt;点击按钮，弹窗&lt;/button&gt;
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>事件监听的同时也可以传参：</p>
+<pre><code class="vue">&lt;button @click=&quot;doAlert(&#39;点击了&#39;)&quot;&gt;点击按钮，弹窗&lt;/button&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="关于事件对象："><a href="#关于事件对象：" class="headerlink" title="关于事件对象："></a>关于事件对象：</h4><ul>
+<li><p>所有事件都默认<strong>有一个$event事件</strong>对象，可以获得当前事件上下文信息</p>
+</li>
+<li><p>template中vue的模板语法为我们提供了一个默认的$event事件对象，在监听事件的时候可以显式传入进去</p>
+<ul>
+<li><pre><code class="vue">&lt;button @click=&quot;doAlert($event,119)&quot;&gt;点击按钮，弹窗&lt;/button&gt;
+
+// instance(实例)中就可以获得$event事件对象了
+...
+methods: {
+    doAlert(event, arg) {
+        console.log(`这是参数${arg}`, event); 
+    },
+},
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>当事件方法没有任何参数参与的时候，定义的语句中就可以直接获取到事件对象，否则，必须显式传递$event</p>
+<ul>
+<li><pre><code class="js">//模板中使用test不传递任何参数
+test(event) {
+    console.log(arg, event);
+},
+</code></pre>
+</li>
+<li><pre><code class="vue">&lt;template&gt;
+    &lt;!-- 此处有别的参数参与，所以必须显式传递$event --&gt;
+    &lt;button @click=&quot;test(119, $event)&quot;&gt;测试事件对象&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+   export default {
+       ...
+       methods:{
+           test(arg,event) {
+              console.log(arg, event);
+            }
+       }
+   }
+&lt;/script&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="动态绑定属性"><a href="#动态绑定属性" class="headerlink" title="动态绑定属性"></a>动态绑定属性</h3><h4 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h4><ul>
+<li><pre><code class="js">&lt;img v-bind:src=&#39;imgUrl&#39; v-bind:title=&#39;imgMsg&#39; /&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="属性-“”"><a href="#属性-“”" class="headerlink" title=":属性=“”"></a>:属性=“”</h4><ul>
+<li><pre><code class="js">&lt;img :src=&#39;imgUrl&#39; :title=&#39;imgMsg&#39; /&gt;
+</code></pre>
+</li>
+</ul>
+<h3 id="v-bind详解"><a href="#v-bind详解" class="headerlink" title="v-bind详解"></a>v-bind<strong>详解</strong></h3><ul>
+<li><p>v-bind主要作用是：绑定属性</p>
+</li>
+<li><p>在vue中，自定义的组件可以通过属性与外界进行通信，那么我们如何为一个组件（<strong>或者原生html节点</strong>）添加属性呢？</p>
+</li>
+<li><p>一句比较绝对又冒失的话：</p>
+</li>
+<li><p><strong>template里面的东西，基本都可以使用v-bind来添加属性</strong></p>
+</li>
+<li><p><strong>添加常规属性</strong></p>
+</li>
+</ul>
+<pre><code class="vue">&lt;!--
+    基本语法：
+        v-bind:属性名=“属性值（或变量）”
+--&gt;
+&lt;p v-bind:selfStr=&quot;str&quot;&gt;hello world&lt;/p&gt;
+</code></pre>
+<ul>
+<li><strong>添加样式类名属性</strong></li>
+</ul>
+<pre><code class="js">&lt;!--
+    基本语法：
+        v-bind:class=&quot;{类名：flag，类名：flag}&quot;
+    语法解析：
+        通过flag来绝对多个class类名的灵活组合
+--&gt;
+&lt;p v-bind:class=&quot;{red:flag,blue:!flag}&quot;&gt;hello world&lt;/p&gt;
+//&lt;span :class=&quot;classObj&quot; @mouseover=&quot;getMoney&quot; @mouseout=&quot;gunMoney&quot;&gt;&lt;/span&gt;
+//在data中暴露：classObj: { bg1: false, bg2: false, bg3: false },
+//使用方法 getMoney() { this.classObj.bg1 = true;this.classObj.bg2 = true;this.classObj.bg3 = true;},
+           //gunMoney() { this.classObj.bg1 = false;this.classObj.bg2 = false;this.classObj.bg3 = false;},
+</code></pre>
+<ul>
+<li><strong>添加style行内样式</strong></li>
+</ul>
+<pre><code class="vue">&lt;!--
+    基本语法：
+        v-bind:style=&quot;{ dom样式属性名：样式值，。。。 }&quot;
+    语法解析：
+        dom样式属性名需要使用小驼峰方式，且属性值为字符串的时候需要添加引号
+--&gt;
+&lt;p v-bind:style=&quot;{ color: &#39;red&#39;, fontWeight: &#39;bold&#39; }&quot;&gt;元宵节快乐&lt;/p&gt;
+</code></pre>
+<p style="background:#ff3300;color:#fff;text-align:center;font-weight:bold">v-bind还有一个最佳简写方案:【:属性名】</p>
+
+<h3 id="双向绑定"><a href="#双向绑定" class="headerlink" title="双向绑定"></a>双向绑定</h3><ul>
+<li>v-model</li>
+</ul>
+<pre><code class="js">//案例
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;账号：&lt;input type=&quot;text&quot; v-model=&quot;uname&quot; /&gt;{{ uname }}&lt;/p&gt;
+    &lt;p&gt;密码：&lt;input type=&quot;text&quot; v-model=&quot;pwd&quot; /&gt;{{ pwd }}&lt;/p&gt;
+    &lt;button @click=&quot;changeReg&quot;&gt;注册&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from &quot;axios&quot;;
+axios.defaults.baseURL = &quot;http://139.9.177.51:8099&quot;;
+export default {
+  data() {
+    return {
+      uname: &quot;&quot;,
+      pwd: &quot;&quot;,
+    };
+  },
+  methods: {
+    changeReg() {
+      axios
+          .post(&quot;/users/add&quot;, { account: this.uname, password: this.pwd })
+        .then((res) =&gt; console.log(res.data));
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+&lt;/style&gt;
+</code></pre>
+<h1 id="vue-router的基本使用"><a href="#vue-router的基本使用" class="headerlink" title="vue-router的基本使用"></a>vue-router的基本使用</h1><h2 id="配置router"><a href="#配置router" class="headerlink" title="配置router"></a>配置router</h2><h3 id="vue-router基本语法使用"><a href="#vue-router基本语法使用" class="headerlink" title="vue-router基本语法使用"></a>vue-router基本语法使用</h3><ul>
+<li><p>vue-router是vue路由的首选插件（也是官方插件）</p>
+</li>
+<li><p>基本使用方法：</p>
+</li>
+<li><strong>前提</strong>需要先下载路由</li>
+</ul>
+<pre><code class="vue">yarn add vue-router -S
+</code></pre>
+<ol>
+<li><p>根目录下创建router.js文件</p>
+</li>
+<li><p>引入——引入Vue和VueRouter</p>
+<pre><code class="js">  import Vue from &#39;vue&#39;
+  import VueRouter from &#39;vue-router&#39;
+</code></pre>
+</li>
+<li><p>全局注册到vue中</p>
+<pre><code class="js">  Vue.use(VueRouter) //很多基于vue的插件和组件库都是使用vue.use来注册的
+</code></pre>
+</li>
+<li><p>结构——创建路由数据结构</p>
+<pre><code class="js">//分配具体路由 一个组件对应一个路由 路由和组件一一对应
+import FindMusic from &#39;./wyy/modules/FindMusic&#39;
+const routes = [
+       {
+           path:&#39;&#39;,
+           component:()=&gt;import(&#39;../../MyDemo&#39;)//路由懒加载
+       }
+       {
+           path:&#39;/...&#39;,
+             name:（通常与path路径名一致）
+             component:A//需要的组件
+       }
+   ]
+</code></pre>
+</li>
+<li><p>实例——通过VueRouter生成实例化路由并且将路由暴露出去</p>
+<pre><code class="js">//暴露
+export default new VueRouter({
+    routes//routes：routes
+})
+</code></pre>
+</li>
+<li><p>挂载——将路由实例导出，在main.js中引入并挂载</p>
+<pre><code class="js">import router from &#39;./router&#39;   
+new Vue({
+     router,//router：router
+     render: h =&gt; h(App),
+   }).$mount(&#39;#app&#39;)
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>以上为路由基本使用语法</li>
+</ul>
+<h4 id="404页面配置"><a href="#404页面配置" class="headerlink" title="404页面配置"></a>404页面配置</h4><pre><code class="vue">404页面
+        在router.js
+        最下面
+
+        {
+            path:&quot;*&quot;,
+            name:&quot;xxx&quot;,
+            component:&quot;&quot;
+        }
+</code></pre>
+<ul>
+<li><h3 id="但是！若想你的路由正常使用，你还需要一个路由出口组件：-lt-router-view-gt-，所有路有规则匹配到的组件都会在-lt-router-view-gt-，（这也是实现路由嵌套的核心组件）"><a href="#但是！若想你的路由正常使用，你还需要一个路由出口组件：-lt-router-view-gt-，所有路有规则匹配到的组件都会在-lt-router-view-gt-，（这也是实现路由嵌套的核心组件）" class="headerlink" title="但是！若想你的路由正常使用，你还需要一个路由出口组件：&lt;router-view&gt;，所有路有规则匹配到的组件都会在&lt;router-view&gt;，（这也是实现路由嵌套的核心组件）"></a>但是！若想你的路由正常使用，你还需要一个路由出口组件：<code>&lt;router-view&gt;</code>，所有路有规则匹配到的组件都会在<code>&lt;router-view&gt;</code>，（<strong>这也是实现路由嵌套的核心组件</strong>）</h3></li>
+</ul>
+<h3 id="router-view详解"><a href="#router-view详解" class="headerlink" title="router-view详解"></a>router-view详解</h3><ul>
+<li><p>router-view是vue-router提供的一个路由入口组件，其主要作用为：根据路由规则来切换渲染对应的组件。</p>
+</li>
+<li><p>虽然概念简单，但实际项目应用中router-view往往和App.vue牵扯不清。</p>
+</li>
+<li><p>首先你需要知道一个概念：<strong>App.vue是整个vue项目中唯一保持生命活性的组件，这就是为什么App.vue被称为入口组件的原因。</strong></p>
+</li>
+<li><p>那么结合App.vue我们可以得到一个结论，router-view在进行一级页面切换的时候最好就是直接让router-view代替App.vue内部的所有内容。</p>
+</li>
+<li><p><strong>router-view和vue-router又有什么关系呢？</strong></p>
+</li>
+<li><p>vue-router最主要的作用是给vue配置路由逻辑，让vue项目内部可以跳转路由和使用路由相关api。</p>
+</li>
+<li>router-view最主要的功能是渲染视图，当vue-router监听到浏览器规则时，将对应组件交给router-view来呈现渲染。</li>
+</ul>
+<h3 id="vue路由跳转"><a href="#vue路由跳转" class="headerlink" title="vue路由跳转"></a>vue路由跳转</h3><ul>
+<li>vue路由跳转有三种方式：</li>
+</ul>
+<h4 id="组件跳转"><a href="#组件跳转" class="headerlink" title="组件跳转"></a>组件跳转</h4><ul>
+<li><p>使用<code>&lt;router-link /&gt;</code>组件来实现跳转</p>
+</li>
+<li><pre><code class="vue">&lt;router-link to=&quot;/hello-world&quot;&gt;跳转到hello-world（组件跳转）&lt;/router-link&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="函数跳转"><a href="#函数跳转" class="headerlink" title="函数跳转"></a>函数跳转</h4><ul>
+<li><p>当你在vue项目中成功配置了一个vue-router路由之后，你的项目全局范围内就会挂载一个$router大对象</p>
+</li>
+<li><p>$router是项目全局路由大对象，可以得到所有跟路由【处理】相关的属性和方法</p>
+</li>
+<li><p>在任何组件内，通过<code>this.$router</code>即可访问到</p>
+</li>
+<li><p>通过<code>this.$router.push(path)</code>就可以进行跳转了</p>
+</li>
+<li><pre><code class="js">jumpTo() {
+    this.$router.push(&quot;/hello-world&quot;);
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="a标签跳转"><a href="#a标签跳转" class="headerlink" title="a标签跳转"></a>a标签跳转</h4><ul>
+<li><p>使用a标签结合锚点路径来进行跳转</p>
+</li>
+<li><pre><code class="vue">&lt;a href=&quot;#/hello-world&quot;&gt;跳转到hello-world&lt;/a&gt;
+</code></pre>
+</li>
+</ul>
+<h3 id="vue路由传参"><a href="#vue路由传参" class="headerlink" title="vue路由传参"></a>vue路由传参</h3><ul>
+<li><p>路由可以跳转，也可以传参，常用传参手段，往往是借助路由函数跳转方式进行传参。</p>
+</li>
+<li><p>在了解传参之前，我们还需要知道一个东西：【当前路由对象—$route】（请注意和$router全局路由对象区分开）</p>
+</li>
+<li><p>当前路由对象$route带有当前路由全部相关信息，通过console打印可以知道，当前路由对象$route身上带有一个<code>params</code>和<code>query</code>两个属性，这两个属性其实就可以帮助我们得到前一个路由传递来的参数了</p>
+</li>
+</ul>
+<h4 id="路由传参基本语法："><a href="#路由传参基本语法：" class="headerlink" title="路由传参基本语法："></a>路由传参基本语法：</h4><h5 id="params传参"><a href="#params传参" class="headerlink" title="params传参"></a><strong>params传参</strong></h5><p style="background:#ff3300;color:#fff;font-weight:bold;text-align:center">使用params传参，路由必须具备name，且只能基于name跳转</p>
+
+<pre><code class="js">this.$router.push({
+    name:&#39;hello-world&#39;,
+    params:{
+        id:1
+    }
+})
+</code></pre>
+<p style="background:#ff3300;color:#fff;font-weight:bold;text-align:center">params传递的参数不持久，参数不在地址栏体现，刷新页面后，就消失了</p>
+
+<h5 id="query传参"><a href="#query传参" class="headerlink" title="query传参"></a><strong>query传参</strong></h5><p style="background:#ff3300;color:#fff;font-weight:bold;text-align:center">query既能基于path跳转，也能基于name跳转</p>
+
+<pre><code class="js">this.$router.push({
+    path:&#39;/hello-world&#39;,
+    query:{
+        id:1
+    }
+})
+</code></pre>
+<p style="background:#ff3300;color:#fff;font-weight:bold;text-align:center">使用query传参，参数在地址栏上体现，且持久</p>
+
+<ul>
+<li>实际项目中，我们在大型参数（大对象，大数组）传递时，更多使用的是本地存储</li>
+</ul>
+<h3 id="vue路由嵌套"><a href="#vue路由嵌套" class="headerlink" title="vue路由嵌套"></a>vue路由嵌套</h3><ul>
+<li>从写法上分析，路由嵌套，最重要的地方就是路由数据结构中的【children】属性</li>
+</ul>
+<pre><code class="js">{
+        path: &#39;/hello-world&#39;,
+        name: &#39;hello-world&#39;,
+        component: () =&gt; import(&#39;@/components/HelloWorld&#39;),
+        children: [        //当前路由下书写children子路由数据结构
+            {
+                path: &#39;hello-1&#39;,
+                component: () =&gt; import(&#39;@/components/Hello1&#39;)
+            }
+        ]
+    }
+</code></pre>
+<ul>
+<li>从逻辑上分析，既然有二级路由，那就说明【当前路由对应的组件内还会继续进行路由规则匹配和路由组件渲染】，基于上面的描述，代表，那个组件内有子路由，那么那个组件内一定要有一个<code>&lt;router-view&gt;&lt;/router-view&gt;</code></li>
+</ul>
+<h1 id="Vue生命周期、计算属性、组件通信、插槽"><a href="#Vue生命周期、计算属性、组件通信、插槽" class="headerlink" title="Vue生命周期、计算属性、组件通信、插槽"></a>Vue生命周期、计算属性、组件通信、插槽</h1><h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><ul>
+<li><p>计算属性顾名思义就是对属性的值进行计算，从而得到一个新的值。</p>
+</li>
+<li><p>计算属性设计的目的就是基于原本的数据来通过计算衍生出新的数据，而又不影响原本的数据</p>
+</li>
+<li><p>基本语法：</p>
+</li>
+</ul>
+<pre><code class="vue">...
+computed:{
+    新数据名(){
+        ...进行计算
+        return 新数据
+    }
+}
+使用：{{新数据名}}
+</code></pre>
+<ul>
+<li><p>使用的时候，<strong>直接使用【新数据名】即可</strong></p>
+</li>
+<li><p><strong>计算属性的特点：</strong></p>
+</li>
+<li><p>必须定义在computed内</p>
+</li>
+<li>必须以函数形态呈现</li>
+<li><p>必须有返回值</p>
+</li>
+<li><p><strong>计算属性最大的作用：</strong></p>
+</li>
+<li><p>通过原本的数据衍生新的数据</p>
+</li>
+<li><p>在数据衍生过程中，可以通过观察数据变化从而进行别的行为操作</p>
+</li>
+<li><p><strong>计算属性的优势：</strong></p>
+</li>
+<li><p>计算属性有缓存性质，如果源数据不变，则不论使用多少次衍生数据，都只会调用一次方法</p>
+</li>
+<li>一旦源数据发生改变，则计算属性从新计算</li>
+</ul>
+<h2 id="过滤器filter（新版本已经移除）"><a href="#过滤器filter（新版本已经移除）" class="headerlink" title="过滤器filter（新版本已经移除）"></a>过滤器filter（新版本已经移除）</h2><ul>
+<li>过滤器作用和computed差不多，两者之间的区别：</li>
+</ul>
+<h3 id="computed："><a href="#computed：" class="headerlink" title="computed："></a><strong>computed：</strong></h3><ul>
+<li>缓存机制</li>
+<li>源数据生成新数据</li>
+<li>源数据发生改变新数据也改变</li>
+</ul>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a><strong>filter</strong></h3><ul>
+<li>没有缓存机制，过滤几次调用几次</li>
+<li>源数据生成新数据</li>
+<li>源数据发生改变新数据也改变</li>
+</ul>
+<pre><code class="vue">&lt;template&gt;
+    &lt;ul&gt;
+        &lt;li v-for=&quot;(item, index) in stus&quot; :key=&quot;index&quot;&gt;{{ item | newStu }}&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  data() {
+    return {
+      stus: [&quot;杨洋&quot;, &quot;赵任杰&quot;, &quot;董家豪&quot;, &quot;霍佳俊&quot;, &quot;刘佳&quot;, &quot;陶天骄&quot;],
+    };
+  },
+  filters: {
+    newStu(stu) {
+      return &quot;0928-&quot; + stu;
+    },
+  },
+&lt;/script&gt;
+
+</code></pre>
+<h2 id="侦听器watch"><a href="#侦听器watch" class="headerlink" title="侦听器watch"></a>侦听器watch</h2><ul>
+<li><p>在某些项目中，我们需要在数据发生改变后立即执行某些行为（而不是得到新数据），那么针对这样的情况，我们使用watch侦听器比较合适。</p>
+</li>
+<li><p><strong>实际项目中，我们有时候会对诸如异步数据进行监听，此时我们需要watch来协助</strong></p>
+</li>
+<li><p>基本语法：</p>
+</li>
+</ul>
+<pre><code class="vue">...
+watch:{
+    变量名&lt;data中定义的变量&gt;(newValue){
+        ...    
+    }
+}
+</code></pre>
+<h2 id="vue生命周期"><a href="#vue生命周期" class="headerlink" title="vue生命周期"></a>vue生命周期</h2><p style="background:#ff3300;color:#fff;font-weight:bold;text-align:center">生命周期表示组件从创建到销毁的完整过程!</p>
+
+<h3 id="四大阶段："><a href="#四大阶段：" class="headerlink" title="四大阶段："></a>四大阶段：</h3><ul>
+<li>诸如vue和react一类的框架，大部分都有生命周期<strong>钩子方法</strong>这么一个说法，为什么需要生命周期呢？因为我们需要建立一个组件从开始到销毁的整个节点把控系统。比如，组件刚开始渲染的时候，数据是异步的，怎么办？那就在初始化生命周期（比如create）的时候，发送ajax请求。</li>
+</ul>
+<h4 id="create阶段—–数据阶段"><a href="#create阶段—–数据阶段" class="headerlink" title="create阶段—–数据阶段"></a>create阶段—–数据阶段</h4><ul>
+<li><p>beforeCreate()—–数据创建之前</p>
+<ul>
+<li>在beforeCreate阶段，vue实例的挂载元素el和数据对象data都为undefined,还未初始化。</li>
+</ul>
+</li>
+<li><p>created()—–数据创建完毕</p>
+<ul>
+<li>在created阶段，vue实例的数据data有了，el还没有。</li>
+</ul>
+</li>
+<li><p><strong>注意：创建阶段：主要是处理数据（主要：对数据进行挟持，把data对象上的数据挂到了this实例上）！！</strong></p>
+</li>
+</ul>
+<h4 id="mount阶段—–渲染阶段"><a href="#mount阶段—–渲染阶段" class="headerlink" title="mount阶段—–渲染阶段"></a>mount阶段—–渲染阶段</h4><ul>
+<li>beforeMount()—–数据渲染之前<ul>
+<li>在beforeMount阶段，vue实例的$el和data都初始化了,单还没有挂载之前都是虚拟的demo阶段,data.message还未替换。</li>
+</ul>
+</li>
+<li>mounted()—–数据渲染完毕<ul>
+<li>在mounted阶段,vue实例挂载完后,data.message成功渲染。</li>
+</ul>
+</li>
+<li><strong>注意：挂载阶段：主要是合成数据和视图模板，先在内存完成虚拟dom解析，最后一次dom操作直接更新到页面。</strong></li>
+</ul>
+<h4 id="update阶段—–更新阶段"><a href="#update阶段—–更新阶段" class="headerlink" title="update阶段—–更新阶段"></a>update阶段—–更新阶段</h4><ul>
+<li>beforeUpdate()—–数据更新之前</li>
+<li>updated()—–数据更新完毕</li>
+<li>当data变化后,针对视图发生更新前后触发beforeUpdata和updata方法。</li>
+<li><strong>注意：更新阶段：主要是完成对视图的动态修改。</strong></li>
+</ul>
+<h4 id="destroy阶段—–销毁阶段"><a href="#destroy阶段—–销毁阶段" class="headerlink" title="destroy阶段—–销毁阶段"></a>destroy阶段—–销毁阶段</h4><ul>
+<li>beforeDestroy—–数据销毁之前</li>
+<li>destroyed—–数据销毁完毕</li>
+<li>在执行destroy方法后，对data的改变不会再触发周期函数，说明此时vue实例已经结束了事件监听以及和dom的绑定，但是dom结构依然存在。</li>
+<li><strong>注意：销毁阶段：主要是完成对组件的回收。</strong></li>
+</ul>
+<p><strong>以上都可以叫做钩子函数</strong></p>
+<h4 id="发请求的最佳时间"><a href="#发请求的最佳时间" class="headerlink" title="发请求的最佳时间"></a>发请求的最佳时间</h4><pre><code class="vue">发请求最佳时间：大部分场景都会操作dom，就放到created生命周期钩子函数里面
+created(){
+this.$nextTick(() =&gt; { /* code */ })
+}
+</code></pre>
+<p><img src="/2021/06/11/vue2.0/H5前端知识汇总\imgs\vue声明周期.jpeg" alt="img"></p>
+<h2 id="组件通信特征"><a href="#组件通信特征" class="headerlink" title="组件通信特征"></a>组件通信特征</h2><ul>
+<li><p>所有UI框架的组件都具备通信特征，具体通信类型有三种：</p>
+<ul>
+<li>父传子<ul>
+<li>属性通信</li>
+</ul>
+</li>
+<li>子传父<ul>
+<li>$emit,$on</li>
+</ul>
+</li>
+<li>兄弟传兄弟（无视层级通信）<ul>
+<li>第三方BUS集成$emit,$on</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="父传子（属性通信）"><a href="#父传子（属性通信）" class="headerlink" title="父传子（属性通信）"></a><strong>父传子</strong>（属性通信）</h3><ul>
+<li>父传子直接基于属性通信即可，很基础</li>
+</ul>
+<h4 id="父传子案例"><a href="#父传子案例" class="headerlink" title="父传子案例"></a>父传子案例</h4><pre><code class="vue">主页面
+&lt;template&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;!-- &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt; --&gt;
+    &lt;Item v-for=&quot;(item, index) in goodsList&quot; :key=&quot;index&quot; :price=&quot;item.price&quot; :proname=&quot;item.proname&quot; :num=&quot;item.num&quot; :shop=&quot;item.shop&quot; :img=&quot;item.img&quot; /&gt;
+    &lt;!-- &lt;/div&gt; --&gt;
+    &lt;!-- &lt;/div&gt; --&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+import Item from &quot;./Item&quot;;
+export default {
+  components: {
+    Item,
+  },
+子页面
+&lt;template&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img :src=&quot;img&quot; alt=&quot;&quot; /&gt;
+    &lt;p&gt;￥{{ (price * 1).toFixed(2) }}&lt;/p&gt;
+    &lt;p&gt;{{ proname }}&lt;/p&gt;
+    &lt;p&gt;{{ num }}&lt;/p&gt;
+    &lt;p&gt;{{ shop }}&lt;/p&gt;
+    &lt;p&gt;&lt;button&gt;加入购物车&lt;/button&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: [&quot;price&quot;, &quot;proname&quot;, &quot;num&quot;, &quot;shop&quot;, &quot;img&quot;],
+};
+&lt;/script&gt;
+</code></pre>
+<h3 id="子传父（-emit-on）"><a href="#子传父（-emit-on）" class="headerlink" title="子传父（$emit,$on）"></a><strong>子传父</strong>（$emit,$on）</h3><p>  子传父是基于Vue自定义事件系统实现的，我们需要先认识vue的自定义事件系统</p>
+<p>  Vue构造函数原型方法中有一个<code>$on</code>和<code>$emit</code>，它俩的作用：</p>
+<ul>
+<li><p>$on</p>
+<ol>
+<li><p>监听事件</p>
+</li>
+<li><p>接受数据</p>
+</li>
+<li><pre><code class="js">this.$on(&#39;事件名&#39;,data=&gt;{
+    ...
+})
+</code></pre>
+</li>
+</ol>
+</li>
+<li><p>$emit</p>
+<ul>
+<li><p>触发事件</p>
+</li>
+<li><p>传递数据</p>
+</li>
+<li><pre><code class="js">this.$emit(&#39;事件名&#39;,&#39;要传递的数据&#39;)
+</code></pre>
+</li>
+</ul>
+<p>关于$on和$emit的配合，我们需要知道的是：</p>
+</li>
+<li><p>Vue是整个应用最大的上下文</p>
+</li>
+<li>$on监听的事件和执行函数，都挂载到了Vue身上</li>
+<li>$emit触发事件，就是去Vue身上找到对应事件，从而调用事件方法</li>
+<li><strong>而每一个组件其实都继承自Vue，所以，基于$on和$emit我们可以随意进行数据传递（最好使用BUS，详见后文）</strong></li>
+</ul>
+<ul>
+<li><p>回到子传父，其基本思路就是：</p>
+<ul>
+<li>子组件内部通过<code>this.$emit</code>触发事件</li>
+<li>父组件通过@或者v-on在子组件标签身上监听事件</li>
+</ul>
+</li>
+</ul>
+<h3 id="兄弟传兄弟（无视层级通信）（第三方BUS集成-emit-on）"><a href="#兄弟传兄弟（无视层级通信）（第三方BUS集成-emit-on）" class="headerlink" title="兄弟传兄弟（无视层级通信）（第三方BUS集成$emit,$on）"></a><strong>兄弟传兄弟（无视层级通信）</strong>（第三方BUS集成$emit,$on）</h3><ul>
+<li><p>其实本质上就是上面$on和$emit的一个函数式写法。</p>
+</li>
+<li><p>在无视层级的书写过程中，我们往往需要一个第三方独立空间来管理监听的事件，此时非常推荐使用一个全新独立的Vue实例。</p>
+</li>
+<li><p>实现思路：</p>
+<ul>
+<li>创建一个BUS文件:内部暴露一个Vue的实例</li>
+<li>在需要发送数据的组件内，合适的位置，使用BUS.$emit来触发自定义事件</li>
+<li>在需要接受数据的组件内，mounted生命周期，使用BUS.$on来监听事件</li>
+</ul>
+<h3 id="组件实例通信"><a href="#组件实例通信" class="headerlink" title="组件实例通信"></a>组件实例通信</h3></li>
+<li><p>在vue中有一个叫ref的api，他让我可以获取一个组件的实例，一旦获取到组件实例后，当前组件相关数据和方法我们都可以无障碍使用了</p>
+</li>
+<li><p>首先，ref的使用方式：</p>
+<pre><code class="vue">&lt;组件 ref=&quot;标记名&quot;&gt;&lt;/组件&gt;
+</code></pre>
+</li>
+<li><p>获取标记的ref：</p>
+<pre><code class="js">this.$refs[标记名]
+</code></pre>
+</li>
+<li><p>注意：通过ref，可以获取子组件身上大部分信息，是通信环节中比较重要的一环。但是，仅限于父组件获取子组件信息的场景</p>
+</li>
+</ul>
+<h2 id="组件详解"><a href="#组件详解" class="headerlink" title="组件详解"></a>组件详解</h2><ul>
+<li>vue组件的一些基本特性：<ul>
+<li>视图模板——template</li>
+<li>自身逻辑——script</li>
+<li>接受属性——props</li>
+<li>通信特征</li>
+<li>自定义事件</li>
+<li>v-model语法糖应用</li>
+</ul>
+</li>
+</ul>
+<h3 id="组件视图模板"><a href="#组件视图模板" class="headerlink" title="组件视图模板"></a>组件视图模板</h3><ul>
+<li>视图模板主要指的是<code>&lt;template&gt;&lt;/template&gt;</code></li>
+</ul>
+<h3 id="组件自身逻辑"><a href="#组件自身逻辑" class="headerlink" title="组件自身逻辑"></a>组件自身逻辑</h3><ul>
+<li>组件自身逻辑主要指的是<code>&lt;script&gt;&lt;/script&gt;</code>,而一个组件逻辑内部常用的一些设定都有：</li>
+</ul>
+<h4 id="data——定义组件自身内部数据"><a href="#data——定义组件自身内部数据" class="headerlink" title="data——定义组件自身内部数据"></a>data——定义组件自身内部数据</h4><ul>
+<li>必须，data必须是函数</li>
+<li>必须，data必须返回一个对象，对象内就是定义的组件自身的数据</li>
+</ul>
+<h4 id="props——定义组件的属性"><a href="#props——定义组件的属性" class="headerlink" title="props——定义组件的属性"></a>props——定义组件的属性</h4><ul>
+<li>对象形式，数组形式</li>
+<li>对象形式的常用书写语法：</li>
+</ul>
+<pre><code class="js">// 属性名：属性类型
+props:{
+    num:Number,
+    words:String
+}
+</code></pre>
+<pre><code class="js">// 完整声明+自定义规则
+props:{
+    num:{
+        type:Number, // 类型
+        default: 10  //默认值
+    }
+}
+
+// 引用类型声明和基本类型有区别
+props:{
+    obj:{
+        type:Object,
+        default:()=&gt;({name:&#39;张三&#39;,age:30})
+    },
+    arr:{
+        type:Array,
+        default:()=&gt;([1,2,3,4,5])
+    }
+}
+</code></pre>
+<ul>
+<li>数组形式的常用书写方法</li>
+</ul>
+<pre><code class="js">props:[&#39;num&#39;,&#39;arr&#39;,&#39;obj&#39;]
+</code></pre>
+<h4 id="methods——定义组件自身的方法"><a href="#methods——定义组件自身的方法" class="headerlink" title="methods——定义组件自身的方法"></a>methods——定义组件自身的方法</h4><h4 id="watch——监听组件内部数据的变化"><a href="#watch——监听组件内部数据的变化" class="headerlink" title="watch——监听组件内部数据的变化"></a>watch——监听组件内部数据的变化</h4><h4 id="computed——计算属性，根据当前数据衍生出新的数据"><a href="#computed——计算属性，根据当前数据衍生出新的数据" class="headerlink" title="computed——计算属性，根据当前数据衍生出新的数据"></a>computed——计算属性，根据当前数据衍生出新的数据</h4><h4 id="生命周期钩子——在每一个生命周期阶段，自动执行"><a href="#生命周期钩子——在每一个生命周期阶段，自动执行" class="headerlink" title="生命周期钩子——在每一个生命周期阶段，自动执行"></a>生命周期钩子——在每一个生命周期阶段，自动执行</h4><h4 id="filter——过滤器（新版本已经废除）"><a href="#filter——过滤器（新版本已经废除）" class="headerlink" title="filter——过滤器（新版本已经废除）"></a>filter——过滤器（新版本已经废除）</h4><h4 id="components——注册子组件"><a href="#components——注册子组件" class="headerlink" title="components——注册子组件"></a>components——注册子组件</h4><h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><ul>
+<li><p>定义：插槽，能帮助我们让组件具有容器特性。一个设置了插槽的组件就可以包含别的内容（组件）了</p>
+</li>
+<li><p>插槽分为三种：</p>
+<ol>
+<li>匿名插槽</li>
+<li>具名插槽</li>
+<li>作用域插槽（重难点）</li>
+</ol>
+</li>
+</ul>
+<h3 id="匿名插槽"><a href="#匿名插槽" class="headerlink" title="匿名插槽"></a>匿名插槽</h3><ul>
+<li>在组件内直接定义<code>&lt;slot&gt;&lt;/slot&gt;</code>，就可以接受外界被包含的内容了</li>
+</ul>
+<h4 id="组件：SlotCmpt"><a href="#组件：SlotCmpt" class="headerlink" title="组件：SlotCmpt"></a>组件：SlotCmpt</h4><pre><code class="vue">&lt;template&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p&gt;这是一个带有插槽的组件&lt;/p&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<h4 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h4><pre><code class="vue">&lt;SlotCmpt&gt;
+    &lt;h1&gt;这是包含的内容&lt;/h1&gt;
+&lt;/SlotCmpt&gt;
+</code></pre>
+<h3 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h3><ul>
+<li>顾名思义，就是为每一个插槽取一个名字，然后放置内容的时候都需要声明是那个插槽的内容</li>
+</ul>
+<h4 id="组件：NamedSlot"><a href="#组件：NamedSlot" class="headerlink" title="组件：NamedSlot"></a>组件：NamedSlot</h4><pre><code class="vue">&lt;template&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+    &lt;p&gt;这是一个具名插槽&lt;/p&gt;
+    &lt;slot name=&quot;header&quot;&gt;&lt;/slot&gt;
+    &lt;slot name=&quot;footer&quot;&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<h4 id="使用方式：-1"><a href="#使用方式：-1" class="headerlink" title="使用方式："></a>使用方式：</h4><pre><code class="vue">&lt;NamedSlot&gt;
+    &lt;template v-slot:header&gt;
+        &lt;h1&gt;这是头部&lt;/h1&gt;        
+    &lt;/template&gt;
+
+    &lt;template v-slot:footer&gt;
+        &lt;h1&gt;这是底部&lt;/h1&gt;
+    &lt;/template&gt;
+&lt;/NamedSlot&gt;
+</code></pre>
+<h3 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h3><ul>
+<li><p>作用域插槽是插槽中和具名插槽使用频率不相上下的一个板块</p>
+</li>
+<li><p>作用域插槽在组件通信中使用频率非常高！如果你希望做一个非常智能的组件，作用域插槽一定可以帮到你！</p>
+</li>
+</ul>
+<h4 id="组件：ScopeSlot"><a href="#组件：ScopeSlot" class="headerlink" title="组件：ScopeSlot"></a>组件：ScopeSlot</h4><pre><code class="vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;这是一个作用域插槽&lt;/p&gt;
+    &lt;!-- 
+        外界接收到的作用域对象长这样：
+            {name1,name2,name3}
+     --&gt;
+    &lt;slot :person1=&quot;name1&quot; :person2=&quot;name2&quot; :person3=&quot;name3&quot;&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<h4 id="使用方式：-2"><a href="#使用方式：-2" class="headerlink" title="使用方式："></a>使用方式：</h4><pre><code class="vue">&lt;div&gt;
+    &lt;p&gt;下面颁发今年源码时代，最受欢迎原创代码奖：&lt;/p&gt;
+    &lt;ScopeSlot&gt;
+        &lt;!-- 
+        1.此处的persons是自己定义的名字
+        2.persons代表了子组件内整个作用域插槽
+        --&gt;
+        &lt;template v-slot=&quot;persons&quot;&gt;
+            {{ persons }}
+        &lt;/template&gt;
+    &lt;/ScopeSlot&gt;
+    &lt;!-- 还可以通过解构的方式来获取子组件的数据 --&gt;
+    &lt;ScopeSlot&gt;
+        &lt;template v-slot=&quot;{ person1 }&quot;&gt;
+            {{ person1 }}
+        &lt;/template&gt;
+    &lt;/ScopeSlot&gt;
+&lt;/div&gt;
+</code></pre>
+<h1 id="Vue路由守卫"><a href="#Vue路由守卫" class="headerlink" title="Vue路由守卫"></a>Vue路由守卫</h1><h2 id="导航守卫的定义"><a href="#导航守卫的定义" class="headerlink" title="导航守卫的定义"></a>导航守卫的定义</h2><ul>
+<li>正如其名，<code>vue-router</code> 提供的导航守卫主要用来通过跳转或取消的方式守卫导航。有多种机会植入路由导航过程中：全局的, 单个路由独享的, 或者组件级的。</li>
+<li>记住<strong>参数或查询的改变并不会触发进入/离开的导航守卫</strong>。你可以通过<a href="https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#响应路由参数的变化" target="_blank" rel="noopener">观察 <code>$route</code> 对象</a>来应对这些变化，或使用 <code>beforeRouteUpdate</code> 的组件内守卫。</li>
+</ul>
+<h2 id="守卫分类"><a href="#守卫分类" class="headerlink" title="守卫分类"></a>守卫分类</h2><h3 id="全局前置守卫"><a href="#全局前置守卫" class="headerlink" title="全局前置守卫"></a>全局前置守卫</h3><ul>
+<li>用法：你可以使用 <code>router.beforeEach</code> 注册一个全局前置守卫</li>
+</ul>
+<pre><code class="js">const router = new VueRouter({ ... })
+
+router.beforeEach((to, from, next) =&gt; {
+  // ...
+})
+</code></pre>
+<ul>
+<li>解析：当一个导航触发时，全局前置守卫按照创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 resolve 完之前一直处于 <strong>等待中</strong>。</li>
+<li>每个守卫方法接收三个参数：</li>
+</ul>
+<h4 id="to-Route"><a href="#to-Route" class="headerlink" title="to: Route"></a><strong><code>to: Route</code></strong></h4><ul>
+<li>即将要进入的目标 <a href="https://router.vuejs.org/zh/api/#路由对象" target="_blank" rel="noopener">路由对象</a></li>
+</ul>
+<h4 id="from-Route"><a href="#from-Route" class="headerlink" title="from: Route"></a><strong><code>from: Route</code></strong></h4><ul>
+<li>当前导航正要离开的路由</li>
+</ul>
+<h4 id="next-Function"><a href="#next-Function" class="headerlink" title="next: Function"></a><strong><code>next: Function</code></strong></h4><ul>
+<li><p>一定要调用该方法来 <strong>resolve</strong> 这个钩子。执行效果依赖 <code>next</code> 方法的调用参数。</p>
+<ul>
+<li><strong><code>next()</code></strong>: 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 <strong>confirmed</strong> (确认的)。</li>
+<li><strong><code>next(false)</code></strong>: 中断当前的导航。如果浏览器的 URL 改变了 (可能是用户手动或者浏览器后退按钮)，那么 URL 地址会重置到 <code>from</code> 路由对应的地址。</li>
+<li><strong><code>next(&#39;/&#39;)</code> 或者 <code>next({ path: &#39;/&#39; })</code></strong>: 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。你可以向 <code>next</code> 传递任意位置对象，且允许设置诸如 <code>replace: true</code>、<code>name: &#39;home&#39;</code> 之类的选项以及任何用在 <a href="https://router.vuejs.org/zh/api/#to" target="_blank" rel="noopener"><code>router-link</code> 的 <code>to</code> prop</a> 或 <a href="https://router.vuejs.org/zh/api/#router-push" target="_blank" rel="noopener"><code>router.push</code></a> 中的选项。</li>
+<li><strong><code>next(error)</code></strong>: (2.4.0+) 如果传入 <code>next</code> 的参数是一个 <code>Error</code> 实例，则导航会被终止且该错误会被传递给 <a href="https://router.vuejs.org/zh/api/#router-onerror" target="_blank" rel="noopener"><code>router.onError()</code></a> 注册过的回调。</li>
+</ul>
+</li>
+<li><p><strong>确保 <code>next</code> 函数在任何给定的导航守卫中都被严格调用一次。它可以出现多于一次，但是只能在所有的逻辑路径都不重叠的情况下，否则钩子永远都不会被解析或报错</strong>。这里有一个在用户未能验证身份时重定向到 <code>/login</code> 的示例：</p>
+</li>
+</ul>
+<pre><code class="js">// BAD
+router.beforeEach((to, from, next) =&gt; {
+  if (to.name !== &#39;Login&#39; &amp;&amp; !isAuthenticated) next({ name: &#39;Login&#39; })
+  // 如果用户未能验证身份，则 `next` 会被调用两次
+  next()
+})
+
+// GOOD
+router.beforeEach((to, from, next) =&gt; {
+  if (to.name !== &#39;Login&#39; &amp;&amp; !isAuthenticated) next({ name: &#39;Login&#39; })
+  else next()
+})
+</code></pre>
+<h3 id="全局解析守卫"><a href="#全局解析守卫" class="headerlink" title="全局解析守卫"></a>全局解析守卫</h3><ul>
+<li>在 2.5.0+ 你可以用 <code>router.beforeResolve</code> 注册一个全局守卫。这和 <code>router.beforeEach</code> 类似，区别是在导航被确认之前，<strong>同时在所有组件内守卫和异步路由组件被解析之后</strong>，解析守卫就被调用。<strong>(2.5.0新增)</strong></li>
+</ul>
+<h3 id="全局后置钩子"><a href="#全局后置钩子" class="headerlink" title="全局后置钩子"></a>全局后置钩子</h3><ul>
+<li>你也可以注册全局后置钩子，然而和守卫不同的是，这些钩子不会接受 <code>next</code> 函数也不会改变导航本身</li>
+</ul>
+<pre><code class="js">router.afterEach((to, from) =&gt; {
+  // ...
+})
+</code></pre>
+<h3 id="路由独享的守卫"><a href="#路由独享的守卫" class="headerlink" title="路由独享的守卫"></a>路由独享的守卫</h3><ul>
+<li>你可以在路由配置上直接定义 <code>beforeEnter</code> 守卫，这些守卫与全局前置守卫的方法参数是一样的。</li>
+</ul>
+<pre><code class="js">const router = new VueRouter({
+  routes: [
+    {
+      path: &#39;/foo&#39;,
+      component: Foo,
+      beforeEnter: (to, from, next) =&gt; {
+        // ...
+      }
+    }
+  ]
+})
+</code></pre>
+<h3 id="组件内的守卫"><a href="#组件内的守卫" class="headerlink" title="组件内的守卫"></a>组件内的守卫</h3><ul>
+<li>最后，你可以在路由组件内直接定义以下路由导航守卫：</li>
+</ul>
+<h4 id="beforeRouteEnter"><a href="#beforeRouteEnter" class="headerlink" title="beforeRouteEnter"></a><code>beforeRouteEnter</code></h4><h4 id="beforeRouteUpdate-2-2-新增"><a href="#beforeRouteUpdate-2-2-新增" class="headerlink" title="beforeRouteUpdate (2.2 新增)"></a><code>beforeRouteUpdate</code> (2.2 新增)</h4><h4 id="beforeRouteLeave"><a href="#beforeRouteLeave" class="headerlink" title="beforeRouteLeave"></a><code>beforeRouteLeave</code></h4><pre><code class="js">const Foo = {
+  template: `...`,
+  beforeRouteEnter(to, from, next) {
+    // 在渲染该组件的对应路由被 confirm 前调用
+    // 不！能！获取组件实例 `this`
+    // 因为当守卫执行前，组件实例还没被创建
+  },
+  beforeRouteUpdate(to, from, next) {
+    // 在当前路由改变，但是该组件被复用时调用
+    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，
+    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。
+    // 可以访问组件实例 `this`
+  },
+  beforeRouteLeave(to, from, next) {
+    // 导航离开该组件的对应路由时调用
+    // 可以访问组件实例 `this`
+  }
+}
+</code></pre>
+<ul>
+<li><p><code>beforeRouteEnter</code> 守卫 <strong>不能</strong> 访问 <code>this</code>，因为守卫在导航确认前被调用，因此即将登场的新组件还没被创建。</p>
+</li>
+<li><p>不过，你可以通过传一个回调给 <code>next</code>来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。</p>
+</li>
+</ul>
+<pre><code class="js">beforeRouteEnter (to, from, next) {
+  next(vm =&gt; {
+    // 通过 `vm` 访问组件实例
+  })
+}
+</code></pre>
+<ul>
+<li>注意 <code>beforeRouteEnter</code> 是支持给 <code>next</code> 传递回调的唯一守卫。对于 <code>beforeRouteUpdate</code> 和 <code>beforeRouteLeave</code> 来说，<code>this</code> 已经可用了，所以<strong>不支持</strong>传递回调，因为没有必要了。</li>
+</ul>
+<pre><code class="js">beforeRouteUpdate (to, from, next) {
+  // just use `this`
+  this.name = to.params.name
+  next()
+}
+</code></pre>
+<ul>
+<li>这个离开守卫通常用来禁止用户在还未保存修改前突然离开。该导航可以通过 <code>next(false)</code> 来取消。</li>
+</ul>
+<pre><code class="js">beforeRouteLeave (to, from, next) {
+  const answer = window.confirm(&#39;Do you really want to leave? you have unsaved changes!&#39;)
+  if (answer) {
+    next()
+  } else {
+    next(false)
+  }
+}
+</code></pre>
+<h2 id="完整的导航解析流程"><a href="#完整的导航解析流程" class="headerlink" title="完整的导航解析流程"></a>完整的导航解析流程</h2><ol>
+<li>导航被触发。</li>
+<li>在失活的组件里调用 <code>beforeRouteLeave</code> 守卫。</li>
+<li>调用全局的 <code>beforeEach</code> 守卫。</li>
+<li>在重用的组件里调用 <code>beforeRouteUpdate</code> 守卫 (2.2+)。</li>
+<li>在路由配置里调用 <code>beforeEnter</code>。</li>
+<li>解析异步路由组件。</li>
+<li>在被激活的组件里调用 <code>beforeRouteEnter</code>。</li>
+<li>调用全局的 <code>beforeResolve</code> 守卫 (2.5+)。</li>
+<li>导航被确认。</li>
+<li>调用全局的 <code>afterEach</code> 钩子。</li>
+<li>触发 DOM 更新。</li>
+<li>调用 <code>beforeRouteEnter</code> 守卫中传给 <code>next</code> 的回调函数，创建好的组件实例会作为回调函数的参数传入。</li>
+</ol>
+
+                </div>
+                <!-- .entry-content -->
+                <div class="single-reward">
+                  <div class="reward-open">赏
+                    <div class="reward-main">
+                      <ul class="reward-row">
+                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/zfbQR.jpg"></li>
+                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/weixinQR.jpg"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center; width: 100%" class="social-share share-mobile"
+                  data-disabled="diandian, tencent"></div>
+                <!-- <footer class="post-footer">
+                  <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+                      target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+                      岂能尽如人意，但求无愧我心！</a></div>
+                  <div class="post-tags">
+                  </div>
+                  <div class="post-share">
+                    <div class="social-share sharehidden share-component"></div>
+                    <i class="iconfont show-share icon-forward"></i>
+                  </div>
+                </footer>.entry-footer -->
+          </article>
+          <!-- #post-## -->
+          <div class="toc" style="background: none;"></div>
+          <section class="post-squares nextprev">
+            
+              
+                <div class="post-nepre half previous">
+                  
+                        <a href="/2021/06/28/vue3.0/" rel="prev">
+                          <div class="background">
+                            <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/vuethree.jpg"
+                              style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                              onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/vuethree.jpg">
+                          </div>
+                          <span class="label">
+                            Previous Post</span>
+                          <div class="info">
+                            <h3>
+                              Vue3.0
+                            </h3>
+                            <hr>
+                          </div>
+                        </a>
+                    </div>
+                    
+                      
+                        
+                          <div class="post-nepre half next">
+                            
+                                  <a href="/2021/03/20/git的基本使用/" rel="next">
+                                    <div class="background">
+                                      <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
+                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/git.jpg"
+                                        style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/git.jpg">
+                                    </div>
+                                    <span class="label">
+                                      Next Post</span>
+                                    <div class="info">
+                                      <h3>
+                                        Git
+                                      </h3>
+                                      <hr>
+                                    </div>
+                                  </a>
+                              </div>
+                              
+          </section>
+          
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function () {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz",
+        appKey: "9m413jYIug2cFvhs6TtILisl",
+        path: window.location.pathname,
+        placeholder: "想说什么，你就说吧 ...",
+        avatar: 'robohash',
+      })
+    }
+  </script>
+  
+            <section class="author-profile">
+              <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                <a href="javascript:;" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg" itemprop="image"
+                    alt="Ayu" height="70" width="70"></a>
+                <div class="meta">
+                  <span class="title">Author</span>
+                  <h3 itemprop="name">
+                    <a href="javascript:;" itemprop="url" rel="author">
+                      Ayu
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <hr>
+              <p><i class="iconfont icon-write"></i>
+                人的一切都应是美的，外貌、衣裳、灵魂、思想。
+              </p>
+            </section>
+        </main><!-- #main -->
+      </div><!-- #primary -->
+    </div>
+
+    
+        </div>
+        <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+          <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ayu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;"><i class="iconfont icon-sakura rotating"
+          style="color: #ffc0cb;display:inline-block"></i>
+        <span style="color: #b9b9b9;">Where <a href="javascript:;"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">there</a> is a <a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);"></a><a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">will</a>,
+          there is a way</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "close" }, "windowheight": "fixed", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  } else {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "open" }, "windowheight": "auto", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  }
+/* ]]> */
+
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+            <div class="openNav no-select" style="height: 50px;">
+              <div class="iconflat no-select" style="width: 50px; height: 50px;">
+                <div class="icon"></div>
+              </div>
+              <div class="site-branding search-form-submit">
+                <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+              </div>
+            </div>
+    </section>
+    <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+        <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+          <div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn">
+        <span id="open-skinMenu"> 切换主题
+            <i class="iconfont icon-gear inline-block rotating"></i>
+        </span>
+    </div>
+</div>
+            <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  </body>
+
+  </html>

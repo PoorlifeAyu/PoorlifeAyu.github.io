@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Node Js、Webpack | Poorlife</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "个人博客Ayu";
+  mashiro_option.author_name = "Ayu";
+  mashiro_option.site_url = "";
+  mashiro_option.v_appId = "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz";
+  mashiro_option.v_appKey = "9m413jYIug2cFvhs6TtILisl";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+
+  <body
+    class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar">
+    </div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+      <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="">
+          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>
+          谁给我一滴水，我便回报他整个大海。
+        </p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                  <li>
+                    <a href="https://github.com/PoorlifeAyu" target="_blank" class="social-github" title="github">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/github.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://weibo.com/u/6030188226" target="_blank" class="social-github" title="sina">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/sina.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://music.163.com/" target="_blank" class="social-github" title="wangyiyun">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wangyiyun.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://mail.qq.com/cgi-bin/frame_html?sid=0j3LVIvsrSzKXR5_&amp;r=c8c502b38f105671c3cf4b6fb70a0ebd" target="_blank" class="social-github" title="email">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/email.svg">
+                    </a>
+                  </li>
+                  
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/wechat.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/qq.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                  <li>
+                    <a href="https://blog.csdn.net/Ayuzz?spm=1000.2115.3001.5343" target="_blank" class="social-github" title="csdn">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/csdn.png">
+                    </a>
+                  </li>
+                  
+                    
+                      
+                        <li id="bg-next">
+                          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+                        </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+        <div id="page" class="site wrapper">
+          <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">个人博客</span>
+            <span class="shironeko">Ayu</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/管理/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          管理
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          个人
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+            <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/nodejs.jpg);"
+      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/nodejs.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+        Node Js、Webpack
+      </h1>
+      <p class="entry-census">
+        <span>
+          <a href="javascript:;">
+            <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="javascript:;">
+            Ayu
+          </a>
+        </span>
+        <span class="bull">
+          ·</span>
+        2021-3-15<span class="bull">
+            ·</span>
+          <span id="busuanzi_value_page_pv"></span>次阅读
+      </p>
+    </header>
+  </div>
+  
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <article id="post-1"
+            class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+            <div class="toc"></div>
+            <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+            
+                <div class="entry-content">
+                  <h1 id="Node-Js入门及配置"><a href="#Node-Js入门及配置" class="headerlink" title="Node Js入门及配置"></a>Node Js入门及配置</h1><h2 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h2><ul>
+<li><p>下载msi文件</p>
+</li>
+<li><p>傻瓜式安装</p>
+<blockquote>
+<p>nodejs  安装路径：C:\Program Files\nodejs\</p>
+</blockquote>
+</li>
+<li><p>打开cmd命令行工具</p>
+<pre><code class="js">node -v
+
+npm -v 
+</code></pre>
+</li>
+</ul>
+<h2 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h2><ul>
+<li><p>dir    查询目录及目录下所有文件</p>
+</li>
+<li><p>cd 路径     跳转到某个路径</p>
+</li>
+<li><p>盘符：     切换路径到某个盘符</p>
+</li>
+<li><p>cls        清屏</p>
+</li>
+<li><p>ctrl+c    中断程序</p>
+</li>
+<li><p>快捷进入某个目录</p>
+<blockquote>
+<p>直接在目录的路径上 输入 cmd</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><ul>
+<li>此电脑–右键–属性</li>
+<li>高级系统设置</li>
+<li>环境变量</li>
+<li>path </li>
+<li>添加 C:\Program Files\nodejs\  到path 的最后</li>
+</ul>
+<h2 id="Node运行js代码"><a href="#Node运行js代码" class="headerlink" title="Node运行js代码"></a>Node运行js代码</h2><ul>
+<li><p>直接运行js文件</p>
+<pre><code class="js">node js文件路径
+</code></pre>
+</li>
+<li><p>直接运行js代码</p>
+<pre><code class="cmd">node 
+</code></pre>
+<pre><code class="js">let a=100;let b=1000;conosle.log(a+b);
+</code></pre>
+</li>
+</ul>
+<h2 id="Node模块"><a href="#Node模块" class="headerlink" title="Node模块"></a>Node模块</h2><ul>
+<li>一个js文件就是 一个模块</li>
+<li>模块与模块之间 有 依赖关系</li>
+<li><p>包：多个模块组合起来的</p>
+</li>
+<li><p>主模块：整个项目的入口</p>
+</li>
+</ul>
+<h2 id="模块的导入与导出"><a href="#模块的导入与导出" class="headerlink" title="模块的导入与导出"></a>模块的导入与导出</h2><blockquote>
+<p>注意：js模块中能够导入任何的文件格式  css  .mp4 .jpg  </p>
+</blockquote>
+<ul>
+<li><p>js模块导入其他文件格式的语法</p>
+<pre><code class="js">require(&#39;文件路径&#39;)     // 相对路径 绝对路径 完整的url地址
+</code></pre>
+</li>
+<li><p>js模块导入js模块的语法</p>
+<ul>
+<li>js模块导出</li>
+</ul>
+<pre><code class="js">//a.js
+let str = &#39;xxzczxczxcxzc&#39;;
+let arr = [12112, 48, 45, 54, 45];
+let name = &#39;张麻子&#39;;
+
+//导出语句-暴露
+module.exports = {
+    str,
+    arr,
+    name
+}
+</code></pre>
+<ul>
+<li>js模块导入</li>
+</ul>
+<pre><code class="js">//b.js---主模块
+//导入的文件
+//接收暴露的数据
+let a = require(&#39;./a.js&#39;);
+console.log(a);
+console.log(a.str);
+</code></pre>
+<ul>
+<li>cmd Node环境运行</li>
+</ul>
+<pre><code class="js">node b.js
+</code></pre>
+</li>
+</ul>
+<h2 id="css文件相互引入"><a href="#css文件相互引入" class="headerlink" title="css文件相互引入"></a>css文件相互引入</h2><pre><code class="css">/*base.css*/
+p {
+    font-size: 40px;
+    font-weight: 600;
+}
+</code></pre>
+<pre><code class="css">/*index.css*/
+/*css文件引入其他的css文件 方法*/
+@import url(&#39;./base.css&#39;);
+p {
+    color: red;
+}
+</code></pre>
+<h2 id="三方包的使用"><a href="#三方包的使用" class="headerlink" title="三方包的使用"></a>三方包的使用</h2><h3 id="npm的用法"><a href="#npm的用法" class="headerlink" title="npm的用法"></a>npm的用法</h3><ul>
+<li>作用：三方包管理工具<ul>
+<li>npm官网</li>
+<li>淘宝镜像</li>
+</ul>
+</li>
+</ul>
+<h4 id="npm常用命令"><a href="#npm常用命令" class="headerlink" title="npm常用命令"></a>npm常用命令</h4><pre><code class="js">npm init       # 创建项目/初始化项目
+npm install 包名       # 下载三方包
+npm install 包名@版本号  # 下载具体的某个版本的包
+npm install 包名 -D     #下载开发环境使用的包
+npm install -g  包名    #全局安装某个包 
+npm uninstall 包名     # 卸载三方包
+npm install            # 下载所有的包
+</code></pre>
+<h4 id="npm-init创建项目"><a href="#npm-init创建项目" class="headerlink" title="npm init创建项目"></a>npm init<strong>创建项目</strong></h4><ul>
+<li><p>作用：创建/初始化项目–package.json 文件</p>
+<pre><code class="json">{
+  &quot;name&quot;: &quot;demo&quot;,   //项目名
+  &quot;version&quot;: &quot;1.0.1&quot;,   //版本号
+  &quot;description&quot;: &quot;&quot;,    //描述信息
+  &quot;main&quot;: &quot;index.js&quot;,   //入口文件--主模块
+  &quot;scripts&quot;: {          //命名工具
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,      //作者
+  &quot;license&quot;: &quot;ISC&quot;   //开源协议
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="案列示范（导入jQuery包）"><a href="#案列示范（导入jQuery包）" class="headerlink" title="案列示范（导入jQuery包）"></a>案列示范（导入jQuery包）</h2><pre><code class="js">//在项目根目录下 
+npm install jquery  
+</code></pre>
+<pre><code class="js">//在入口文件-主模块 index.js
+let jquery  = require(&#39;jquery&#39;);
+console.log(jquery);
+</code></pre>
+<h2 id="yarn安装"><a href="#yarn安装" class="headerlink" title="yarn安装"></a>yarn安装</h2><ul>
+<li><p>作用：三方包管理工具</p>
+<pre><code class="js">npm install -g yarn 
+</code></pre>
+<pre><code class="js">C:\Users\Administrator\AppData\Roaming\npm 
+删除所有的 .ps1文件
+</code></pre>
+<pre><code class="js">yarn init -y     #快速创建/初始化项目
+yarn add 包名    # 安装三方包
+yarn add 包名@版本号   #安装某个版本号的包
+yarn add 包名 -D      #安装本地开发环境的三方包
+yarn add global 包名    # 全局安装三方包
+yarn remove 包名        #删除包
+yarn                   #一次性安装所有的包
+</code></pre>
+</li>
+</ul>
+<p><strong><em>[注意]</em></strong>全局安装使用npm</p>
+<p>​        项目依赖安装使用yarn</p>
+<h2 id="设置镜像源"><a href="#设置镜像源" class="headerlink" title="设置镜像源"></a>设置镜像源</h2><h3 id="npm设置淘宝镜像"><a href="#npm设置淘宝镜像" class="headerlink" title="npm设置淘宝镜像"></a>npm设置淘宝镜像</h3><pre><code class="js">npm config set registry  https://registry.npm.taobao.org
+</code></pre>
+<pre><code class="js">npm config get registry
+</code></pre>
+<h3 id="yarn设置淘宝镜像"><a href="#yarn设置淘宝镜像" class="headerlink" title="yarn设置淘宝镜像"></a>yarn设置淘宝镜像</h3><pre><code class="js">yarn config set registry  https://registry.npm.taobao.org 
+</code></pre>
+<pre><code class="js">yarn config get registry  
+</code></pre>
+<h1 id="Webpack的基本使用"><a href="#Webpack的基本使用" class="headerlink" title="Webpack的基本使用"></a>Webpack的基本使用</h1><p><img src="/2021/03/15/Node、Webpack的基本使用/webpack.png" alt></p>
+<h2 id="webpack作用"><a href="#webpack作用" class="headerlink" title="webpack作用"></a>webpack作用</h2><ul>
+<li>将node环境下 js代码及各种资源文件转换为 浏览器可运行的静态资源</li>
+<li>将大文件 进行压缩</li>
+<li>将代码进行混淆</li>
+</ul>
+<p>webpack处理的文件</p>
+<ul>
+<li>js文件</li>
+<li><p>css 文件 less sass stylus  scss</p>
+</li>
+<li><p>图片</p>
+</li>
+</ul>
+<h2 id="webpack5大核心概念【重点】"><a href="#webpack5大核心概念【重点】" class="headerlink" title="webpack5大核心概念【重点】"></a>webpack5大核心概念<strong>【重点】</strong></h2><ol>
+<li>entry   入口文件</li>
+<li>output  出口文件 </li>
+<li>loader   解释器</li>
+<li>plugins   插件</li>
+<li>mode   环境</li>
+</ol>
+<h2 id="webpack安装及初始化项目"><a href="#webpack安装及初始化项目" class="headerlink" title="webpack安装及初始化项目"></a>webpack安装及初始化项目</h2><ul>
+<li><p>全局安装 webpack webpack-cli</p>
+<pre><code class="js">npm install webpack@5.11.0 webpack-cli  -g
+</code></pre>
+</li>
+<li><p>删除npm 文件中所有的 .ps1 文件【避坑】</p>
+<pre><code class="js">目录： C:\Users\Administrator\AppData\Roaming\npm
+</code></pre>
+</li>
+<li><p>项目初始化</p>
+<pre><code class="js">yarn init -y
+yarn add webpack@5.11.0 webpack-cli -D
+</code></pre>
+</li>
+</ul>
+<h2 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h2><pre><code class="js">webpack-demo
+├── src
+│   ├── css
+│   ├── fonts
+│   ├── img
+│   ├── js
+│   └── index.html
+├── package.json
+├── webpack.config.js
+└── yarn.lock
+</code></pre>
+<h2 id="配置webpack-config-js"><a href="#配置webpack-config-js" class="headerlink" title="配置webpack.config.js"></a>配置webpack.config.js</h2><pre><code class="js">/**webpack 打包配置文件
+ * author:cometang 2021-06-12
+ */
+module.exports = {
+    //五大概念导出
+    //入口
+    entry: &#39;&#39;,
+    //出口
+    output: {
+        filename: &#39;bundle.js&#39;
+    },
+    // loader 解释器
+    module: {
+        rules: [
+            //使用什么loader  对什么格式的文件 进行解释
+            { test: /\.css$/, use: &#39;&#39; }
+        ]
+    },
+    //plugins 插件
+    plugins: [
+
+    ],
+    //mode 环境
+    //development 本地开发环境
+    // production 线上生成环境
+    mode: &quot;development&quot;
+}
+</code></pre>
+<h2 id="打包js文件"><a href="#打包js文件" class="headerlink" title="打包js文件"></a>打包js文件</h2><ul>
+<li><p>目的：让原来不能够在浏览器运行的js文件能够支持运行</p>
+<blockquote>
+<p>前提工作： 创建 index.html  index.js  main.js(主模块) </p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="js">webpack-demo
+├── .vscode
+│   └── settings.json
+├── dist
+│   └── bundle.js
+├── src
+│   ├── css
+│   ├── fonts
+│   ├── img
+│   ├── js
+│   │   ├── index.js
+│   │   └── main.js
+│   └── index.html
+├── package.json
+├── webpack.config.js
+└── yarn.lock
+</code></pre>
+<ul>
+<li>修改webpack.config.js 配置</li>
+</ul>
+<pre><code class="js">//导入 nodejs 内直模块  获取项目根目录绝对路径
+const path = require(&#39;path&#39;);
+</code></pre>
+<pre><code class="js"> //入口
+  entry: &#39;./src/js/main.js&#39;,
+</code></pre>
+<pre><code class="js">//出口
+    output: {
+        // 出口文件 放置的位置  必须是绝对路径
+        // 出口文件的 文件名
+        path: path.resolve(__dirname, &#39;dist&#39;),
+        filename: &#39;bundle.js&#39;
+    },
+</code></pre>
+<pre><code class="js">&lt;body&gt;
+    &lt;script src=&quot;../dist/bundle.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>项目根目录下-cmd 命令行窗口 输入打包命令</li>
+</ul>
+<pre><code class="js">webpack 
+</code></pre>
+<h2 id="打包css文件"><a href="#打包css文件" class="headerlink" title="打包css文件"></a>打包css文件</h2><ul>
+<li>css文件支持打包</li>
+<li>css相互引入之后一样可以打包</li>
+<li>js中导入的css文件可以打包</li>
+</ul>
+<p>修改配置文件</p>
+<ul>
+<li>下载 css-loader   style-loader</li>
+<li>配置loader <code>module</code></li>
+</ul>
+<pre><code class="js">yarn add css-loader style-loader -D
+</code></pre>
+<pre><code class="js">  // loader 解释器
+    module: {
+        rules: [
+            //使用什么loader  对什么格式的文件 进行解释
+            //css-loader  让webpack 可以打包css代码
+            //style-loader   将打包完成之后的css代码 添加页面的 head-style标签中
+            { test: /\.css$/, use: [&#39;style-loader&#39;,&#39;css-loader&#39;] }
+        ]
+    },
+</code></pre>
+<h2 id="打包less文件"><a href="#打包less文件" class="headerlink" title="打包less文件"></a>打包less文件</h2><h3 id="less语法"><a href="#less语法" class="headerlink" title="less语法"></a>less语法</h3><pre><code class="js">/*变量*/
+@bgcolor:#f60;
+@fsize:14px;
+/*嵌套语法 嵌套层数不要超过三层*/
+.box{
+    width:200px;
+    height: 200px;
+    background-color: aqua;
+    .box1{
+        width: 150px;
+        height: 150px;
+        background-color: @bgcolor;
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+        }
+    }
+}
+</code></pre>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><ul>
+<li><p>下载loader  及less</p>
+<pre><code class="js">yarn add less-loader less -D
+</code></pre>
+</li>
+<li><p>配置loader </p>
+<pre><code class="js"> module: {
+        rules: [
+            //使用什么loader  对什么格式的文件 进行解释
+            //css-loader  让webpack 可以打包css代码
+            //style-loader   将打包完成之后的css代码 添加页面的 head-style标签中
+            { test: /\.css$/, use: [&#39;style-loader&#39;, &#39;css-loader&#39;] },
+            { test: /\.less$/, use: [&#39;style-loader&#39;, &#39;css-loader&#39;, &#39;less-loader&#39;] }
+        ]
+    },
+</code></pre>
+</li>
+</ul>
+<h2 id="打包css中的图片"><a href="#打包css中的图片" class="headerlink" title="打包css中的图片"></a>打包css中的图片</h2><ul>
+<li><p>下载loader   url-loader  file-loader</p>
+</li>
+<li><p>配置loader</p>
+<pre><code class="js">yarn add url-loader file-loader -D
+</code></pre>
+<pre><code class="js"> {
+                test: /\.(jpg|png|gif)$/,
+                loader: &#39;url-loader&#39;,
+                /** 详细配置*/
+                options: {
+                    //hash 随机32为字符  ext 获取文件后缀
+                    name: &#39;[hash:16].[ext]&#39;,
+                    //小于20kb base64压缩  大于20kb 不进行压缩
+                    limit: 20 * 1024
+                }
+   }
+</code></pre>
+</li>
+</ul>
+<h2 id="打包html中的图片"><a href="#打包html中的图片" class="headerlink" title="打包html中的图片"></a>打包html中的图片</h2><ul>
+<li>思路：因为html中的图片 是img src属性，直接打包html 页面就可以附带实现图片的打包<ul>
+<li>下载loader plugin   html-loader   html-webpack-plugin </li>
+<li>配置loader</li>
+<li>配置plugin</li>
+</ul>
+</li>
+</ul>
+<pre><code class="js">yarn add html-loader@1.3.2  html-webpack-plugin@5.0.0-beta.1 -D
+</code></pre>
+<pre><code class="js">   { test: /\.html$/, loader: &#39;html-loader&#39; }
+</code></pre>
+<pre><code class="js">//导入三方插件包
+const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
+</code></pre>
+<pre><code class="js"> //plugins 插件
+    plugins: [
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: &#39;./src/index.html&#39;
+        })
+    ],
+</code></pre>
+<blockquote>
+<p><strong>注意</strong>:配置完成之后，删除html文件中的 bundle.js引入</p>
+</blockquote>
+<h2 id="打包js中的图片"><a href="#打包js中的图片" class="headerlink" title="打包js中的图片"></a>打包js中的图片</h2><pre><code class="js">let picDom = document.querySelector(&#39;.pic&#39;);
+let img = document.createElement(&#39;img&#39;);
+//以模块的方式导入图片
+img.src = require(&#39;../img/1.jpg&#39;);
+picDom.appendChild(img);
+</code></pre>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="html中引入静态资源路径设置为相对路径"><a href="#html中引入静态资源路径设置为相对路径" class="headerlink" title="html中引入静态资源路径设置为相对路径"></a>html中引入静态资源路径设置为相对路径</h3><pre><code class="js">  //出口
+    output: {
+        // 出口文件 放置的位置  必须是绝对路径
+        // 出口文件的 文件名
+        path: path.resolve(__dirname, &#39;dist&#39;),
+        filename: &#39;bundle.js&#39;,
+        //设置静态资源请求的 相对路径
+        publicPath: &#39;./&#39;
+    },
+</code></pre>
+<h3 id="图片打包-用ES规范进行打包压缩"><a href="#图片打包-用ES规范进行打包压缩" class="headerlink" title="图片打包 用ES规范进行打包压缩"></a>图片打包 用ES规范进行打包压缩</h3><pre><code class="js"> {
+                test: /\.(jpg|png|gif)$/,
+                loader: &#39;url-loader&#39;,
+                /** 详细配置*/
+                options: {
+                    //hash 随机32为字符  ext 获取文件后缀
+                    name: &#39;[hash:16].[ext]&#39;,
+                    //小于20kb base64压缩  大于20kb 不进行压缩
+                    limit: 20 * 1024,
+                    esModule: false   //图片打包设置为 Es规范进行打包 不使用commonjs规范
+                }
+  },
+</code></pre>
+<h2 id="打包字体图标"><a href="#打包字体图标" class="headerlink" title="打包字体图标"></a>打包字体图标</h2><ul>
+<li><p>下载loader   file-loader</p>
+</li>
+<li><p>配置loader</p>
+<pre><code class="js">yarn add file-loader -D
+</code></pre>
+<pre><code class="js">  { test: /\.(svg|ttf|eot|woff|woff2)$/, loader: &quot;file-loader&quot; }
+</code></pre>
+<p>主模块引入iconfont.css</p>
+<pre><code class="js">/*导入字体图标 css文件 */
+require(&#39;../fonts/iconfont.css&#39;)
+</code></pre>
+</li>
+</ul>
+<h2 id="ES6转ES5"><a href="#ES6转ES5" class="headerlink" title="ES6转ES5"></a>ES6转ES5</h2><ul>
+<li><p>下载loader 和plugin </p>
+</li>
+<li><p>配置loader</p>
+</li>
+<li><p>项目根目录下 创建 并配置 .babelrc 文件</p>
+<pre><code class="js">yarn add babel-core babel-loader@7.1.5 babel-preset-es2015 -D
+</code></pre>
+<pre><code class="js">   {
+                test: /\.js$/,
+                loader: &#39;babel-loader&#39;,    // loader 编译es6为es5
+                exclude: /node_modules/  // 排除
+            }
+</code></pre>
+<p>.babelrc</p>
+<pre><code class="js">{
+    &quot;presets&quot;: [
+        &quot;es2015&quot;
+    ]
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="配置开发服务"><a href="#配置开发服务" class="headerlink" title="配置开发服务"></a>配置开发服务</h2><ul>
+<li>下载插件</li>
+<li>配置  webpack.config.js</li>
+<li>配置package.json</li>
+</ul>
+<pre><code class="js">yarn add webpack-dev-server -D 
+</code></pre>
+<pre><code class="js">//开发服务配置
+    devServer: {
+        contentBase: path.resolve(__dirname, &#39;dist&#39;), // 启动服务器目录
+        compress: true, // 启动gzip
+        port: 8081,  // 端口  8080 80  8081 8082
+        open: true, // 自动打开服务
+        publicPath: &#39;/&#39;, // 静态资源查找路径
+        openPage: &#39;index.html&#39;, // 打开的页面
+    },
+    target: &#39;web&#39;, // 目标是浏览器
+</code></pre>
+<pre><code class="js">  &quot;scripts&quot;: {
+    &quot;serve&quot;: &quot;webpack serve&quot;, 
+    &quot;build&quot;: &quot;webpack&quot;
+  },
+</code></pre>
+<h3 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h3><pre><code class="js">npm run serve 
+
+yarn serve
+</code></pre>
+<h3 id="打包线上的服务"><a href="#打包线上的服务" class="headerlink" title="打包线上的服务"></a>打包线上的服务</h3><pre><code class="js">npm run build 
+
+yarn build 
+</code></pre>
+<h2 id="单页应用优化-多页应用打包"><a href="#单页应用优化-多页应用打包" class="headerlink" title="单页应用优化-多页应用打包"></a>单页应用优化-多页应用打包</h2><h3 id="单页应用优化：文件整理"><a href="#单页应用优化：文件整理" class="headerlink" title="单页应用优化：文件整理"></a>单页应用优化：文件整理</h3><h4 id="js文件整理"><a href="#js文件整理" class="headerlink" title="js文件整理"></a>js文件整理</h4><pre><code class="js"> output: {
+        // 出口文件 放置的位置  必须是绝对路径
+        // 出口文件的 文件名
+        path: path.resolve(__dirname, &#39;dist&#39;),
+        filename: &#39;js/[name].js&#39;,
+        //设置静态资源请求的 相对路径
+        publicPath: &#39;./&#39;
+    },
+</code></pre>
+<h4 id="css文件整理"><a href="#css文件整理" class="headerlink" title="css文件整理"></a>css文件整理</h4><ul>
+<li>将js中的css代码提取出来 生成独立的css文件  安装两个插件</li>
+<li>将css文件引入到html </li>
+</ul>
+<p>修改配置文件</p>
+<ul>
+<li>安装插件</li>
+</ul>
+<pre><code class="js">yarn add mini-css-extract-plugin  optimize-css-assets-webpack-plugin -D 
+</code></pre>
+<ul>
+<li>配置</li>
+</ul>
+<pre><code class="js">//css提取并通过link方式引导页面的插件
+const MiniCssExtractPlugin = require(&#39;mini-css-extract-plugin&#39;);
+const OptimizeCssAssetsWebpackPlugin = require(&#39;optimize-css-assets-webpack-plugin&#39;);
+</code></pre>
+<pre><code class="js">  //plugins 插件
+    plugins: [
+        new HtmlWebpackPlugin({
+            //以哪个页面作为打包的页面模板--打包哪个页面
+            template: &#39;./src/index.html&#39;
+        }),
+        new MiniCssExtractPlugin({
+            filename: &#39;css/[name].css&#39; // 输出到css文件夹里
+        }),
+        new OptimizeCssAssetsWebpackPlugin()
+
+    ],
+</code></pre>
+<pre><code class="js">//取消 style-loader 的加载方式 更换为 link引入  
+{ test: /\.css$/, use: [MiniCssExtractPlugin.loader, &#39;css-loader&#39;] },
+ { test: /\.less$/, use: [MiniCssExtractPlugin.loader, &#39;css-loader&#39;, &#39;less-loader&#39;] },
+</code></pre>
+<h4 id="图片文件整理"><a href="#图片文件整理" class="headerlink" title="图片文件整理"></a>图片文件整理</h4><pre><code class="js"> {
+                test: /\.(jpg|png|gif)$/,
+                loader: &#39;url-loader&#39;,
+                /** 详细配置*/
+                options: {
+                    //hash 随机32为字符  ext 获取文件后缀
+                    name: &#39;[hash:16].[ext]&#39;,
+                    //小于20kb base64压缩  大于20kb 不进行压缩
+                    limit: 20 * 1024,
+                    esModule: false,   //图片打包设置为 Es规范进行打包 不使用commonjs规范
+                    outputPath: &#39;img&#39;
+                }
+            },
+</code></pre>
+<h4 id="字体图标文件整理"><a href="#字体图标文件整理" class="headerlink" title="字体图标文件整理"></a>字体图标文件整理</h4><pre><code class="js">    {
+                test: /\.(svg|ttf|eot|woff|woff2)$/, loader: &quot;file-loader&quot;,
+                options: {
+                    outputPath: &#39;fonts&#39;   //输出的目录
+                }
+            },
+</code></pre>
+<h4 id="修复-css中背景图的路径问题"><a href="#修复-css中背景图的路径问题" class="headerlink" title="修复 css中背景图的路径问题"></a>修复 css中背景图的路径问题</h4><pre><code class="js">  {
+                test: /\.css$/, use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: &#39;../&#39;
+                    }
+                }, &#39;css-loader&#39;]
+            },
+            {
+                test: /\.less$/, use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: &#39;../&#39;
+                    }
+                }, &#39;css-loader&#39;, &#39;less-loader&#39;]
+            },
+</code></pre>
+<h4 id="自动清除dist"><a href="#自动清除dist" class="headerlink" title="自动清除dist"></a>自动清除dist</h4><ul>
+<li><p>下载插件</p>
+</li>
+<li><p>配置插件</p>
+<pre><code class="js">yarn add clean-webpack-plugin -D
+</code></pre>
+<pre><code class="js">//自动清除dist 
+const { CleanWebpackPlugin } = require(&#39;clean-webpack-plugin&#39;)
+//plugin 添加
+new CleanWebpackPlugin()
+</code></pre>
+</li>
+</ul>
+
+                </div>
+                <!-- .entry-content -->
+                <div class="single-reward">
+                  <div class="reward-open">赏
+                    <div class="reward-main">
+                      <ul class="reward-row">
+                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/zfbQR.jpg"></li>
+                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/weixinQR.jpg"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center; width: 100%" class="social-share share-mobile"
+                  data-disabled="diandian, tencent"></div>
+                <!-- <footer class="post-footer">
+                  <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+                      target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+                      岂能尽如人意，但求无愧我心！</a></div>
+                  <div class="post-tags">
+                  </div>
+                  <div class="post-share">
+                    <div class="social-share sharehidden share-component"></div>
+                    <i class="iconfont show-share icon-forward"></i>
+                  </div>
+                </footer>.entry-footer -->
+          </article>
+          <!-- #post-## -->
+          <div class="toc" style="background: none;"></div>
+          <section class="post-squares nextprev">
+            
+              
+                <div class="post-nepre half previous">
+                  
+                        <a href="/2021/03/20/git的基本使用/" rel="prev">
+                          <div class="background">
+                            <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/git.jpg"
+                              style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                              onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/git.jpg">
+                          </div>
+                          <span class="label">
+                            Previous Post</span>
+                          <div class="info">
+                            <h3>
+                              Git
+                            </h3>
+                            <hr>
+                          </div>
+                        </a>
+                    </div>
+                    
+                      
+                        
+                          <div class="post-nepre half next">
+                            
+                                  <a href="/2021/02/25/H5/" rel="next">
+                                    <div class="background">
+                                      <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
+                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/hfive.jpg"
+                                        style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/hfive.jpg">
+                                    </div>
+                                    <span class="label">
+                                      Next Post</span>
+                                    <div class="info">
+                                      <h3>
+                                        H5
+                                      </h3>
+                                      <hr>
+                                    </div>
+                                  </a>
+                              </div>
+                              
+          </section>
+          
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function () {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz",
+        appKey: "9m413jYIug2cFvhs6TtILisl",
+        path: window.location.pathname,
+        placeholder: "想说什么，你就说吧 ...",
+        avatar: 'robohash',
+      })
+    }
+  </script>
+  
+            <section class="author-profile">
+              <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                <a href="javascript:;" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg" itemprop="image"
+                    alt="Ayu" height="70" width="70"></a>
+                <div class="meta">
+                  <span class="title">Author</span>
+                  <h3 itemprop="name">
+                    <a href="javascript:;" itemprop="url" rel="author">
+                      Ayu
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <hr>
+              <p><i class="iconfont icon-write"></i>
+                人若有志，万事可为。
+              </p>
+            </section>
+        </main><!-- #main -->
+      </div><!-- #primary -->
+    </div>
+
+    
+        </div>
+        <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+          <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ayu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;"><i class="iconfont icon-sakura rotating"
+          style="color: #ffc0cb;display:inline-block"></i>
+        <span style="color: #b9b9b9;">Where <a href="javascript:;"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">there</a> is a <a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);"></a><a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">will</a>,
+          there is a way</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "close" }, "windowheight": "fixed", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  } else {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "open" }, "windowheight": "auto", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  }
+/* ]]> */
+
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+            <div class="openNav no-select" style="height: 50px;">
+              <div class="iconflat no-select" style="width: 50px; height: 50px;">
+                <div class="icon"></div>
+              </div>
+              <div class="site-branding search-form-submit">
+                <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+              </div>
+            </div>
+    </section>
+    <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+        <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+          <div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn">
+        <span id="open-skinMenu"> 切换主题
+            <i class="iconfont icon-gear inline-block rotating"></i>
+        </span>
+    </div>
+</div>
+            <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  </body>
+
+  </html>

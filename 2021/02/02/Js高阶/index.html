@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Javascript | Poorlife</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "个人博客Ayu";
+  mashiro_option.author_name = "Ayu";
+  mashiro_option.site_url = "";
+  mashiro_option.v_appId = "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz";
+  mashiro_option.v_appKey = "9m413jYIug2cFvhs6TtILisl";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+
+  <body
+    class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar">
+    </div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+      <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="">
+          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>
+          谁给我一滴水，我便回报他整个大海。
+        </p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                  <li>
+                    <a href="https://github.com/PoorlifeAyu" target="_blank" class="social-github" title="github">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/github.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://weibo.com/u/6030188226" target="_blank" class="social-github" title="sina">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/sina.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://music.163.com/" target="_blank" class="social-github" title="wangyiyun">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wangyiyun.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://mail.qq.com/cgi-bin/frame_html?sid=0j3LVIvsrSzKXR5_&amp;r=c8c502b38f105671c3cf4b6fb70a0ebd" target="_blank" class="social-github" title="email">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/email.svg">
+                    </a>
+                  </li>
+                  
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/wechat.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/qq.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                  <li>
+                    <a href="https://blog.csdn.net/Ayuzz?spm=1000.2115.3001.5343" target="_blank" class="social-github" title="csdn">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/csdn.png">
+                    </a>
+                  </li>
+                  
+                    
+                      
+                        <li id="bg-next">
+                          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+                        </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+        <div id="page" class="site wrapper">
+          <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">个人博客</span>
+            <span class="shironeko">Ayu</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/管理/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          管理
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          个人
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+            <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsthree.jpg);"
+      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsthree.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+        Javascript
+      </h1>
+      <p class="entry-census">
+        <span>
+          <a href="javascript:;">
+            <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="javascript:;">
+            Ayu
+          </a>
+        </span>
+        <span class="bull">
+          ·</span>
+        2021-2-2<span class="bull">
+            ·</span>
+          <span id="busuanzi_value_page_pv"></span>次阅读
+      </p>
+    </header>
+  </div>
+  
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <article id="post-1"
+            class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+            <div class="toc"></div>
+            <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+            
+                <div class="entry-content">
+                  <h1 id="高阶Js-作用域、函数与闭包"><a href="#高阶Js-作用域、函数与闭包" class="headerlink" title="高阶Js:作用域、函数与闭包"></a>高阶Js:作用域、函数与闭包</h1><h2 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h2><ul>
+<li><p>js代码的执行环境—–执行上下文</p>
+<p><img src="/2021/02/02/Js高阶/执行环境.png" alt></p>
+</li>
+<li><p><strong>js执行栈的数据写入及清除—【先进后出】原则</strong></p>
+</li>
+<li><p>栈溢出：递归函数大量写入数据</p>
+</li>
+</ul>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><h3 id="作用域分类"><a href="#作用域分类" class="headerlink" title="作用域分类"></a>作用域分类</h3><ul>
+<li>全局作用域 ES5</li>
+<li>局部作用域 ES5</li>
+<li>块级作用域 ES6新增  {} </li>
+</ul>
+<h3 id="作用域的概念【重点】"><a href="#作用域的概念【重点】" class="headerlink" title="作用域的概念【重点】"></a>作用域的概念<strong>【重点】</strong></h3><h4 id="作用域：标识符的作用范围"><a href="#作用域：标识符的作用范围" class="headerlink" title="作用域：标识符的作用范围"></a><strong>作用域：标识符的作用范围</strong></h4><h4 id="标识符：变量-函数名-函数的参数-对象属性"><a href="#标识符：变量-函数名-函数的参数-对象属性" class="headerlink" title="标识符：变量  函数名  函数的参数  对象属性"></a><strong>标识符：变量  函数名  函数的参数  对象属性</strong></h4><p><img src="/2021/02/02/Js高阶/作用域.png" alt></p>
+<h3 id="作用域链【重点】"><a href="#作用域链【重点】" class="headerlink" title="作用域链【重点】"></a>作用域链<strong>【重点】</strong></h3><ul>
+<li><p><strong>作用域链查找规则—就近原则</strong></p>
+</li>
+<li><p><strong>查找方式:逐级向上查找，直到window,最后都没有找到报错。</strong></p>
+<blockquote>
+<p>先在自己的作用域查找这个变量，没有找到 上一级查找这个变量，直到找到window作用域，最后都没找到报错。</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/2021/02/02/Js高阶/作用域链.png" alt></p>
+<h4 id="区分ES5-与ES6的作用域"><a href="#区分ES5-与ES6的作用域" class="headerlink" title="区分ES5 与ES6的作用域"></a>区分ES5 与ES6的作用域</h4><pre><code class="js">//ES5   
+for (var i = 0; i &lt; 5; i++) {
+        console.log(i);  //0 1 2 3 4 
+    }
+    console.log(i);   // 5
+//ES6 
+for (let  i = 0; i &lt; 5; i++) {
+        console.log(i);  //0 1 2 3 4 
+    }
+    console.log(i);   //i is not defined
+</code></pre>
+<h2 id="函数【重点】"><a href="#函数【重点】" class="headerlink" title="函数【重点】"></a>函数<strong>【重点】</strong></h2><h3 id="ES5函数复习"><a href="#ES5函数复习" class="headerlink" title="ES5函数复习"></a>ES5函数复习</h3><ul>
+<li><p>函数定义</p>
+<ul>
+<li>声明式  </li>
+<li>表达式</li>
+</ul>
+</li>
+<li><p>函数参数</p>
+<ul>
+<li>调用方（实参）</li>
+<li>被调用方（形参）</li>
+</ul>
+</li>
+<li><p>函数必须要有return  </p>
+<blockquote>
+<p>被调函数 没有写return ，会自动返回 undefiend</p>
+</blockquote>
+</li>
+<li><p>回调函数接收异步返回数据</p>
+<p><strong>现在不调，回头再调【满足特定条件 调用】</strong></p>
+<blockquote>
+<p>多个回调函数嵌套使用，会导致：回调地狱， Promise()</p>
+</blockquote>
+</li>
+<li><p>ES5函数的默认参数 arguments</p>
+<blockquote>
+<p>伪数组</p>
+</blockquote>
+</li>
+<li><p>函数的形参默认值的设置</p>
+<blockquote>
+<p>a=a||0;  //ES5</p>
+<p>function(a=0){}   //ES6</p>
+</blockquote>
+</li>
+<li><p>函数的调用</p>
+</li>
+</ul>
+<h3 id="ES6箭头函数【重点】"><a href="#ES6箭头函数【重点】" class="headerlink" title="ES6箭头函数【重点】"></a>ES6箭头函数<strong>【重点】</strong></h3><ol>
+<li>去掉function ，小括号与大括号之间加上 “=&gt;”</li>
+<li>如果形参只有一个可以省略小括号</li>
+<li>如果没有形参，小括号必须保留</li>
+<li>如果函数体中只有一句代码，可以省略 return 与 大括号</li>
+</ol>
+<pre><code class="js">  //ES6 求和
+    // let fn = (a, b) =&gt; a + b;
+    // console.log(fn(100, 2));
+
+    let arr = [1, 2, 1, 45, 4, 54, 854];
+    //map 
+    let arr1 = arr.map(item =&gt; item + 100)
+    // forEach   filter   sum()  findIndex  find  
+</code></pre>
+<h3 id="ES5-默认参数arguments"><a href="#ES5-默认参数arguments" class="headerlink" title="ES5 默认参数arguments"></a>ES5 默认参数arguments</h3><pre><code class="js">    function fn() {
+        if (arguments.length == 1) {
+            return arguments[0];
+        }
+        if (arguments.length == 2) {
+            return arguments[0] + arguments[1];
+        }
+        if (arguments.length == 3) {
+            return (arguments[0] + arguments[1] + arguments[2]) / 3;
+        }
+        if (arguments.length == 4) {
+            let arr = [];
+            for (var i = 0; i &lt; arguments.length; i++) {
+                arr.push(arguments[i]);
+            }
+            return arr;
+        }
+    }
+</code></pre>
+<h3 id="ES6的函数默认参数"><a href="#ES6的函数默认参数" class="headerlink" title="ES6的函数默认参数"></a>ES6的函数默认参数</h3><ul>
+<li>ES6函数 没有了arguments，ES6新增了rest参数</li>
+<li>ES6函数 没有了this指向</li>
+</ul>
+<h3 id="ES6-rest参数【重点】"><a href="#ES6-rest参数【重点】" class="headerlink" title="ES6 rest参数【重点】"></a>ES6 rest参数<strong>【重点】</strong></h3><h4 id="…data-data-所有实参数据集合，真数组"><a href="#…data-data-所有实参数据集合，真数组" class="headerlink" title="…data  data:所有实参数据集合，真数组"></a>…data  data:所有实参数据集合，真数组</h4><pre><code class="js">    //1.将所有的实参全部存到一个数组里面 
+    const sum = (...arr) =&gt; {
+        console.log(arr);
+        arr.forEach(item =&gt; console.log(item))
+    }
+    sum(1, 2, 15, 45, 45, 45, 454, 85, 8, 78, 8, 7, 8, 87874)
+
+    //2.将部分实参存到数组里面
+    const sum = (user1, user2, user3, ...arr) =&gt; {
+        console.log(user2);
+        console.log(arr);
+    }
+    sum(&#39;张麻子&#39;, &#39;黄四郎&#39;, &#39;师爷&#39;, 1, 4, 54, 54, 5, 48, 7878, 7, 87, 87, 8, 78)
+</code></pre>
+<h3 id="ES5的立即执行函数-IIFE"><a href="#ES5的立即执行函数-IIFE" class="headerlink" title="ES5的立即执行函数 IIFE"></a>ES5的立即执行函数 IIFE</h3><ul>
+<li><p>概念：一旦加载js文件立即执行该函数体的代码，一般一个页面只会写一个立即执行函数</p>
+<pre><code class="js">;(function(){
+    函数体
+})()
+</code></pre>
+</li>
+</ul>
+<h2 id="闭包【重点】"><a href="#闭包【重点】" class="headerlink" title="闭包【重点】"></a>闭包<strong>【重点】</strong></h2><h3 id="闭包的概念"><a href="#闭包的概念" class="headerlink" title="闭包的概念"></a>闭包的概念</h3><ul>
+<li>函数内部变量跨作用域访问</li>
+</ul>
+<h3 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h3><ul>
+<li>保护局部变量不被全局污染；形成块级作用域</li>
+</ul>
+<h3 id="闭包常见写法"><a href="#闭包常见写法" class="headerlink" title="闭包常见写法"></a>闭包常见写法</h3><h4 id="外部函数包含内部函数，外部函数返回内部函数"><a href="#外部函数包含内部函数，外部函数返回内部函数" class="headerlink" title="外部函数包含内部函数，外部函数返回内部函数"></a>外部函数包含内部函数，外部函数返回内部函数</h4><pre><code class="js">function fn(){
+    var a=1000;
+    return function(){
+        a-=100;
+    }
+}
+let fn1 = fn();
+fn1()
+</code></pre>
+<h4 id="外部函数包含内部函数，内部函数挂载到window"><a href="#外部函数包含内部函数，内部函数挂载到window" class="headerlink" title="外部函数包含内部函数，内部函数挂载到window"></a>外部函数包含内部函数，内部函数挂载到window</h4><pre><code class="js">;(function(){
+    var a=1000;
+    window.output = function(){
+        a-=100;
+    }
+})()
+output()
+</code></pre>
+<h3 id="案列"><a href="#案列" class="headerlink" title="案列"></a>案列</h3><pre><code class="js">//压岁钱模型
+function mom() {
+    var money = 500;
+    return function () {
+       money -= 100;
+       console.log(money);
+    }
+ }
+var spendMoney = mom();
+spendMoney();
+</code></pre>
+<pre><code class="js">//根据闭包实现一个取号器
+function num(){
+       var num = 0;
+        let add =function(){
+            num++;
+            cosnole.log(num)
+        }
+       return add;
+}
+var numAdd = num();
+
+
+function newAdd(){
+    num =1;
+    console.log(num)
+}
+</code></pre>
+<h2 id="闭包应用"><a href="#闭包应用" class="headerlink" title="闭包应用"></a>闭包应用</h2><h3 id="解决定时器问题"><a href="#解决定时器问题" class="headerlink" title="解决定时器问题"></a>解决定时器问题</h3><ul>
+<li>通过闭包实现一个ES6才有的代码块区域（ES6块级作用域）</li>
+</ul>
+<h4 id="定时器问题"><a href="#定时器问题" class="headerlink" title="定时器问题"></a>定时器问题</h4><pre><code class="js">  for (var i = 0; i &lt; 5; i++) {
+        setTimeout(function () {
+            console.log(i);    
+        }, 1000)
+    }
+//过了1S 瞬间打印 5个5
+</code></pre>
+<pre><code class="js">  //ES5 块级作用域
+    for (var i = 0; i &lt; 5; i++) {
+        ; (function (index) {
+            setTimeout(function () {
+                console.log(index);    
+            }, 1000)
+        })(i)
+    }
+//过了1S 瞬间打印 0 1 2 3 4
+</code></pre>
+<h3 id="多个li选择器事件触发问题"><a href="#多个li选择器事件触发问题" class="headerlink" title="多个li选择器事件触发问题"></a>多个li选择器事件触发问题</h3><pre><code class="js">&lt;li&gt;菜单1&lt;/li&gt;
+&lt;li&gt;菜单12&lt;/li&gt;
+&lt;li&gt;菜单13&lt;/li&gt;
+&lt;li&gt;菜单14&lt;/li&gt;
+&lt;li&gt;菜单15&lt;/li&gt;
+&lt;li&gt;菜单16&lt;/li&gt;
+&lt;li&gt;菜单17&lt;/li&gt;
+&lt;li&gt;菜单18&lt;/li&gt;
+
+&lt;script&gt;
+    var lis = document.querySelectorAll(&#39;li&#39;);
+    for (var i = 0; i &lt; lis.length; i++) {
+        ; (function (i) {
+            lis[i].addEventListener(&#39;click&#39;, function (ev) {
+                console.log(i);
+            })
+        })(i)
+    }
+&lt;/script&gt;
+</code></pre>
+<h2 id="ES6实现闭包"><a href="#ES6实现闭包" class="headerlink" title="ES6实现闭包"></a>ES6实现闭包</h2><h4 id="ES6-直接通过-let-关键字-直接形成ES5闭包（块级作用域）"><a href="#ES6-直接通过-let-关键字-直接形成ES5闭包（块级作用域）" class="headerlink" title="ES6 直接通过 let 关键字 直接形成ES5闭包（块级作用域）"></a>ES6 直接通过 let 关键字 直接形成ES5闭包（块级作用域）</h4><pre><code class="js"> //解决事件监听的问题
+    let lis = document.querySelectorAll(&#39;li&#39;);
+    for (let i = 0; i &lt; lis.length; i++) {
+        lis[i].addEventListener(&#39;click&#39;, function (ev) {
+            console.log(i);
+        })
+    }
+
+    //解决定时器问题
+    for (let i = 0; i &lt; 5; i++) {
+        setTimeout(function () {
+            console.log(i);
+        }, 1000)
+    }
+</code></pre>
+<h1 id="高阶Js对象、构造函数、原型链、this指向"><a href="#高阶Js对象、构造函数、原型链、this指向" class="headerlink" title="高阶Js对象、构造函数、原型链、this指向"></a>高阶Js对象、构造函数、原型链、this指向</h1><h2 id="面向对象及面向过程"><a href="#面向对象及面向过程" class="headerlink" title="面向对象及面向过程"></a>面向对象及面向过程</h2><h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><ul>
+<li>更加注重事情结果</li>
+</ul>
+<h3 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h3><ul>
+<li>更加注重0-1,从无到有的发展</li>
+</ul>
+<h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><ul>
+<li>具有相同属性的事物，抽象概念</li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><ul>
+<li>具体的事物，具象化</li>
+</ul>
+<p><img src="/2021/02/02/Js高阶/对象1.png" alt></p>
+<p><img src="/2021/02/02/Js高阶/对象2.png" alt></p>
+<h2 id="对象-1"><a href="#对象-1" class="headerlink" title="对象"></a>对象</h2><h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><h4 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h4><pre><code class="js">let obj = new Object();
+</code></pre>
+<h4 id="字面量-实例化的语法糖"><a href="#字面量-实例化的语法糖" class="headerlink" title="字面量(实例化的语法糖)"></a>字面量(实例化的语法糖)</h4><pre><code class="js">let obj = {}
+</code></pre>
+<p><strong>【注意】</strong>如果需要批量创建对象，工厂模式</p>
+<h2 id="工厂函数"><a href="#工厂函数" class="headerlink" title="工厂函数"></a>工厂函数</h2><h3 id="实现批量创建对象"><a href="#实现批量创建对象" class="headerlink" title="实现批量创建对象"></a>实现批量创建对象</h3><pre><code class="js"> /*批量 狗的对象*/
+    function createObj(name, age, sex) {
+        let obj = {};
+        obj.name = name;
+        obj.age = age;
+        obj.sex = sex;
+
+        obj.eat = function () {
+            console.log(&#39;干饭....&#39;);
+        }
+        return obj;
+    }
+
+    let obj = createObj(&#39;哮天犬&#39;, 500, &#39;公&#39;);
+    let obj1 = createObj(&#39;小黄&#39;, 2, &#39;母&#39;);
+    let obj2 = createObj(&#39;旺财&#39;, 7, &#39;母&#39;);
+</code></pre>
+<pre><code class="js">/*汽车的工厂函数*/
+function createCar(pp, color, price, type) {
+        return {
+            pp,
+            color,
+            price,
+            type,
+            run: function () {
+                console.log(&#39;92的油就可以跑.....&#39;);
+            }
+        }
+    }
+
+    let hq = createCar(&#39;红旗&#39;, &#39;黑色&#39;, 45, &#39;suv&#39;);
+    let ca = createCar(&#39;长安&#39;, &#39;白色&#39;, 15, &#39;suv&#39;);
+    let jl = createCar(&#39;吉利&#39;, &#39;白色&#39;, 15, &#39;轿车&#39;);
+</code></pre>
+<ul>
+<li>工厂函数的问题：批量创建的对象,分类出现错误</li>
+</ul>
+<h2 id="构造函数【重点】"><a href="#构造函数【重点】" class="headerlink" title="构造函数【重点】"></a>构造函数<strong>【重点】</strong></h2><ol>
+<li>没有return </li>
+<li>函数中的属性和方法都挂载到this上</li>
+<li>命名规则 大驼峰 </li>
+<li>所有的对象都是通过 构造函数 实例化出来的（new）</li>
+</ol>
+<pre><code class="js"> function ChinaCar(pp, color, price, type) {
+
+        this.pp = pp;
+        this.color = color;
+        this.price = price;
+        this.type = type;
+        this.run = function () {
+            console.log(&#39;跑....&#39;);
+        }
+
+    }
+
+    //实例对象
+    let hq = new ChinaCar(&#39;红旗&#39;, &#39;黑色&#39;, 45, &#39;suv&#39;)
+</code></pre>
+<pre><code class="js"> //练习dog 的构造函数
+    function Dog(name, age, sex, color, type) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.color = color;
+        this.type = type;
+        this.eat = function () {
+            console.log(&#39;干饭....&#39;);
+        }
+    }
+    //实例对象
+    let dog1 = new Dog(&#39;哮天犬&#39;, 500, &#39;公&#39;, &#39;黑色&#39;, &#39;中华田园犬&#39;)
+</code></pre>
+<ul>
+<li>构造函数的问题：当实例创建过多，实例的方法会不断的挂载到执行栈，方法过载–[原型及原型链解决这个问题]</li>
+</ul>
+<h2 id="new-关键字【重点】"><a href="#new-关键字【重点】" class="headerlink" title="new 关键字【重点】"></a>new 关键字<strong>【重点】</strong></h2><ul>
+<li>创建一个空对象</li>
+<li><p>空对象与this进行绑定</p>
+</li>
+<li><p>将所有的属性和方法指向这个this</p>
+</li>
+<li>实例化时 将实例对象返回出去</li>
+</ul>
+<h2 id="原型与原型链【重点】"><a href="#原型与原型链【重点】" class="headerlink" title="原型与原型链【重点】"></a>原型与原型链<strong>【重点】</strong></h2><ul>
+<li>每个构造函数都有一个显示原型(prototype)</li>
+<li><p>实例对象都有一个隐式原型<code>__proto__</code></p>
+</li>
+<li><p>实例对象的 <code>__proto__</code>指向自己的构造函数的prototype</p>
+</li>
+<li>构造函数的显示原型<code>prototype</code>有一个<code>constructor</code> 指向构造函数自己</li>
+</ul>
+<p><img src="/2021/02/02/Js高阶/原型.png" alt></p>
+<h2 id="原型链【重点】"><a href="#原型链【重点】" class="headerlink" title="原型链【重点】"></a>原型链<strong>【重点】</strong></h2><ul>
+<li>每个构造函数都有 prototype     </li>
+<li>这个prototype 是一个对象 ===》 （Object 构造函数实例化出来的）</li>
+<li>方法查找：就近原则，逐级往上查找，直到Object，报错</li>
+</ul>
+<p><img src="/2021/02/02/Js高阶/原型链.png" alt></p>
+<h2 id="原型方法解决方法过载的问题【重点】"><a href="#原型方法解决方法过载的问题【重点】" class="headerlink" title="原型方法解决方法过载的问题【重点】"></a>原型方法解决方法过载的问题<strong>【重点】</strong></h2><pre><code class="js">   //类
+    //构造函数
+    function ChinaCar(pp, color, price, type) {
+
+        this.pp = pp;
+        this.color = color;
+        this.price = price;
+        this.type = type;
+        // this.run = function () {
+        //     console.log(&#39;跑....&#39;);
+        // }
+    }
+    //将所以的方法写显示原型上面
+    ChinaCar.prototype.run = function () {
+        console.log(&#39;跑....&#39;);
+    }
+
+    //类的实例对象
+    let hq = new ChinaCar(&#39;红旗&#39;, &#39;黑色&#39;, 45, &#39;suv&#39;)
+    let ca = new ChinaCar(&#39;长安&#39;, &#39;黑色&#39;, 45, &#39;suv&#39;)
+</code></pre>
+<h2 id="原型链查找变量与方法【重点】"><a href="#原型链查找变量与方法【重点】" class="headerlink" title="原型链查找变量与方法【重点】"></a>原型链查找变量与方法<strong>【重点】</strong></h2><ul>
+<li><strong>方法查找：就近原则，逐级往上查找，直到Object，没有找到报错</strong></li>
+</ul>
+<pre><code class="js">   //给Object 添加原型方法或者变量
+
+    Object.prototype.say = function () {
+        console.log(&#39;我正在说话...&#39;);
+    }
+    Object.prototype.xxx = &#39;杀得好萨贝达挥洒&#39;
+    //类
+    //构造函数
+    function ChinaCar(pp, color, price, type) {
+        this.pp = pp;
+        this.color = color;
+        this.price = price;
+        this.type = type;
+        // this.run = function () {
+        //     console.log(&#39;跑....&#39;);
+        // }
+    }
+    //将所以的方法写显示原型上面
+    ChinaCar.prototype.run = function () {
+        console.log(&#39;跑....&#39;);
+    }
+
+    //类的实例对象
+    let hq = new ChinaCar(&#39;红旗&#39;, &#39;黑色&#39;, 45, &#39;suv&#39;)
+    //原型链的方法查找
+    console.log(hq.say());
+    console.log(hq.xxx);
+</code></pre>
+<ul>
+<li>给数组的原型添加方法：传递一个元素，能够返回数组元素对应的索引值</li>
+</ul>
+<pre><code class="js">let arr = [1,24,15,45,45,45,5]
+arr.searchIndex(15)   // 2
+
+Array.prototype.searchIndex = function (num) {
+        console.log(this);
+        let index = -1;
+        for (let i = 0; i &lt; this.length; i++) {
+            if (num === this[i]) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+</code></pre>
+<h2 id="this指向【重点】"><a href="#this指向【重点】" class="headerlink" title="this指向【重点】"></a>this指向<strong>【重点】</strong></h2><ul>
+<li>js全局下的this —-window</li>
+<li>构造函数中的this —- 实例化出来的对象</li>
+<li><p>事件触发函数中的this—-事件源</p>
+</li>
+<li><p>箭头函数中的this ——上一级的this</p>
+</li>
+<li><p>定时器延时器下的this—–window</p>
+</li>
+<li>一般函数的this—谁调用指向谁</li>
+<li>对象函数的this—谁调用指向谁</li>
+</ul>
+<h2 id="this-借用【重点】"><a href="#this-借用【重点】" class="headerlink" title="this 借用【重点】"></a>this 借用<strong>【重点】</strong></h2><ul>
+<li>call</li>
+<li>apply</li>
+<li>bind </li>
+</ul>
+<h3 id="借用的同时-立即调用"><a href="#借用的同时-立即调用" class="headerlink" title="借用的同时 立即调用"></a>借用的同时 立即调用</h3><pre><code class="js">借出对象.call(借给谁,参数1,参数1,参数1,参数1,参数1,参数1...)
+</code></pre>
+<pre><code class="js">借出对象.apply(借给谁,[参数1,参数1,参数1,参数1,参数1,参数1...])
+</code></pre>
+<pre><code class="js"> //借用其他对象中的方法
+
+    let obj = {
+        name: &#39;张萨摩&#39;,
+        show: function (a = &#39;&#39;, x = &#39;&#39;) {
+            console.log(a);
+            console.log(this);
+            console.log(&#39;跳舞...&#39;);
+        }
+    }
+
+    let obj1 = {
+        name: &#39;李四&#39;
+    }
+
+    //this 借用
+    // call()  apply()  bind()
+    // 语法规则：
+    // 借出的对象.借出的方法.call(借给谁,&#39;aaa&#39;,&#39;xxxx&#39;)
+
+    //立即调用
+    // obj.show.call(obj1, &#39;李四&#39;)
+    // obj.show.apply(obj1, [&#39;李四&#39;, &#39;sdsad&#39;])
+</code></pre>
+<h3 id="永久借用"><a href="#永久借用" class="headerlink" title="永久借用"></a>永久借用</h3><pre><code class="js">let fn =借出的对象.bind(借给谁,参数1,参数1,参数1,参数1,参数1,参数1...)
+</code></pre>
+<pre><code class="js">//永久借用
+    let fn = obj.show.bind(obj1, &#39;李四&#39;);
+    fn()
+    fn()
+</code></pre>
+<h1 id="高阶Js变量内存分配、深浅拷贝、继承、变量类型"><a href="#高阶Js变量内存分配、深浅拷贝、继承、变量类型" class="headerlink" title="高阶Js变量内存分配、深浅拷贝、继承、变量类型"></a>高阶Js变量内存分配、深浅拷贝、继承、变量类型</h1><h2 id="变量的内存分配"><a href="#变量的内存分配" class="headerlink" title="变量的内存分配"></a>变量的内存分配</h2><h3 id="变量的储存"><a href="#变量的储存" class="headerlink" title="变量的储存"></a>变量的储存</h3><h4 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h4><ul>
+<li>存储到栈内存</li>
+</ul>
+<h4 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h4><ul>
+<li>它的地址存储在栈内存中，数据存储在堆内存中。通过地址<strong>(指针)</strong>链接起来</li>
+</ul>
+<p><img src="/2021/02/02/Js高阶/变量储存分配.png" alt></p>
+<h3 id="变量的拷贝"><a href="#变量的拷贝" class="headerlink" title="变量的拷贝"></a>变量的拷贝</h3><h4 id="基本类型-1"><a href="#基本类型-1" class="headerlink" title="基本类型"></a>基本类型</h4><ul>
+<li>变量的拷贝只是拷贝值</li>
+</ul>
+<h4 id="引用类型-1"><a href="#引用类型-1" class="headerlink" title="引用类型"></a>引用类型</h4><ul>
+<li>变量的拷贝拷贝的是地址。存在数据共享问题</li>
+</ul>
+<p><img src="/2021/02/02/Js高阶/拷贝.png" alt></p>
+<h3 id="变量的传递"><a href="#变量的传递" class="headerlink" title="变量的传递"></a>变量的传递</h3><h4 id="基本类型-2"><a href="#基本类型-2" class="headerlink" title="基本类型"></a>基本类型</h4><ul>
+<li>传递的只是值</li>
+</ul>
+<h4 id="引用类型-2"><a href="#引用类型-2" class="headerlink" title="引用类型"></a>引用类型</h4><ul>
+<li><p>传递的是地址，存在数据共享问题</p>
+<p><img src="/2021/02/02/Js高阶/参数.png" alt></p>
+</li>
+</ul>
+<h2 id="变量的深浅拷贝"><a href="#变量的深浅拷贝" class="headerlink" title="变量的深浅拷贝"></a>变量的深浅拷贝</h2><h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><h4 id="for…in…遍历"><a href="#for…in…遍历" class="headerlink" title="for…in…遍历"></a>for…in…遍历</h4><pre><code class="js">  let user = {
+    name: &#39;张麻子&#39;,
+    age: 30,
+    address: &#39;上海&#39;,
+  }
+  let user1 = {}
+  for (let key in user) {
+    user1[key] = user[key]
+  }
+  user1.name = &#39;倪妮&#39;
+  user1.age = 30
+  user1.money = 10000000000000000000
+  user1.address = &#39;我身边&#39;
+  console.log(user)
+  console.log(user1)
+</code></pre>
+<h4 id="Object-assgin-要合并的对象"><a href="#Object-assgin-要合并的对象" class="headerlink" title="Object.assgin({},要合并的对象)"></a>Object.assgin({},要合并的对象)</h4><p><strong>[注意]</strong>第一个参数必须是空对象，这样就得到新的地址</p>
+<pre><code class="js">  let user = {
+    name: &#39;张麻子&#39;,
+    age: 30,
+    address: &#39;上海&#39;,
+  }
+  let user1 = Object.assign({}, user)
+  user1.money = 100000000000000
+  console.log(user)
+  console.log(user1)
+</code></pre>
+<h3 id="深拷贝（浅拷贝只能拷贝一层）"><a href="#深拷贝（浅拷贝只能拷贝一层）" class="headerlink" title="深拷贝（浅拷贝只能拷贝一层）"></a>深拷贝<strong>（浅拷贝只能拷贝一层）</strong></h3><h4 id="JSON的2个核心方法（JSON-parse（），JSON-stringify（））"><a href="#JSON的2个核心方法（JSON-parse（），JSON-stringify（））" class="headerlink" title="JSON的2个核心方法（JSON.parse（），JSON.stringify（））"></a>JSON的2个核心方法（JSON.parse（），JSON.stringify（））</h4><pre><code class="js">  let user = {
+    name: &#39;张三&#39;,
+    age: 40,
+    job: [&#39;扫地&#39;, &#39;洗厕所&#39;],
+    family: {
+      wife: &#39;容嬷嬷&#39;,
+      son: &#39;张武&#39;,
+    },
+  }
+  let user1 = JSON.parse(JSON.stringify(user))
+  user1.job.push(&#39;倒水&#39;)
+  user1.family.son = &#39;李五&#39;
+  console.log(user)
+  console.log(user1)
+</code></pre>
+<h4 id="lodash解决深拷贝缺陷"><a href="#lodash解决深拷贝缺陷" class="headerlink" title="lodash解决深拷贝缺陷"></a>lodash解决深拷贝缺陷</h4><pre><code class="js">//使用lodash里面的方法可以解决深拷贝问题
+&lt;script src=&quot;./lodash.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  let user = {
+    name: &#39;张三&#39;,
+    age: 40,
+    job: [&#39;扫地&#39;, &#39;洗厕所&#39;],
+    family: {
+      wife: &#39;容嬷嬷&#39;,
+      son: &#39;张武&#39;,
+    },
+    a: NaN,//使用JSON的两个核心方法会缺失
+    b: Infinity,
+    c: undefined,
+    d: function () {},
+  }
+  //   let user1 = JSON.parse(JSON.stringify(user))
+  let user1 = _.cloneDeep(user)
+  user1.job.push(&#39;倒水&#39;)
+  user1.family.son = &#39;李五&#39;
+  console.log(user)
+  console.log(user1)
+&lt;/script&gt;
+</code></pre>
+<h2 id="检测变量类型"><a href="#检测变量类型" class="headerlink" title="检测变量类型"></a>检测变量类型</h2><h3 id="typeof【5个】"><a href="#typeof【5个】" class="headerlink" title="typeof【5个】"></a>typeof<strong>【5个】</strong></h3><ul>
+<li><p>number—–数字类型</p>
+<ul>
+<li><p>字符串转数字</p>
+<pre><code class="JS">&#39;100&#39;*1
++&#39;100&#39; //  0+&#39;100&#39;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>undefind—–未定义</p>
+</li>
+<li><p>boolean—–true/flase</p>
+</li>
+<li><p>string—–字符串类型</p>
+<ul>
+<li><p>数字转字符串</p>
+<pre><code class="js">100+&#39;&#39;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>function—–函数</p>
+</li>
+<li><p>布尔类型转换结果为flase</p>
+<blockquote>
+<p>0  0.0  ‘’  undefined  NaN</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><ul>
+<li>用于检测变量是否是引用类型<strong>(构造函数、引用类型、对于Object都是true)</strong></li>
+</ul>
+<pre><code class="js">    console.log([] instanceof Array) //true
+    console.log([] instanceof Object) //true
+    console.log(new Date() instanceof Date) //true
+    console.log(new Date() instanceof Object) //true
+    // &quot;dfdsfd&quot; new String(&quot;dfdsfd&quot;) //flase
+    //100 new Number(100)  //flase
+    console.log(Array.isArray([])) //true
+    console.log(Array.isArray({})) //flase
+</code></pre>
+<h3 id="Array-isArray【区分数组和对象】"><a href="#Array-isArray【区分数组和对象】" class="headerlink" title="Array.isArray【区分数组和对象】"></a>Array.isArray<strong>【区分数组和对象】</strong></h3><ul>
+<li>作用：判断是否是一个数组</li>
+</ul>
+<pre><code class="js">  function each(obj) {
+    if (Array.isArray(obj)) {
+      obj.forEach((item, index) =&gt; console.log(index, &#39;===&gt;&#39;, item))
+    } else if (obj instanceof Object) {
+      for (let key in obj) {
+        console.log(key, &#39;----&#39;, obj[key])
+      }
+    } else {
+      console.log(&#39;你是傻子吗？&#39;)
+    }
+  }
+  each([1, 2, 3, 4, 5])
+  each({ name: &#39;周杰伦&#39;, age: 40, skill: &#39;唱歌&#39; })
+  each(&#39;ssssssss&#39;)
+
+//输出结果
+0 &quot;===&gt;&quot; 1
+1 &quot;===&gt;&quot; 2
+2 &quot;===&gt;&quot; 3
+3 &quot;===&gt;&quot; 4
+4 &quot;===&gt;&quot; 5
+name ---- 周杰伦
+age ---- 40
+skill ---- 唱歌
+你是傻子吗？
+</code></pre>
+<h3 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call()"></a>Object.prototype.toString.call()</h3><ul>
+<li>万能检测数据类型</li>
+</ul>
+<pre><code class="js">  Object.prototype.toString.call()
+</code></pre>
+<pre><code class="js">  console.log(Object.prototype.toString.call(&#39;aaaa&#39;))
+  console.log(Object.prototype.toString.call(1234))
+  console.log(Object.prototype.toString.call(null))
+  console.log(Object.prototype.toString.call({ name: &#39;张三&#39;, age: 40 }))
+  console.log(Object.prototype.toString.call([1, 23, 12, 312]))
+  console.log(Object.prototype.toString.call(function () {}))
+</code></pre>
+<h2 id="ES5的继承【重点】"><a href="#ES5的继承【重点】" class="headerlink" title="ES5的继承【重点】"></a>ES5的继承<strong>【重点】</strong></h2><h3 id="子类继承父类的属性"><a href="#子类继承父类的属性" class="headerlink" title="子类继承父类的属性"></a>子类继承父类的属性</h3><p><strong>注意</strong>子类要继承父类的属性要改变this的指向（call()，apply()）</p>
+<pre><code class="js">//借用父类属性
+Prosen.call(this,name,age)
+</code></pre>
+<h3 id="子类继承父类原型上的方法"><a href="#子类继承父类原型上的方法" class="headerlink" title="子类继承父类原型上的方法"></a>子类继承父类原型上的方法</h3><pre><code class="js">Student.prototype = Object.create(Prosen.prototype);
+</code></pre>
+<h3 id="子类将constructor-指向构造函数自己"><a href="#子类将constructor-指向构造函数自己" class="headerlink" title="子类将constructor 指向构造函数自己"></a>子类将constructor 指向构造函数自己</h3><pre><code class="js"> Student.prototype.constructor = Student;
+</code></pre>
+<h3 id="子类在自己的原型上添加自己的方法"><a href="#子类在自己的原型上添加自己的方法" class="headerlink" title="子类在自己的原型上添加自己的方法"></a>子类在自己的原型上添加自己的方法</h3><pre><code class="js">Student.prototype.study = ()=&gt;console.log(&#39;天天学习&#39;)
+</code></pre>
+<h3 id="ES5继承完成示例"><a href="#ES5继承完成示例" class="headerlink" title="ES5继承完成示例"></a>ES5继承完成示例</h3><pre><code class="js"> //人类
+    function Prosen(name,age){
+        this.name = name ;
+        this.age = age ;
+    }
+    Prosen.prototype.eat = function(){
+        console.log(&#39;吃东西&#39;)
+    }
+
+    //学生类
+    function Student(name,age,sno){
+        //1.子类集成父类的属性 借用父类的属性 call
+        Prosen.call(this,name,age)
+        // this.name = name;
+        // this.age = age;
+        this.sno = sno;
+    }
+        //2.子类集成父类的方法
+        Student.prototype = Object.create(Prosen.prototype);
+       // 3. 子类的constructor 指向自己
+       Student.prototype.constructor = Student;
+
+        //4.
+        Student.prototype.study = function(){
+            console.log(&#39;天天学习&#39;)
+        }
+
+
+    let user = new Prosen(&#39;张麻子&#39;,40)
+    let students = new Student(&#39;小明&#39;,15,&#39;学001&#39;);
+</code></pre>
+<h1 id="高阶JsES6的class类、模块化、语法糖"><a href="#高阶JsES6的class类、模块化、语法糖" class="headerlink" title="高阶JsES6的class类、模块化、语法糖"></a>高阶JsES6的class类、模块化、语法糖</h1><h2 id="解构（数组、对象、数组参数，函数参数）"><a href="#解构（数组、对象、数组参数，函数参数）" class="headerlink" title="解构（数组、对象、数组参数，函数参数）"></a>解构<strong>（数组、对象、数组参数，函数参数）</strong></h2><h3 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h3><pre><code class="js">  // 数组的解构
+    time = [2021, 6, 29]
+    let [y, m, d] = time
+    console.log(y, m, d)//2021 6 29
+
+    time = [2021, 6]
+    let [y, m, d = 30] = time
+    console.log(y, m, d)//2021 6 30
+
+    time = [2021, 6]
+    let [y, m, d] = time
+    console.log(y, m, d) //2021 6 undefined
+
+    time = [2021, 6, 31]
+    let [y, m, d = 30] = time
+    console.log(y, m, d) //2021 6 31
+</code></pre>
+<h3 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h3><pre><code class="js">    //   对象的解构
+      let user = {
+        name: &#39;彭于晏&#39;,
+        age: 35,
+        addr: &#39;上海&#39;,
+        money: Infinity,
+      }
+      //   //   let { addr, name, age } = user
+      //   console.log(addr, name, age) //上海 彭于晏 35
+      //   let { addr, name, age, money = 1000 } = user
+      //   console.log(addr, name, age, money) //上海 彭于晏 35 1000
+      let { name, addr, money = 11000 } = user
+      console.log(addr, name, money) //上海 彭于晏 Infinity
+</code></pre>
+<h3 id="函数参数的解构赋值（数组、对象）"><a href="#函数参数的解构赋值（数组、对象）" class="headerlink" title="函数参数的解构赋值（数组、对象）"></a>函数参数的解构赋值（数组、对象）</h3><h4 id="参数为数组时"><a href="#参数为数组时" class="headerlink" title="参数为数组时"></a>参数为数组时</h4><pre><code class="js">  const add = ([x, y = 1] = [100]) =&gt; x + y
+  console.log(add()) //101
+  const add = ([x, y = 1]) =&gt; x + y
+  console.log(add([1, 2])) //3
+  const add = ([x, y] = [100, 1]) =&gt; x + y
+  console.log(add()) //101
+  console.log(add([100, 200])) //300
+</code></pre>
+<h4 id="参数为对象时"><a href="#参数为对象时" class="headerlink" title="参数为对象时"></a>参数为对象时</h4><pre><code class="js">function move({ x = 0, y = 0 } = {}) {
+return [x, y]
+}
+
+move({ x: 3, y: 8 }) // [3, 8]
+move({ x: 3 }) // [3, 0]
+move({}) // [0, 0]
+move() // [0, 0]
+</code></pre>
+<h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><pre><code class="js">  let a = 1;
+  let b = 2;
+  [a, b] = [b, a];
+  console.log(a, b); //2,1
+</code></pre>
+<h3 id="获取后端数据中需要的数据"><a href="#获取后端数据中需要的数据" class="headerlink" title="获取后端数据中需要的数据"></a>获取后端数据中需要的数据</h3><pre><code class="js">  const jsonData = {
+    id: 42,
+    status: &#39;OK&#39;,
+    data: [867, 5309],
+    otherData1: 18,
+    otherData2: [&#39;www&#39;, &#39;itsource&#39;, &#39;cn&#39;],
+    otherData3: {
+      a: 1,
+    },
+  };
+  let { id, status, data } = jsonData;
+  console.log(id, status, data);//42 &quot;OK&quot; (2) [867, 5309]
+</code></pre>
+<h2 id="展开运算符"><a href="#展开运算符" class="headerlink" title="展开运算符"></a>展开运算符</h2><h3 id="展开字符串【字符串反转】"><a href="#展开字符串【字符串反转】" class="headerlink" title="展开字符串【字符串反转】"></a>展开字符串<strong>【字符串反转】</strong></h3><pre><code class="js">  let str = &#39;good afternoon&#39;
+  //   展开字符串
+  console.log(...str) //g o o d   a f t e r n o o n
+  //将展开的字符串转为数组
+  console.log([...str]) //[&quot;g&quot;, &quot;o&quot;, &quot;o&quot;, &quot;d&quot;, &quot; &quot;, &quot;a&quot;, &quot;f&quot;, &quot;t&quot;, &quot;e&quot;, &quot;r&quot;, &quot;n&quot;, &quot;o&quot;, &quot;o&quot;, &quot;n&quot;]
+  //颠倒数组顺序
+  console.log([...str].reverse()) // [&quot;n&quot;, &quot;o&quot;, &quot;o&quot;, &quot;n&quot;, &quot;r&quot;, &quot;e&quot;, &quot;t&quot;, &quot;f&quot;, &quot;a&quot;, &quot; &quot;, &quot;d&quot;, &quot;o&quot;, &quot;o&quot;, &quot;g&quot;]
+  //将数组转为字符串得到翻转后的字符串
+  console.log([...str].reverse().join(&#39;&#39;)) //noonretfa doog
+</code></pre>
+<h3 id="展开数组【浅拷贝、数组的合并、伪数组转数组】"><a href="#展开数组【浅拷贝、数组的合并、伪数组转数组】" class="headerlink" title="展开数组【浅拷贝、数组的合并、伪数组转数组】"></a>展开数组<strong>【浅拷贝、数组的合并、伪数组转数组】</strong></h3><pre><code class="js">  let arr = [1, 2, 3, 4, 5]
+  //展开数组
+  console.log(...arr) //1 2 3 4 5
+  //实现浅拷贝(将数组展开后再次转化为新数组)
+  console.log([...arr]) //[1, 2, 3, 4, 5]
+  console.log([...arr, ...[1, 3, 5]]) // [1, 2, 3, 4, 5, 1, 3, 5]
+  //伪数组转真数组
+  function fn() {
+    console.log([...arguments]) //[1, 2, 3, 4, 5]
+  }
+  fn(1, 2, 3, 4, 5)
+</code></pre>
+<h3 id="展开对象【浅拷贝、对象的合并】"><a href="#展开对象【浅拷贝、对象的合并】" class="headerlink" title="展开对象【浅拷贝、对象的合并】"></a>展开对象<strong>【浅拷贝、对象的合并】</strong></h3><pre><code class="js">  let obj = {
+    name: &#39;彭于晏&#39;,
+    age: 40,
+  }
+  //展开对象后再次转换为新对象实现浅拷贝
+  console.log({ ...obj }) //{name: &quot;彭于晏&quot;, age: 40}
+  //合并对象
+  console.log({ names: &#39;胡歌&#39;, ages: 20, ...obj }) //{names: &quot;胡歌&quot;, ages: 20, name: &quot;彭于晏&quot;, age: 40}
+</code></pre>
+<h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><pre><code class="js">    let emList = [
+      { id: 1, name: &#39;倪妮&#39;, sex: 1, age: 30, money: 10000000, time: 1324563478889 },
+      { id: 2, name: &#39;胡歌&#39;, sex: 0, age: 20, money: 20000000, time: 1222222222222 },
+      { id: 3, name: &#39;陈冠希&#39;, sex: 0, age: 30, money: 30000000, time: 1324943835527 },
+      { id: 4, name: &#39;佟丽娅&#39;, sex: 1, age: 45, money: 40000000, time: 1424943836627 },
+      { id: 5, name: &#39;谢霆锋&#39;, sex: 0, age: 50, money: 50000000, time: 1124943837727 },
+      { id: 6, name: &#39;周杰伦&#39;, sex: 0, age: 10, money: 60000000, time: 1424943838222 },
+      { id: 7, name: &#39;周杰伦&#39;, sex: 0, age: 10, money: 60000000, time: 1424943838222 },
+    ];
+    //将时间戳转换为年月日日期格式
+    const getDateByTime = (time, sign = &#39;/&#39;) =&gt; {
+      let m = new Date(time).getMonth() + 1;
+      m = m &lt; 10 ? &#39;0&#39; + m : m;
+      let d = new Date(time).getDate();
+      d = d &lt; 10 ? &#39;0&#39; + d : d;
+      return [new Date(time).getFullYear(), m, d].join(sign);
+    };   
+let html = &#39;&#39;;
+    //遍历
+    emList.forEach((item) =&gt; {      
+//模板字符串
+      html += `
+        &lt;tr&gt;
+          &lt;td&gt;${item.id}&lt;/td&gt;
+          &lt;td&gt;${item.name}&lt;/td&gt;
+          &lt;td&gt;${item.sex == 0 ? &#39;男&#39; : &#39;女&#39;}&lt;/td&gt;
+          &lt;td&gt;${item.age}&lt;/td&gt;
+          &lt;td&gt;￥ ${item.money.toFixed(2)}&lt;/td&gt;
+          &lt;td&gt;${getDateByTime(item.time)}&lt;/td&gt;
+          &lt;td&gt;&lt;button&gt;删除&lt;/button&gt;
+        &lt;/tr&gt;
+        `;
+    });
+  document.querySelector(&#39;tbody&#39;).innerHTML = html;
+</code></pre>
+<h2 id="对象的简写"><a href="#对象的简写" class="headerlink" title="对象的简写"></a>对象的简写</h2><ol>
+<li>如果key和value一样，只写key</li>
+<li>方法省略：function</li>
+</ol>
+<pre><code class="js">  let name = &#39;彭于晏&#39;;
+  let age = 30;
+  let addr = &#39;上海&#39;;
+  let obj = {
+    name,
+    age,
+    addr1: addr,
+    run() {},
+    eat() {},
+  };
+  console.log(obj); //{name: &quot;彭于晏&quot;, age: 30, addr1: &quot;上海&quot;, run: ƒ, eat: ƒ}
+</code></pre>
+<h2 id="ES6类（class）"><a href="#ES6类（class）" class="headerlink" title="ES6类（class）"></a>ES6类（class）</h2><ol>
+<li>关键字class</li>
+<li>类名时大驼峰命名规则</li>
+<li>constructor构造器new的时候自动调用相当于构造函数</li>
+<li>如果没有写constructor，会自动给你创建一个空的</li>
+<li>静态方法只能类去调用，实例对象不能调用，关键字static</li>
+</ol>
+<pre><code class="js"> //类 类名命名大驼峰
+  class DayStar {
+    //构造器 构造函数
+    constructor(name, age) {
+      this.nama = name;
+      this.age = age;
+    }
+    //原型上的方法
+    sing() {
+      console.log(&#39;我爱唱歌&#39;);
+    }
+    move() {
+      console.log(&#39;我爱移动&#39;);
+    }
+    //静态方法 只能类去调用 实例对象不能调用
+    static eatPerson() {
+      console.log(&#39;我爱你&#39;);
+    }
+  }
+  let pyy = new DayStar(&#39;彭于晏&#39;, 40);
+  console.log(pyy);
+  pyy.sing(); //我爱唱歌
+  pyy.move(); //我爱移动
+  DayStar.eatPerson(); //我爱你
+</code></pre>
+<h2 id="ES6类的继承"><a href="#ES6类的继承" class="headerlink" title="ES6类的继承"></a>ES6类的继承</h2><ol>
+<li>关键字<strong>extends</strong>子类<strong>extends</strong>父类</li>
+<li>super() 超类/父类</li>
+</ol>
+<pre><code class="js"> //类
+  class Animal {
+    constructor(type, sex, size) {
+      this.type = type;
+      this.sex = sex;
+      this.size = size;
+    }
+    swimming() {
+      console.log(&#39;游泳&#39;);
+    }
+    running() {
+      console.log(&#39;跑跑跑&#39;);
+    }
+    //静态方法
+    static sleep() {
+      console.log(&#39;睡觉了&#39;);
+    }
+  }
+  class Dog extends Animal {
+    constructor(type, sex, size, color) {
+      //超类
+      super(type, sex, size);
+      this.color = color;
+    }
+    lookHome() {
+      console.log(&#39;我要看家了&#39;);
+    }
+    static call() {
+      console.log(&#39;giaogiaogiao&#39;);
+    }
+  }
+  let cc = new Dog(&#39;柴犬&#39;, &#39;公&#39;, &#39;小狗&#39;, &#39;黄色&#39;);
+  console.log(cc);
+  Dog.call(); //giaogiaogiao
+  cc.lookHome(); //我要看家了
+  cc.swimming(); //游泳
+  cc.running(); //跑跑跑
+  Animal.sleep(); //睡觉了
+</code></pre>
+<h2 id="ES6模块化"><a href="#ES6模块化" class="headerlink" title="ES6模块化"></a>ES6模块化</h2><h3 id="模块的定义"><a href="#模块的定义" class="headerlink" title="模块的定义"></a>模块的定义</h3><ul>
+<li>一个js文件就是一个模块，放js文件的文件夹就是包</li>
+</ul>
+<h3 id="语法一"><a href="#语法一" class="headerlink" title="语法一"></a>语法一</h3><blockquote>
+<p>导出、暴露</p>
+<p>export 要暴露的东西</p>
+<p>export 要暴露的东西</p>
+<p>导入</p>
+<p>import {xxx,yyy} from ‘路径/文件名’</p>
+</blockquote>
+<h4 id="暴露（导出）"><a href="#暴露（导出）" class="headerlink" title="暴露（导出）"></a>暴露<strong>（导出）</strong></h4><pre><code class="js">export let num = 1000;
+export const getSum = (a, b) =&gt; a + b;
+export let arr = [1, 2, 3, 4, 5];
+export let user = { name: &#39;彭于晏&#39;, age: 30 };
+</code></pre>
+<h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><pre><code class="js">//导入
+import { num, arr, user, getSum } from &#39;./fn.js&#39;;
+console.log(num); //1000
+console.log(arr); // [1, 2, 3, 4, 5]
+console.log(user); //{name: &quot;彭于晏&quot;, age: 30}
+console.log(getSum(500, 200)); //700
+</code></pre>
+<blockquote>
+<script src="./index.js" type="module"></script>
+</blockquote>
+<h3 id="语法二"><a href="#语法二" class="headerlink" title="语法二"></a>语法二</h3><blockquote>
+<p>暴露、导出</p>
+<p>export default {</p>
+<p>​    要暴露的东西，</p>
+<p>​    要暴露的东西</p>
+<p>}</p>
+<p>导入</p>
+<p>import 变量名 from ‘路径/文件名’</p>
+<p>调用</p>
+<p>变量名.已经暴露的东西</p>
+</blockquote>
+<h4 id="暴露（导出）-1"><a href="#暴露（导出）-1" class="headerlink" title="暴露（导出）"></a>暴露<strong>（导出）</strong></h4><pre><code class="js">const getSum = (a, b) =&gt; a + b;
+const arr = [1, 2, 3, 4, 5, [6, 7, 8]];
+const user = { name: &#39;陈冠希&#39;, age: 20 };
+export default {
+  getSum,
+  arr,
+  user,
+};
+</code></pre>
+<h4 id="导入-1"><a href="#导入-1" class="headerlink" title="导入"></a>导入</h4><pre><code class="js">import myApi from &#39;./b.js&#39;;
+console.log(myApi);
+console.log(myApi.getSum(100, 122));
+console.log(myApi.user);
+</code></pre>
+<blockquote>
+<script src="./main.js" type="module"></script>
+</blockquote>
+<h1 id="高阶Js异步同步处理【Promise】"><a href="#高阶Js异步同步处理【Promise】" class="headerlink" title="高阶Js异步同步处理【Promise】"></a>高阶Js异步同步处理<strong>【Promise】</strong></h1><h2 id="同步异步的概念"><a href="#同步异步的概念" class="headerlink" title="同步异步的概念"></a>同步异步的概念</h2><ol>
+<li>同步和异步同时存在，先走完同步，再走异步</li>
+</ol>
+<pre><code class="js">  console.log(1);
+  setTimeout(() =&gt; console.log(2), 2000);
+  console.log(3);
+</code></pre>
+<ol start="2">
+<li>定时器、事件处理函数、ajax、回调函数</li>
+</ol>
+<pre><code class="js">  console.log(1);
+  console.log(3);
+</code></pre>
+<ol start="3">
+<li>回调地狱</li>
+</ol>
+<pre><code class="js">&lt;script src=&quot;./http.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  //请求a.json得到id
+  $http.get(&#39;./serve/a.json&#39;, (res) =&gt; {
+    //   let id = res.id
+    let { id } = res;
+    //携带id请求b.json得到code
+    $http.get(&#39;./serve//b.json&#39;, (res) =&gt; {
+      let { code } = res;
+      //携带code请求c.json得到data
+      $http.get(&#39;./serve/c.json&#39;, (res) =&gt; {
+        let { data } = res;
+        console.log(data);
+          .......
+      });
+    });
+  });
+&lt;/script&gt;
+</code></pre>
+<h2 id="Promise【重点】"><a href="#Promise【重点】" class="headerlink" title="Promise【重点】"></a>Promise<strong>【重点】</strong></h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>Promise是构造函数，得到实例对象需要 new Promise()</li>
+<li>有三个状态：进行中，成功，失败</li>
+<li>状态切换只有两个可能，而且状态改变后不可逆，状态完成就凝固了<ul>
+<li>进行中—&gt;成功</li>
+<li>进行中—&gt;失败</li>
+</ul>
+</li>
+</ul>
+<h4 id="基本语法结构"><a href="#基本语法结构" class="headerlink" title="基本语法结构"></a>基本语法结构</h4><pre><code class="js">new Primise((resolve,reject)=&gt;{
+    if(1) {
+        resolve(data)
+    } else {
+        reject(err)
+    }
+})
+.then(data=&gt;{  
+})//捕获成功
+.catch(err=&gt;{
+})//捕获失败
+</code></pre>
+<h3 id="Promise解决回调地狱"><a href="#Promise解决回调地狱" class="headerlink" title="Promise解决回调地狱"></a>Promise解决回调地狱</h3><pre><code class="js">&lt;script src=&quot;./http.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  new Promise((resolve) =&gt; {
+    //1.请求a.json，得到id
+    $http.get(&#39;./serve/a.json&#39;, (res) =&gt; {
+      resolve(res);
+    });
+  }).then((data) =&gt;
+    new Promise((resolve) =&gt; {
+      //2.携带id请求b.json，得到code
+      let { id } = data;
+      $http.get(&#39;./serve/b.json?id=&#39; + id, (res) =&gt; {
+        resolve(res);
+      });
+    })
+      .then(
+        (data) =&gt;
+          new Promise((resolve) =&gt; {
+            //3.携带code请求c.json，得到data
+            let { code } = data;
+            $http.get(&#39;./serve/c.json?code=&#39; + code, (res) =&gt; {
+              resolve(res);
+            });
+          })
+      )
+      .then((res) =&gt; {
+        let { data } = res;
+        console.log(data);
+      })
+  );
+&lt;/script&gt;
+</code></pre>
+<h3 id="Promise完美解决回调地狱"><a href="#Promise完美解决回调地狱" class="headerlink" title="Promise完美解决回调地狱"></a>Promise完美解决回调地狱</h3><pre><code class="js">&lt;script src=&quot;./http.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  //封装一个基于Promise的get请求
+  const loadData = (url, params = &#39;&#39;) =&gt; new Promise((resolve) =&gt; {
+    url = params === &#39;&#39; ? url : url + &#39;?&#39; + params; //处理参数问题
+    $http.get(url, res =&gt; resolve(res));
+  });
+  //1.请求a.json，得到id
+  loadData(&#39;./serve/a.json&#39;)
+    //2.携带id请求b.json，得到code
+    .then((res) =&gt; loadData(&#39;./serve/b.json&#39;, (&#39;id&#39; + res.id)))
+    //3.携带code请求c.json，得到data
+    .then((res) =&gt; loadData(&#39;./serve/c.json&#39;, (&#39;code&#39; + res.code)))
+    .then((res) =&gt; console.log(res.data));
+&lt;/script&gt;
+</code></pre>
+<h2 id="axios库的使用【重点】"><a href="#axios库的使用【重点】" class="headerlink" title="axios库的使用【重点】"></a>axios库的使用<strong>【重点】</strong></h2><ul>
+<li>概念：Axios 是一个基于 promise 的 HTTP 库,可以用在浏览器和 Node.js 中</li>
+</ul>
+<h3 id="axios的使用"><a href="#axios的使用" class="headerlink" title="axios的使用"></a>axios的使用</h3><pre><code class="js">&lt;script src=&quot;./axios.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  //get请求
+  axios.get(&#39;http://139.9.177.51:3333/api/testGet?name=彭于晏&#39;).then(res =&gt; console.log(res.data, new Date().getTime()));
+  axios.get(&#39;http://139.9.177.51:3333/api/testGet&#39;, { params: { name: &#39;金城武&#39; } }).then(res =&gt; console.log(res.data));
+  //post请求
+  axios.post(&#39;http://139.9.177.51:3333/api/testPost&#39;, { name: &#39;陈冠希&#39; }).then(res =&gt; console.log(res.data));
+&lt;/script&gt;
+</code></pre>
+<h3 id="axios解决回调地狱"><a href="#axios解决回调地狱" class="headerlink" title="axios解决回调地狱"></a>axios解决回调地狱</h3><pre><code class="js">&lt;div&gt;&lt;/div&gt;
+&lt;script src=&quot;./axios.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    axios.get(&#39;./serve/a.json&#39;)
+        .then(res =&gt; axios.get(&#39;./serve/b.json&#39;, { params: { id: res.data.id } }))
+        .then(res =&gt; axios.get(&#39;./serve/c.json&#39;, { params: { code: res.data.code } }))
+        .then(res =&gt; document.querySelector(&#39;div&#39;).innerText = res.data.data)
+&lt;/script&gt;
+</code></pre>
+<h2 id="async和await"><a href="#async和await" class="headerlink" title="async和await"></a>async和await</h2><ul>
+<li>async异步 只能修饰函数</li>
+<li>await和async连用</li>
+<li>和Promise连用</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre><code class="js">&lt;script&gt;
+    const timer = () =&gt; new Promise(resolve =&gt; {
+        setTimeout(() =&gt; {
+            console.log(2);
+            resolve(&#39;你快回来&#39;)
+        }, 2000)
+    })
+    const myApi = async () =&gt; {
+        console.log(1);
+        let res = await timer()
+        console.log(res);
+        console.log(3);
+    }
+    myApi()
+&lt;/script&gt;
+</code></pre>
+<h3 id="async和await解决回调地狱"><a href="#async和await解决回调地狱" class="headerlink" title="async和await解决回调地狱"></a>async和await解决回调地狱</h3><pre><code class="js">&lt;span style=&quot;font-size: 50px;color: pink;&quot;&gt;&lt;/span&gt;
+&lt;script src=&quot;./axios.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    //axios是基于Promise
+
+    const loadData = async () =&gt; {
+        //1.请求a.json得到id
+        let data1 = await axios.get(&#39;./serve/a.json&#39;)
+        // console.log(data1);
+        //2.携带id请求b.json得到code
+        let data2 = await axios.get(&#39;./serve/b.json?id=&#39; + data1.data.id)
+        // console.log(data2);
+        let data3 = await axios.get(&#39;./serve/c.json?code=&#39; + data2.data.code)
+        // console.log(data3);
+        //3.携带code请求c.json得到data
+        document.querySelector(&#39;span&#39;).innerText = data3.data.data
+    }
+    loadData()
+&lt;/script&gt;
+</code></pre>
+<h2 id="axios并发请求"><a href="#axios并发请求" class="headerlink" title="axios并发请求"></a>axios并发请求</h2><h3 id="1-定义请求函数，一定要将axios返回来"><a href="#1-定义请求函数，一定要将axios返回来" class="headerlink" title="1.定义请求函数，一定要将axios返回来"></a>1.定义请求函数，一定要将axios返回来</h3><h3 id="2-语法结构"><a href="#2-语法结构" class="headerlink" title="2.语法结构"></a>2.语法结构</h3><pre><code class="js">&lt;script src=&quot;../axios.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    //设置axios全局默认服务请求地址
+    axios.defaults.baseURL = &#39;http://139.9.177.51:3333&#39;
+    //并发请求 一起发送请求
+    //请求函数 get
+    const getName = () =&gt; axios.get(&#39;/api/testGet&#39;, { params: { name: &#39;金城武&#39; } })
+    //请求函数 post
+    const getNameTwo = () =&gt; axios.post(&#39;/api/testPost&#39;, { name: &#39;陈冠希&#39; })
+    const getEmail = () =&gt; axios.post(&#39;/api/emailExist&#39;, { email: &#39;nihaod@qq.com&#39; })
+    //一起发送请求
+    axios.all([getName(), getNameTwo(), getEmail()])
+        .then(axios.spread((dataA, dataB, dataC) =&gt; {
+            console.log(dataA.data);
+            console.log(dataB.data);
+            console.log(dataC.data);
+        }))
+        .catch(error =&gt; console.log(error))
+&lt;/script&gt;
+</code></pre>
+
+                </div>
+                <!-- .entry-content -->
+                <div class="single-reward">
+                  <div class="reward-open">赏
+                    <div class="reward-main">
+                      <ul class="reward-row">
+                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/zfbQR.jpg"></li>
+                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/weixinQR.jpg"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center; width: 100%" class="social-share share-mobile"
+                  data-disabled="diandian, tencent"></div>
+                <!-- <footer class="post-footer">
+                  <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+                      target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+                      岂能尽如人意，但求无愧我心！</a></div>
+                  <div class="post-tags">
+                  </div>
+                  <div class="post-share">
+                    <div class="social-share sharehidden share-component"></div>
+                    <i class="iconfont show-share icon-forward"></i>
+                  </div>
+                </footer>.entry-footer -->
+          </article>
+          <!-- #post-## -->
+          <div class="toc" style="background: none;"></div>
+          <section class="post-squares nextprev">
+            
+              
+                <div class="post-nepre half previous">
+                  
+                        <a href="/2021/02/25/H5/" rel="prev">
+                          <div class="background">
+                            <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/hfive.jpg"
+                              style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                              onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/hfive.jpg">
+                          </div>
+                          <span class="label">
+                            Previous Post</span>
+                          <div class="info">
+                            <h3>
+                              H5
+                            </h3>
+                            <hr>
+                          </div>
+                        </a>
+                    </div>
+                    
+                      
+                        
+                          <div class="post-nepre half next">
+                            
+                                  <a href="/2021/01/22/Js中阶/" rel="next">
+                                    <div class="background">
+                                      <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
+                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jstwo.jpg"
+                                        style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jstwo.jpg">
+                                    </div>
+                                    <span class="label">
+                                      Next Post</span>
+                                    <div class="info">
+                                      <h3>
+                                        Javascript
+                                      </h3>
+                                      <hr>
+                                    </div>
+                                  </a>
+                              </div>
+                              
+          </section>
+          
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function () {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz",
+        appKey: "9m413jYIug2cFvhs6TtILisl",
+        path: window.location.pathname,
+        placeholder: "想说什么，你就说吧 ...",
+        avatar: 'robohash',
+      })
+    }
+  </script>
+  
+            <section class="author-profile">
+              <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                <a href="javascript:;" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg" itemprop="image"
+                    alt="Ayu" height="70" width="70"></a>
+                <div class="meta">
+                  <span class="title">Author</span>
+                  <h3 itemprop="name">
+                    <a href="javascript:;" itemprop="url" rel="author">
+                      Ayu
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <hr>
+              <p><i class="iconfont icon-write"></i>
+                人无善志，虽勇必伤。
+              </p>
+            </section>
+        </main><!-- #main -->
+      </div><!-- #primary -->
+    </div>
+
+    
+        </div>
+        <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+          <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ayu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;"><i class="iconfont icon-sakura rotating"
+          style="color: #ffc0cb;display:inline-block"></i>
+        <span style="color: #b9b9b9;">Where <a href="javascript:;"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">there</a> is a <a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);"></a><a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">will</a>,
+          there is a way</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "close" }, "windowheight": "fixed", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  } else {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "open" }, "windowheight": "auto", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  }
+/* ]]> */
+
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+            <div class="openNav no-select" style="height: 50px;">
+              <div class="iconflat no-select" style="width: 50px; height: 50px;">
+                <div class="icon"></div>
+              </div>
+              <div class="site-branding search-form-submit">
+                <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+              </div>
+            </div>
+    </section>
+    <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+        <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+          <div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn">
+        <span id="open-skinMenu"> 切换主题
+            <i class="iconfont icon-gear inline-block rotating"></i>
+        </span>
+    </div>
+</div>
+            <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  </body>
+
+  </html>

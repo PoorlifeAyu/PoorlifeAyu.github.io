@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Javascript | Poorlife</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "个人博客Ayu";
+  mashiro_option.author_name = "Ayu";
+  mashiro_option.site_url = "";
+  mashiro_option.v_appId = "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz";
+  mashiro_option.v_appKey = "9m413jYIug2cFvhs6TtILisl";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+
+  <body
+    class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar">
+    </div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+      <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="">
+          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>
+          谁给我一滴水，我便回报他整个大海。
+        </p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                  <li>
+                    <a href="https://github.com/PoorlifeAyu" target="_blank" class="social-github" title="github">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/github.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://weibo.com/u/6030188226" target="_blank" class="social-github" title="sina">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/sina.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://music.163.com/" target="_blank" class="social-github" title="wangyiyun">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wangyiyun.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://mail.qq.com/cgi-bin/frame_html?sid=0j3LVIvsrSzKXR5_&amp;r=c8c502b38f105671c3cf4b6fb70a0ebd" target="_blank" class="social-github" title="email">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/email.svg">
+                    </a>
+                  </li>
+                  
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/wechat.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/qq.jpg">
+                  </div>
+                </li>
+                
+                    
+              
+                  <li>
+                    <a href="https://blog.csdn.net/Ayuzz?spm=1000.2115.3001.5343" target="_blank" class="social-github" title="csdn">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/social/csdn.png">
+                    </a>
+                  </li>
+                  
+                    
+                      
+                        <li id="bg-next">
+                          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/next-b.svg">
+                        </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+        <div id="page" class="site wrapper">
+          <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">个人博客</span>
+            <span class="shironeko">Ayu</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/管理/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          管理
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          个人
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+            <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jstwo.jpg);"
+      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jstwo.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+        Javascript
+      </h1>
+      <p class="entry-census">
+        <span>
+          <a href="javascript:;">
+            <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="javascript:;">
+            Ayu
+          </a>
+        </span>
+        <span class="bull">
+          ·</span>
+        2021-1-22<span class="bull">
+            ·</span>
+          <span id="busuanzi_value_page_pv"></span>次阅读
+      </p>
+    </header>
+  </div>
+  
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <article id="post-1"
+            class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+            <div class="toc"></div>
+            <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+            
+                <div class="entry-content">
+                  <h1 id="JS函数与数组进阶"><a href="#JS函数与数组进阶" class="headerlink" title="JS函数与数组进阶"></a>JS函数与数组进阶</h1><h2 id="ES6定义变量的关键字【重点】"><a href="#ES6定义变量的关键字【重点】" class="headerlink" title="ES6定义变量的关键字【重点】"></a>ES6定义变量的关键字<strong>【重点】</strong></h2><h3 id="var"><a href="#var" class="headerlink" title="var"></a>var</h3><blockquote>
+<p>变量提升</p>
+<p>可以重复定义同一个变量</p>
+</blockquote>
+<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><blockquote>
+<p>先定义再使用</p>
+<p>不能在同一作用域下反复定义</p>
+<p>形成块级作用域（大括号括起来的就是块级作用域，<strong>注意：</strong>对象的大括号没有形成块级作用域）</p>
+</blockquote>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><blockquote>
+<p>定义常量</p>
+<p>定义必须赋值后面不能修改值</p>
+<p>先定义再使用</p>
+<p>不能在同一作用域下反复定义</p>
+<p>形成块级作用域（大括号括起来的就是块级作用域，<strong>注意：</strong>对象的大括号没有形成块级作用域）</p>
+</blockquote>
+<h2 id="循环及嵌套循环"><a href="#循环及嵌套循环" class="headerlink" title="循环及嵌套循环"></a>循环及嵌套循环</h2><ul>
+<li>输出图形：外层循环控制行，内层循环控制列</li>
+<li>读取数据：一层一层读取，一层循环读一维数组，二层循环读二维数组  …..</li>
+</ul>
+<h2 id="字符串的操作【重点】"><a href="#字符串的操作【重点】" class="headerlink" title="字符串的操作【重点】"></a>字符串的操作<strong>【重点】</strong></h2><h3 id="【注意】都不会改变原字符串"><a href="#【注意】都不会改变原字符串" class="headerlink" title="【注意】都不会改变原字符串"></a><strong>【注意】</strong>都不会改变原字符串</h3><h3 id="1-charAt"><a href="#1-charAt" class="headerlink" title="1.charAt()"></a>1.charAt()</h3><ul>
+<li>作用：返回在指定位置的字符</li>
+</ul>
+<pre><code class="js">  //   1．charAt  返回在指定位置的字符。
+  let str = &#39;sdasdasdasfa&#39;;
+  console.log(str.charAt(2)); //a
+  console.log(str); //不改变原字符串 sdasdasdasfa
+</code></pre>
+<h3 id="2-charCodeAt"><a href="#2-charCodeAt" class="headerlink" title="2.charCodeAt()"></a>2.charCodeAt()</h3><ul>
+<li>作用：返回在指定的位置的字符的 Unicode 编码</li>
+</ul>
+<pre><code class="js">  //   2．charCodeAt  返回在指定的位置的字符的 Unicode 编码。
+  let str = &#39;abcdefg&#39;;
+  console.log(str.charCodeAt(2)); //99
+  console.log(str); //不改变原字符串 abcdefg
+</code></pre>
+<h3 id="3-concat"><a href="#3-concat" class="headerlink" title="3.concat()"></a>3.concat()</h3><ul>
+<li>作用：连接两个或更多字符串，并返回新的字符串</li>
+</ul>
+<pre><code class="js"> //   3．concat      连接两个或更多字符串，并返回新的字符串。
+  let str = &#39;aaaaa&#39;;
+  let str1 = &#39;bbbbb&#39;;
+  console.log(str.concat(str1)); //aaaaabbbbb
+  console.log(str); //aaaaa
+  console.log(str1); //不会改变原字符串 bbbbb
+</code></pre>
+<h3 id="4-includes"><a href="#4-includes" class="headerlink" title="4.includes()"></a>4.includes()</h3><ul>
+<li>作用：查找字符串中是否包含指定的子字符串</li>
+</ul>
+<pre><code class="js">  //   4．includes  查找字符串中是否包含指定的子字符串。
+  let str = &#39;abcdefg&#39;;
+  console.log(str.includes(&#39;c&#39;)); //true 找不到返回false
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="5-indexOf"><a href="#5-indexOf" class="headerlink" title="5.indexOf()"></a>5.indexOf()</h3><ul>
+<li>作用：返回某个指定的字符串值在字符串中首次出现的位置</li>
+</ul>
+<pre><code class="js">  //   5．IndexOf      返回某个指定的字符串值在字符串中首次出现的位置。
+  let str = &#39;abcdefg&#39;;
+  console.log(str.indexOf(&#39;o&#39;)); //2 找不到返回-1
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="6-replace"><a href="#6-replace" class="headerlink" title="6.replace()"></a>6.replace()</h3><ul>
+<li>作用：在字符串中查找匹配的子串， 并替换与正则表达式匹配的子串</li>
+</ul>
+<pre><code class="js">  //   6．replace  在字符串中查找匹配的子串， 并替换与正则表达式匹配的子串
+  let str = &#39;abcdefg&#39;;
+  console.log(str.replace(&#39;a&#39;, &#39;o&#39;)); //obcdefg
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="7-slice"><a href="#7-slice" class="headerlink" title="7.slice()"></a>7.slice()</h3><ul>
+<li>作用：提取字符串的片断，并在新的字符串中返回被提取的部分</li>
+</ul>
+<pre><code class="js">  //   7．slice  提取字符串的片断，并在新的字符串中返回被提取的部分。
+  let str = &#39;abcdefg&#39;;
+  console.log(str.slice(2, 6)); //cdef
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="8-split"><a href="#8-split" class="headerlink" title="8.split()"></a>8.split()</h3><ul>
+<li>作用：把字符串分割为字符串数组</li>
+</ul>
+<pre><code class="js">  //   8．split  把字符串分割为字符串数组。
+  let str = &#39;abcdefg&#39;;
+  console.log([...str]); //[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;]
+  console.log(str.split(&#39;&#39;)); //[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;]
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="9-substr"><a href="#9-substr" class="headerlink" title="9.substr()"></a>9.substr()</h3><ul>
+<li>作用：从起始索引号提取字符串中指定数目的字符</li>
+</ul>
+<pre><code class="js">  //   9．substr  从起始索引号提取字符串中指定数目的字符。
+  let str = &#39;abcdefg&#39;;
+  console.log(str.substr(0, 2)); //ab
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="10-substring"><a href="#10-substring" class="headerlink" title="10.substring()"></a>10.substring()</h3><ul>
+<li>作用：提取字符串中两个指定的索引号之间的字符</li>
+</ul>
+<pre><code class="js">  //   10．substring  提取字符串中两个指定的索引号之间的字符。
+  let str = &#39;abcdefg&#39;;
+  console.log(str.substring(0, 3)); //abc
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="11-toLowerCase"><a href="#11-toLowerCase" class="headerlink" title="11.toLowerCase()"></a>11.toLowerCase()</h3><ul>
+<li>作用：把字符串转换为小写</li>
+</ul>
+<pre><code class="js">  //   11．toLowerCase      把字符串转换为小写。
+  let str = &#39;ABCDEFG&#39;;
+  console.log(str.toLowerCase()); //abcdefg
+  console.log(str); //不会改变原字符串 ABCDEFG
+</code></pre>
+<h3 id="12-toUpperCase"><a href="#12-toUpperCase" class="headerlink" title="12.toUpperCase()"></a>12.toUpperCase()</h3><ul>
+<li>作用：把字符串转换为大写</li>
+</ul>
+<pre><code class="js"> //   12．toUpperCase  把字符串转换为大写。
+  let str = &#39;abcdefg&#39;;
+  console.log(str.toUpperCase()); //ABCDEFG
+  console.log(str); //不会改变原字符串 abcdefg
+</code></pre>
+<h3 id="13-trim"><a href="#13-trim" class="headerlink" title="13.trim()"></a>13.trim()</h3><ul>
+<li>作用：去除字符串两边的空白</li>
+</ul>
+<pre><code class="js">  //   13．trim  去除字符串两边的空白
+  let str = &#39; abcdefg &#39;;
+  console.log(str.trim()); //abcdefg
+  console.log(str); //不会改变原字符串  abcdefg
+</code></pre>
+<h2 id="数组的操作【重点】"><a href="#数组的操作【重点】" class="headerlink" title="数组的操作【重点】"></a>数组的操作<strong>【重点】</strong></h2><h3 id="1-push"><a href="#1-push" class="headerlink" title="1.push()"></a>1.push()</h3><ul>
+<li>作用：向数组的末尾添加一个或更多元素，并返回新的长度</li>
+<li>特点：改变原数组</li>
+</ul>
+<pre><code class="js">  //   1．push  向数组的末尾添加一个或更多元素，并返回新的长度。
+  let arr = [1, 2, 3, 4]
+  console.log(arr.push(5, 6, 7)) //返回数组的长度 7
+  console.log(arr) //改变原数组 [1,2,3,4,5,6,7]
+</code></pre>
+<h3 id="2-unshift"><a href="#2-unshift" class="headerlink" title="2.unshift()"></a>2.unshift()</h3><ul>
+<li>作用：向数组的开头添加一个或更多元素，并返回新的长度</li>
+<li>特点：改变原数组</li>
+</ul>
+<pre><code class="js">  //   2．unshift  向数组的开头添加一个或更多元素，并返回新的长度。
+  let arr = [123, 3, 123, 12, 4, 12, 412]
+  console.log(arr.unshift(&#39;陈冠希&#39;, &#39;彭于晏&#39;, &#39;胡歌&#39;)) //10
+  console.log(arr) //改变原数组[&#39;陈冠希&#39;, &#39;彭于晏&#39;, &#39;胡歌&#39;,123, 3, 123, 12, 4, 12, 412]
+</code></pre>
+<h3 id="3-splice"><a href="#3-splice" class="headerlink" title="3.splice()"></a>3.splice()</h3><ul>
+<li>作用：向数组的开头添加一个或更多元素，并返回新的长度</li>
+<li>特点：改变原数组</li>
+</ul>
+<pre><code class="js">  //   3．splice  从数组中添加或删除元素。
+  let arr = [312, 3, 12, 3, 1231, 324, 564]
+  arr.splice(1, 0, &#39;你好&#39;, &#39;我不好&#39;) //312, &quot;你好&quot;, &quot;我不好&quot;, 3, 12, 3, 1231, 324, 564
+  console.log(arr) //[312,&#39;你好&#39;, &#39;我不好&#39;, 3, 12, 3, 1231, 324, 564]
+  arr.splice(2, 3, &#39;你好&#39;, &#39;我不好&#39;) //312, &quot;你好&quot;, &quot;你好&quot;, &quot;我不好&quot;, 3, 1231, 324, 564
+  console.log(arr) //改变原数组 参数按照长度
+</code></pre>
+<h3 id="4-pop"><a href="#4-pop" class="headerlink" title="4.pop()"></a>4.pop()</h3><ul>
+<li>作用：向数组的开头添加一个或更多元素，并返回新的长度</li>
+<li>特点：改变原数组</li>
+</ul>
+<pre><code class="js">  //   4．pop  删除数组的最后一个元素并返回删除的元素。
+  let arr = [1, 2, 3, 4, 5]
+  console.log(arr.pop()) //返回删除的元素 5
+  console.log(arr) //改变原数组[1, 2, 3, 4]
+</code></pre>
+<h3 id="5-shift"><a href="#5-shift" class="headerlink" title="5.shift()"></a>5.shift()</h3><ul>
+<li>作用：向数组的开头添加一个或更多元素，并返回新的长度</li>
+<li>特点：改变原数组</li>
+</ul>
+<pre><code class="js">  //   5．shift  删除并返回数组的第一个元素。
+  let arr = [1, 23, 12, 3, 12]
+  console.log(arr.shift()) //1
+  console.log(arr) //改变原数组 23,12,3,12
+</code></pre>
+<h3 id="6-forEach"><a href="#6-forEach" class="headerlink" title="6.forEach()"></a>6.forEach()</h3><ul>
+<li>作用：向数组的开头添加一个或更多元素，并返回新的长度</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">  //   6．forEach  数组每个元素都执行一次回调函数。
+  let arr = [1, 2, 3, 4, 5, 6, 7]
+  arr.forEach((item) =&gt; console.log(item + 5))//[6,7,8,9,10,11,12]
+  console.log(arr) //不改变原数组
+</code></pre>
+<h3 id="7-delete"><a href="#7-delete" class="headerlink" title="7.delete()"></a>7.delete()</h3><ul>
+<li>作用：删除数组中的指定元素</li>
+<li>特点：改变原数组</li>
+</ul>
+<pre><code class="js">  //   7.delete  删除数组中的指定元素会留下空位
+  let arr = [1, 2, 3, 4, 5, 6, 7]
+  console.log(delete arr[4]) //true
+  console.log(arr) // [1, 2, 3, 4, empty, 6, 7]
+</code></pre>
+<h3 id="8-map（）"><a href="#8-map（）" class="headerlink" title="8.map（）"></a>8.map（）</h3><ul>
+<li>作用：遍历数组并返回一个新数组</li>
+<li>特点：不影响原数组的值</li>
+</ul>
+<pre><code class="js">        let arr = [1, 2, 564, 5, 45, 45];
+        let arr1 = arr.map(function (item) {
+            return item * 2;
+        })
+        console.log(arr1);    //[2, 4, 1128, 10, 90, 90]
+</code></pre>
+<pre><code class="js">    //将数组中的元素 的某个属性 的值都更改一下
+    let arr = [
+        { sno: 1, age: 15, name: &#39;张麻子&#39; },
+        { sno: 2, age: 20, name: &#39;张麻子&#39; },
+        { sno: 3, age: 12, name: &#39;张麻子&#39; },
+        { sno: 4, age: 18, name: &#39;张麻子&#39; },
+    ]
+    let arr2 = arr.map(function (item) {
+        item.age = item.age + 5;
+        return item;
+    })
+    console.log(arr2);
+</code></pre>
+<h3 id="9-find"><a href="#9-find" class="headerlink" title="9.find()"></a>9.find()</h3><ul>
+<li>作用：遍历数组，返回满足条件的第一个元素</li>
+<li>特点：不会影响原数组</li>
+</ul>
+<pre><code class="js">    let arr = [1, 2, 4, 31, 54, 54, 5, 45];
+    let data = arr.find(function (item) {
+        return item &gt; 30;
+    })
+    console.log(data);   //31
+</code></pre>
+<pre><code class="js">    let arr = [
+            { sno: 1, age: 15, name: &#39;张麻子1&#39; },
+            { sno: 2, age: 20, name: &#39;张麻子2&#39; },
+            { sno: 3, age: 12, name: &#39;张麻子3&#39; },
+            { sno: 4, age: 18, name: &#39;张麻子4&#39; },
+        ]
+        let data1 = arr.find(function (item) {
+            return item.sno === 3;
+        })
+        console.log(data1); //{ sno: 3, age: 12, name: &#39;张麻子3&#39; }
+
+</code></pre>
+<h3 id="10-findIndex"><a href="#10-findIndex" class="headerlink" title="10.findIndex()"></a>10.findIndex()</h3><ul>
+<li>作用：查找满足条件的第一个元素的索引并返回，找不到返回-1</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">    let arr = [1, 2, 15, 15, 45, 45, 45, 485];
+
+    let index = arr.findIndex(function (item) {
+        return item &gt; 500
+    })
+    console.log(index);   // -1
+</code></pre>
+<h3 id="11-indexOf"><a href="#11-indexOf" class="headerlink" title="11.indexOf()"></a>11.indexOf()</h3><ul>
+<li>作用：查找相等的元素的索引并返回，找不到返回-1</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">    let arr = [1, 2, 15, 15, 45, 45, 45, 485];
+    let index1 = arr.indexOf(15)
+    console.log(index1);  //2
+</code></pre>
+<h3 id="12-join"><a href="#12-join" class="headerlink" title="12.join()"></a>12.join()</h3><ul>
+<li>作用：将数组转换为字符串，可以添加一个分隔符</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">    // 数组转字符串
+    let arr1 = [&#39;张三&#39;, &#39;抽烟 喝酒 烫头&#39;]
+    let str1 = arr1.join(&#39;,&#39;)
+    console.log(str1);
+    //将字符串 转换数组
+    let arr2 = str1.split(&#39;,&#39;)
+    console.log(arr2);
+</code></pre>
+<h3 id="13-includes"><a href="#13-includes" class="headerlink" title="13.includes()"></a>13.includes()</h3><ul>
+<li>作用：检测数组中是否包含某个元素，包含返回：true     不包含返回：flase<ul>
+<li>检测字符串中是否包含某个元素，包含返回：true     不包含返回：flase</li>
+</ul>
+</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">   // 检测数组中是否包含某个元素
+    let arr = [12, 45, 6, 484, 88, 48, 4];
+    console.log(12);  //true
+    console.log(arr.includes(120));  //false
+
+    //检测字符串中是否包含 某个字符
+    let str = &#39;xdsadhsavdghasvdghsadvbh&#39;;
+    console.log(str.includes(&#39;dhs&#39;)); //true
+    console.log(str.includes(&#39;aaaa&#39;));  //false
+</code></pre>
+<h3 id="14-reverse"><a href="#14-reverse" class="headerlink" title="14.reverse()"></a>14.reverse()</h3><ul>
+<li>作用：将数组反序输出</li>
+<li>特点：改变原数组</li>
+</ul>
+<pre><code class="js">  //   2．reverse      反转数组的元素顺序。
+    let arr = [1, 2, 3, 4, 5]
+    console.log(arr.reverse())//[5,4,3,2,1]
+    console.log(arr) //改变原数组 [5,4,3,2,1]
+</code></pre>
+<h3 id="15-sort"><a href="#15-sort" class="headerlink" title="15.sort()"></a>15.sort()</h3><ul>
+<li><p>作用：对数组中的元素进行排序</p>
+</li>
+<li><p>特点：改变原数组</p>
+<ul>
+<li>元素为字符串时的排序</li>
+<li>ASCII码</li>
+</ul>
+<pre><code class="js">字符0       48
+A          65
+a          97
+</code></pre>
+<pre><code class="js">    // 注意：字符串与 数字的排序有区别 
+    // 字符串排序 只能是 从小到大  （从大到小  reverse() 实现）
+    // 如果元素是字符串  排序不需要写 function  
+    let arr = [&#39;Dxxx&#39;, &#39;Bxxx&#39;, &#39;axxx&#39;, &#39;AAAA&#39;]
+    let arr1 = arr.sort();
+    console.log(arr1);
+</code></pre>
+<ul>
+<li>元素为数字时的排序</li>
+</ul>
+<pre><code class="js">     // 如果是数值    排序必须写 function 
+    let arr2 = [100, 300, 850, 50, 150];
+    let arr3 = arr2.sort(function (a, b) {
+        //从小到大排序
+        // return a - b;
+        //从大到小排序
+        return b - a;
+    });
+    console.log(arr3);
+</code></pre>
+</li>
+</ul>
+<h3 id="16-flat"><a href="#16-flat" class="headerlink" title="16.flat()"></a>16.flat()</h3><ul>
+<li>作用：拉平数组，将多维数组转换为1维数组</li>
+<li>特点：不影响原数组</li>
+<li>参数：数字(正整数)[拉平的层数]/infinity：无线层</li>
+</ul>
+<pre><code class="js">  //   8．flat  嵌套数组转一维数组（如：arr.flat()）
+  let arr = [1, 2, [3, 4, [6, 7, 8, [9, 10]]], 5]
+  console.log(arr.flat(4))
+  console.log(arr.flat(Infinity)) //1,2,3,4,6,7,8,9,10,5
+  console.log(arr) //不会改变原数组
+</code></pre>
+<h3 id="17-every"><a href="#17-every" class="headerlink" title="17.every()"></a>17.every()</h3><ul>
+<li>作用：每一个元素都满足条件时返回true   否则返回flase</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">let arr = [10, 12, 45, 45, 48, 748, 78, 748, 48]
+    let bool = arr.every(function (item) {
+        return item &gt; 1;
+    })
+    console.log(bool);   //true
+</code></pre>
+<h3 id="18-some"><a href="#18-some" class="headerlink" title="18.some()"></a>18.some()</h3><ul>
+<li>作用：只要有一个元素满足条件就返回true 没有元素满足条件返回flase</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">   let arr = [10, 12, 45, 45, 48, 748, 78, 748, 48]
+    let bool = arr.every(function (item) {
+        return item &gt; 740;
+    })
+    console.log(bool);   //true
+</code></pre>
+<h3 id="19-filter"><a href="#19-filter" class="headerlink" title="19.filter()"></a>19.filter()</h3><ul>
+<li>作用：将原数组中满足条件的元素组成新数组并返回</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">  //   18．filter  检测数值元素，并返回符合条件所有元素的数组。
+  let arr = [1, 2, 3, 4, 5, 6]
+  console.log(arr.filter((item) =&gt; item &gt; 3))//4,5,6
+  console.log(arr) //不改变原数组
+</code></pre>
+<pre><code class="js">    let arr = [
+        { sno: 1, age: 15, name: &#39;张麻子1&#39; },
+        { sno: 2, age: 20, name: &#39;张麻子2&#39; },
+        { sno: 3, age: 12, name: &#39;张麻子3&#39; },
+        { sno: 4, age: 18, name: &#39;张麻子4&#39; },
+    ]
+    let arr1 = arr.filter(function (item) {
+        return item.age &gt;= 18;
+    })
+    console.log(arr1);
+
+</code></pre>
+<h3 id="20-slice"><a href="#20-slice" class="headerlink" title="20.slice()"></a>20.slice()</h3><ul>
+<li>作用：截取数组返回新数组</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">  let arr = [1, 45, 54, 545, 65, 45, 45, 4];
+    // 左闭右开
+    //参数：起点索引  终点索引
+    // let arr1 = arr.slice(1, 5);
+    // console.log(arr1);
+    // 参数：如果参数是 负数， 倒数
+    let arr2 = arr.slice(-3, -1);
+    console.log(arr2);
+</code></pre>
+<h3 id="21-concat"><a href="#21-concat" class="headerlink" title="21.concat()"></a>21.concat()</h3><ul>
+<li>作用：连接两个或更多的数组，并返回结果</li>
+<li>特点：不改变原数组</li>
+</ul>
+<pre><code class="js">  //   1．concat  连接两个或更多的数组，并返回结果。
+  let arr = [1, 2]
+  let arr1 = [3, 4]
+  console.log(arr.concat(arr1)) //[1,2,3,4]
+  console.log(arr) //[1,2]
+  console.log(arr1) //不会改变原数组 [3,4]
+</code></pre>
+<h4 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h4><h5 id="按照是否改变原数组"><a href="#按照是否改变原数组" class="headerlink" title="按照是否改变原数组"></a>按照是否改变原数组</h5><blockquote>
+<p>改变原数组：  reverse() sort() push() unshift() shift() pop() delete() splice()</p>
+</blockquote>
+<h5 id="按照参数"><a href="#按照参数" class="headerlink" title="按照参数"></a>按照参数</h5><blockquote>
+<p>传递函数：map  find  findIndex  sort(数值排序)     every   some   filter   </p>
+</blockquote>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数的隐藏参数arguments"><a href="#函数的隐藏参数arguments" class="headerlink" title="函数的隐藏参数arguments"></a>函数的隐藏参数arguments</h3><ul>
+<li>arguments：伪数组（类数组）</li>
+</ul>
+<pre><code class="js">// 实现任意个参数 进行求和的函数
+function sum() {
+        console.log(arguments);
+        //for 循环
+        let num = 0;
+        for (let i = 0; i &lt; arguments.length; i++) {
+            num += arguments[i];
+        }
+        return num;
+    }
+    console.log(sum(1, 2, 5, 45, 45, 5));
+
+</code></pre>
+<h3 id="函数的形参默认值设置Es5"><a href="#函数的形参默认值设置Es5" class="headerlink" title="函数的形参默认值设置Es5"></a>函数的形参默认值设置Es5</h3><pre><code class="js">  //形参默认值设置
+    function sum(a, b) {
+        //ES5 形参默认值设置
+        a = a || 0;
+        b = b || 0;
+        return a + b;
+    }
+    console.log(sum(100));
+</code></pre>
+<h3 id="函数提升【重点】"><a href="#函数提升【重点】" class="headerlink" title="函数提升【重点】"></a>函数提升<strong>【重点】</strong></h3><ul>
+<li><strong>【注意】</strong>声明式定义的函数，有函数提升的问题</li>
+</ul>
+<pre><code class="js"> // sum();
+    // 声明式定义 可以函数提升
+    // function sum() {
+    //     console.log(&#39;xxxx&#39;);
+    // }
+
+    sum();
+    // 表达式定义 没有函数提升
+    var sum = function () {
+        console.log(&#39;xxxxx&#39;);
+    }
+</code></pre>
+<h3 id="ES6中形参的默认值设置"><a href="#ES6中形参的默认值设置" class="headerlink" title="ES6中形参的默认值设置"></a>ES6中形参的默认值设置</h3><pre><code class="js"> //ES6 直接在形参接收时 设置 默认值
+    function sum(a = 0, b = 0) {
+        //ES5
+        // a= a||0
+        // b=b||0
+        return a + b;
+    }
+    console.log(sum(10, 20));
+</code></pre>
+<h3 id="回调函数【重点】"><a href="#回调函数【重点】" class="headerlink" title="回调函数【重点】"></a>回调函数<strong>【重点】</strong></h3><ul>
+<li>回调函数的作用：现在不调，回头再调</li>
+<li>解决问题：异步数据返回</li>
+<li>产生问题：回调地狱</li>
+<li>函数调用：必须要写return，没有return，会返回undefined</li>
+</ul>
+<pre><code class="js">    // 回调案例 
+    // 现在不调 回头再调
+    // 实现：3秒之后 计算平均数
+    function fn(a, b, callback) {
+        let sum = a + b;
+        setTimeout(function () {
+            let num = sum / 2;
+            callback(num);
+        }, 3000)
+    }
+    fn(1, 32, function (res) {
+        console.log(res);
+    })
+</code></pre>
+<h3 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h3><ul>
+<li>特点：在函数的内部调用自己</li>
+</ul>
+<pre><code class="js">    //递归【了解】
+    // 在函数体中 调用自己（值发生改变）
+    // 应用场景：遍历多级的菜单
+    function fn(i) {
+        //判断 如果i &lt;1 结束
+        if (i &gt; 1) {
+            return i * fn(i - 1)
+        } else {
+            return 1;
+        }
+    }
+    console.log(fn(10));
+</code></pre>
+<h1 id="JS对象与BOM进阶"><a href="#JS对象与BOM进阶" class="headerlink" title="JS对象与BOM进阶"></a>JS对象与BOM进阶</h1><h2 id="对象-【重点】"><a href="#对象-【重点】" class="headerlink" title="对象 【重点】"></a>对象 <strong>【重点】</strong></h2><h3 id="字面量创建"><a href="#字面量创建" class="headerlink" title="字面量创建"></a>字面量创建</h3><ul>
+<li>let obj = ｛｝</li>
+</ul>
+<h3 id="实例化创建"><a href="#实例化创建" class="headerlink" title="实例化创建"></a>实例化创建</h3><ul>
+<li>let obj = new Object（）</li>
+</ul>
+<h3 id="对象方法keys"><a href="#对象方法keys" class="headerlink" title="对象方法keys"></a>对象方法keys</h3><ul>
+<li>作用：获取对象中所有的属性名，返回一个数组</li>
+<li>语法：Object.keys（obj）</li>
+</ul>
+<pre><code class="js">   let obj = {
+        name: &#39;张麻子&#39;,
+        age: 40,
+        like: [&#39;抽烟&#39;, &#39;喝酒&#39;, &#39;烫头&#39;],
+    }  
+   //将所有的属性名 取出来放到数组中
+  let keyArr = Object.keys(obj); // [&#39;name&#39;,&#39;age&#39;,&#39;like&#39;] 
+  //遍历数组 取对象属性的值
+    keyArr.forEach(function (item) {
+        console.log(obj[item]);
+    })
+</code></pre>
+<h3 id="对象方法assgin"><a href="#对象方法assgin" class="headerlink" title="对象方法assgin"></a>对象方法assgin</h3><ul>
+<li>作用：合并多对象，到一个新的对象中</li>
+<li><strong>注意</strong>：合并多对象时，如果后面的对象有重复属性，后面的属性值会覆盖前面的属性值</li>
+</ul>
+<pre><code class="js">  //1.直接合并到obj 中 --改变了obj的值
+    Object.assign(obj, info);
+  //2.合并到新的 对象中--原对象不会改变
+    let userInfo = Object.assign({}, obj, info);
+</code></pre>
+<h2 id="内置对象Date"><a href="#内置对象Date" class="headerlink" title="内置对象Date"></a>内置对象Date</h2><ul>
+<li>使用：let date = new Date（）</li>
+</ul>
+<pre><code class="js">/*将格林威治时间 转换为 本地时间格式*/
+    // 2021-06-06 14:39:30
+    //年
+    let y = date.getFullYear();
+    //月
+    let m = parseInt(date.getMonth()) + 1;
+    //日
+    let d = date.getDate();
+    //小时
+    let h = date.getHours();
+    //分钟
+    let min = date.getMinutes();
+    //秒
+    let s = date.getSeconds();
+
+    //添 0 补齐 
+    // if (m &lt; 10) {
+    //     m = &#39;0&#39; + m
+    // }
+
+    //三目运算符 添 0 补齐
+    m = m &lt; 10 ? &#39;0&#39; + m : m;
+    d = d &lt; 10 ? &#39;0&#39; + d : d;
+    h = h &lt; 10 ? &#39;0&#39; + h : h;
+    min = min &lt; 10 ? &#39;0&#39; + min : min;
+    s = s &lt; 10 ? &#39;0&#39; + s : s;
+    let str = `${y}-${m}-${d} ${h}:${min}:${s}`;
+    console.log(str);
+</code></pre>
+<ul>
+<li>new Date()传值</li>
+</ul>
+<pre><code class="js">new Date(时间戳/字符串（2021-02-01）） 
+</code></pre>
+<ul>
+<li><p>toLocalString()</p>
+<ul>
+<li>作用：将格林威治时间格式转换为本地字符串形式的时间</li>
+<li>用法：new Date().toLoaclString();</li>
+</ul>
+</li>
+<li><p>getTime()</p>
+<ul>
+<li>作用：获取格林威治时间对应的时间戳</li>
+<li>用法：new Date().getTime()</li>
+<li>特点：13位的数值，永不重复，参与数学运算（+-*/）</li>
+</ul>
+</li>
+</ul>
+<pre><code class="js">    //获取格林威治时间对应的时间戳
+    let date1 = date.getTime();
+    // 13位数字 1970-1-1 
+    // 永不重复
+    // 优点1：便于推算之前 与 之后的时间
+    //获取前十天的时间
+    let date2 = date1 - 24 * 60 * 60 * 1000 * 10;
+    //时间戳转换为 格式 格林威治时间
+    let date3 = new Date(date2);
+    // console.log(date3.toLocaleString());
+</code></pre>
+<pre><code class="js">    //优点2： 计算两个时间戳 间隔的天数
+    let date4 = new Date(&#39;2021-06-01&#39;).getTime();
+    let date5 = new Date(&#39;2021-05-01&#39;).getTime();
+    console.log(date4);
+    console.log(date5);
+    //计算间隔天数
+    // 两个间隔的总 毫秒数   / 1天的毫秒 === 有多少天
+
+    let days = (date4 - date5) / (24 * 60 * 60 * 1000)
+    console.log(days);
+</code></pre>
+<ul>
+<li>unix时间戳转换工具</li>
+</ul>
+<h2 id="内置对象location【重点】"><a href="#内置对象location【重点】" class="headerlink" title="内置对象location【重点】"></a>内置对象location<strong>【重点】</strong></h2><pre><code class="js">    console.log(location.protocol);
+    //主机地址
+    console.log(location.hostname);
+    //端口号
+    console.log(location.port);
+    //数据参数
+    console.log(location.search);
+    //锚点
+    console.log(location.hash);
+</code></pre>
+<pre><code class="js">    /**
+         * @strToObj  将url中地址栏的 search 的数据获取转换为 对象
+         * @str       String    url search 的字符串
+         * @return    Object  {name:zhangmazi,age:40}
+         */
+    strToObj: function (str) {
+            let obj = {}
+            //去掉 ?
+            str = str.substr(1);
+            // name=zhangmazi&amp;age=40&amp;sex=nan
+            //字符串转换为数组
+            let arr = str.split(&#39;&amp;&#39;);
+            //[&quot;name=zhangmazi&quot;, &quot;age=40&quot;, &quot;sex=nan&quot;]
+            //遍历数组
+            arr.forEach(function (item) {
+                //以 = 分割 形成多个小数组 
+                let arr1 = item.split(&#39;=&#39;);
+                // [&quot;name&quot;, &quot;zhangmazi&quot;]    [&quot;age&quot;, &quot;40&quot;]     [&quot;sex&quot;, &quot;nan&quot;]
+                // 组装obj 
+                obj[arr1[0]] = arr1[1]
+            })
+            return obj;
+        }
+</code></pre>
+<ul>
+<li>location.href   跳转页面</li>
+</ul>
+<pre><code class="js">    location.href = &#39;http://www.baidu.com&#39;
+</code></pre>
+<ul>
+<li>location.reload()     重载/刷新页面</li>
+</ul>
+<pre><code class="js">   let btn = document.querySelector(&#39;button&#39;);
+    btn.addEventListener(&#39;click&#39;, function () {
+        location.reload();
+    })
+</code></pre>
+<h2 id="history"><a href="#history" class="headerlink" title="history"></a>history</h2><ul>
+<li>作用：网页的历史记录</li>
+</ul>
+<pre><code class="js">history.go(2) // 前进2页
+history.back() // 后退1页 go(-1)
+history.forward() // 前进1页 go(1)
+history.length  // 浏览器历史列表中的元素数量
+</code></pre>
+<h2 id="screen"><a href="#screen" class="headerlink" title="screen"></a>screen</h2><pre><code class="js">screen.availHeight // 可用的屏幕高度
+screen.availWidth // 可用的屏幕宽度
+screen.width // 屏幕的宽
+screen.height // 屏幕的高
+</code></pre>
+<h2 id="navigator"><a href="#navigator" class="headerlink" title="navigator"></a>navigator</h2><pre><code class="js">console.log(navigator.userAgent)  //用户 客户端 信息
+</code></pre>
+<h1 id="JS正则表达式和事件进阶"><a href="#JS正则表达式和事件进阶" class="headerlink" title="JS正则表达式和事件进阶"></a>JS正则表达式和事件进阶</h1><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="正则的定义"><a href="#正则的定义" class="headerlink" title="正则的定义"></a>正则的定义</h3><h4 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h4><pre><code class="js">let reg = new RegExp(&quot;字符串&quot;,[模式修饰符])
+</code></pre>
+<h4 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h4><pre><code class="js">let reg = / 规则 /
+</code></pre>
+<h3 id="正则的使用"><a href="#正则的使用" class="headerlink" title="正则的使用"></a>正则的使用</h3><pre><code class="js">reg.test(str)  //满足正正则验证 返回：true    不满足返回：false
+</code></pre>
+<h3 id="正则规则"><a href="#正则规则" class="headerlink" title="正则规则"></a>正则规则</h3><blockquote>
+<p><code>^</code>             以….开头</p>
+<p><code>$</code>             以……结尾</p>
+<p>[]               以….范围之内</p>
+<p>{}               出现次数</p>
+<p>|                或者</p>
+<p>标识符 i     不区分大小写</p>
+</blockquote>
+<pre><code class="js">let reg = /w/i   
+</code></pre>
+<h3 id="案例示范"><a href="#案例示范" class="headerlink" title="案例示范"></a>案例示范</h3><pre><code class="js">//手机号
+    let reg = /^1[3-9][0-9]{9}$/
+    let str = &#39;22444444444&#39;;
+   console.log(reg.test(str));
+
+//不区分大小写 匹配
+    let str = &#39;asdasdWsdsaadsadad&#39;;
+    // let reg = /W|w/;
+    let reg = /w/i;
+    console.log(reg.test(str));
+
+    //1. 匹配字符串中是否有 &#39;a&#39;
+    //2. 实现手机号 匹配验证
+    //3. 匹配字符串中 是否出现 *
+</code></pre>
+<h2 id="事件【重点】"><a href="#事件【重点】" class="headerlink" title="事件【重点】"></a>事件<strong>【重点】</strong></h2><h3 id="事件对象event"><a href="#事件对象event" class="headerlink" title="事件对象event"></a>事件对象event</h3><ul>
+<li>作用：完整记录事件从发生到结束的整个过程产生的所有数据变化<ol>
+<li>事件源—–event.target</li>
+<li>事件类型—–event.type</li>
+<li>键盘事件的键盘码—–event.keyCode</li>
+</ol>
+</li>
+</ul>
+<h3 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h3><ul>
+<li>触发的键盘：键码值</li>
+</ul>
+<p><img src="/2021/01/22/Js中阶/键码值.png" alt></p>
+<ul>
+<li>键盘事件的监听</li>
+</ul>
+<pre><code class="js"> inp.addEventListener(&#39;keyup&#39;, function (event) {
+        //按下回车
+        if (event.keyCode === 13) {
+            console.log(inp.value);
+        }
+        //按下回退键 
+        if (event.keyCode === 8) {
+            console.log(inp.value);
+        }
+    })
+</code></pre>
+<h3 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h3><ul>
+<li>定义：事件发生的所有过程</li>
+<li>事件流的三个阶段<ol>
+<li>第一阶段：事件捕获，从上之下，依次捕获</li>
+<li>第二阶段：自身触发</li>
+<li>第三阶段：事件冒泡，从下至上，依次触发</li>
+</ol>
+</li>
+</ul>
+<p><img src="/2021/01/22/Js中阶/事件冒泡与捕获.png" alt></p>
+<p><strong>注意</strong></p>
+<pre><code class="js">el.addEventListener(&#39;事件类型&#39;,触发执行函数fn,捕获 true/冒泡 false )
+</code></pre>
+<h3 id="阻止事件传播（捕获-冒泡）"><a href="#阻止事件传播（捕获-冒泡）" class="headerlink" title="阻止事件传播（捕获/冒泡）"></a>阻止事件传播（捕获/冒泡）</h3><ul>
+<li>阻止事件传播</li>
+</ul>
+<pre><code class="js">event.stopPropagation();
+</code></pre>
+<h3 id="阻止浏览器的默认行为"><a href="#阻止浏览器的默认行为" class="headerlink" title="阻止浏览器的默认行为"></a>阻止浏览器的默认行为</h3><pre><code class="js">   let aDom = document.querySelector(&#39;a&#39;);
+    aDom.addEventListener(&#39;click&#39;, function (event) {
+            console.log(&#39;xxx&#39;);
+            //取消浏览器默认行为
+            event.preventDefault();
+        })
+</code></pre>
+<h3 id="事件移除"><a href="#事件移除" class="headerlink" title="事件移除"></a>事件移除</h3><pre><code class="js">      //点击之后 移除事件
+      //移除5s之后 又将事件添加回来
+      let btn = document.querySelector(&#39;button&#39;);
+      let add = function (event) {
+            console.log(&#39;点你了&#39;);
+            //清除事件监听
+            btn.removeEventListener(&#39;click&#39;, add)
+            // 过5s 添加click 事件的监听
+            setTimeout(function () {
+                btn.addEventListener(&#39;click&#39;, add)
+            }, 5000)
+        }
+
+        btn.addEventListener(&#39;click&#39;, add)
+
+</code></pre>
+<h3 id="事件委派【重点】"><a href="#事件委派【重点】" class="headerlink" title="事件委派【重点】"></a>事件委派<strong>【重点】</strong></h3><ul>
+<li><p>概念：将子节点的事件交给父级/祖宗级节点进行监听，实现原理：事件冒泡原理</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>提升性能，只在内存中存储了一个事件函数。</li>
+<li>动态添加的节点，实现事件监听</li>
+</ul>
+</li>
+</ul>
+<pre><code class="js">        //事件委派 tody 做监听
+        tbody.addEventListener(&#39;click&#39;, function (event) {
+            // 根据事件源 判断是否点击了删除 按钮
+            if (event.target.nodeName === &#39;BUTTON&#39;) {
+                console.log(&#39;点击了删除按钮....&#39;);
+                event.target.parentNode.parentNode.remove();
+            }
+        })
+</code></pre>
+<h1 id="Ajax原理-重点"><a href="#Ajax原理-重点" class="headerlink" title="Ajax原理[重点]"></a>Ajax原理<strong>[重点]</strong></h1><h2 id="ajax基础概念"><a href="#ajax基础概念" class="headerlink" title="ajax基础概念"></a>ajax基础概念</h2><h3 id="很久以前的开发模式"><a href="#很久以前的开发模式" class="headerlink" title="很久以前的开发模式"></a>很久以前的开发模式</h3><p><img src="/2021/01/22/Js中阶/很久以前的数据请求方式.png" alt></p>
+<h3 id="ajax引擎"><a href="#ajax引擎" class="headerlink" title="ajax引擎"></a>ajax引擎</h3><p><img src="/2021/01/22/Js中阶/Ajax引擎.png" alt></p>
+<h3 id="ajax-get请求-4步"><a href="#ajax-get请求-4步" class="headerlink" title="ajax  get请求-4步"></a>ajax  get请求-4步</h3><pre><code class="js">    // get请求 4步
+    //1. 实例化ajax 
+    let xhr = new XMLHttpRequest();
+    //2. 请求方式, 请求地址+请求的数据
+    xhr.open(&#39;get&#39;, &#39;http://139.9.177.51:3333/api/testGet?name=张麻子&#39;);
+    //3. 监听ajax的状态 及 返回数据
+    xhr.onreadystatechange = function () {
+        //判断 ajax 状态
+        if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+            //获取返回值
+            console.log(xhr.responseText);
+        }
+    }
+    //4. 发送请求
+    xhr.send();
+</code></pre>
+<ul>
+<li>xhr.onreadystatechange<ul>
+<li>作用：监听ajax 状态变化  每一次变化 都会自动触发</li>
+</ul>
+</li>
+<li>xhr.readyState  <ul>
+<li>作用：ajax 的请求状态，只有到最后一步     readyState===4 才能拿到返回数据</li>
+</ul>
+</li>
+<li>xhr.status <ul>
+<li>作用：网页请求状态码  </li>
+<li>200  成功</li>
+<li>200-300  问题不大 成功</li>
+<li>300-400  静态资源访问路径错误–问题很小</li>
+<li>400-500  访问出错，找不到访问地址–问题很大-记得甩锅</li>
+<li>500以上   ajax已经进入后端代码， 后端拦截—不关前端的事情</li>
+</ul>
+</li>
+</ul>
+<pre><code class="js">  404   not found   //找不到路径
+  403  not found  //没有权限访问
+  501   //拒绝/拦截访问  
+  301  //静态资源路径出错
+  201   //成功
+</code></pre>
+<h2 id="ajax-4看排错法"><a href="#ajax-4看排错法" class="headerlink" title="ajax 4看排错法"></a>ajax 4看排错法</h2><h3 id="1看：请求地址-请求方式"><a href="#1看：请求地址-请求方式" class="headerlink" title="1看：请求地址+请求方式"></a>1看：请求地址+请求方式</h3><p><img src="/2021/01/22/Js中阶/ajax排错.png" alt></p>
+<h3 id="2看：http状态码"><a href="#2看：http状态码" class="headerlink" title="2看：http状态码"></a>2看：http状态码</h3><p><img src="/2021/01/22/Js中阶/ajax2看.png" alt></p>
+<h3 id="3看：请求参数"><a href="#3看：请求参数" class="headerlink" title="3看：请求参数"></a>3看：请求参数</h3><p><img src="/2021/01/22/Js中阶/ajax3看请求参数.png" alt></p>
+<h3 id="4看：返回参数"><a href="#4看：返回参数" class="headerlink" title="4看：返回参数"></a>4看：返回参数</h3><p><img src="/2021/01/22/Js中阶/ajax4看.png" alt></p>
+<h2 id="ajax-post-请求-5步"><a href="#ajax-post-请求-5步" class="headerlink" title="ajax post 请求-5步"></a>ajax post 请求-5步</h2><pre><code class="js">     // post请求 5句代码
+
+    //1.实例化ajax
+    let xhr = new XMLHttpRequest();
+    //2.请求方式  请求地址
+    xhr.open(&#39;post&#39;, &#39;http://139.9.177.51:3333/api/testPost&#39;);
+    //3.post 请求 修改请求头， 模仿form 表单的 请求
+    xhr.setRequestHeader(&#39;Content-Type&#39;, &#39;application/x-www-form-urlencoded&#39;);
+
+    //4.监听返回
+    xhr.onreadystatechange = function () {
+        //判断步骤 状态码
+        if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+            console.log(xhr.responseText);
+        }
+    }
+
+    //5.发送+数据
+    xhr.send(&#39;name=张麻子&amp;age=20&#39;)
+</code></pre>
+<h2 id="数据渲染"><a href="#数据渲染" class="headerlink" title="数据渲染"></a>数据渲染</h2><pre><code class="js">  let body = document.querySelector(&#39;body&#39;);
+</code></pre>
+<pre><code class="js">   //4.监听返回
+        xhr.onreadystatechange = function () {
+            //判断步骤 状态码
+            if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+                //将json数据转换为 js对象
+                let res = JSON.parse(xhr.responseText);
+                console.log(res);
+
+                //渲染到页面 
+                let html = `&lt;p&gt;${res.msg}&lt;/p&gt; &lt;p&gt;${res.data}&lt;/p&gt;`;
+                body.innerHTML = html;
+            }
+        }
+</code></pre>
+<h2 id="json文件请求"><a href="#json文件请求" class="headerlink" title="json文件请求"></a>json文件请求</h2><pre><code class="js">//2. 请求方式, 请求地址+请求的数据
+xhr.open(&#39;get&#39;, &#39;./data.json&#39;);
+</code></pre>
+<h2 id="post请求传输json数据"><a href="#post请求传输json数据" class="headerlink" title="post请求传输json数据"></a>post请求传输json数据</h2><pre><code class="js">xhr.setRequestHeader(&#39;Content-Type&#39;, &#39;application/json&#39;);
+</code></pre>
+<pre><code class="js">let data = { account: &#39;17111111111&#39;, password: &#39;123456&#39; }
+//5.发送+数据
+xhr.send(JSON.stringify(data))
+</code></pre>
+
+                </div>
+                <!-- .entry-content -->
+                <div class="single-reward">
+                  <div class="reward-open">赏
+                    <div class="reward-main">
+                      <ul class="reward-row">
+                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/zfbQR.jpg"></li>
+                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/donate/weixinQR.jpg"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center; width: 100%" class="social-share share-mobile"
+                  data-disabled="diandian, tencent"></div>
+                <!-- <footer class="post-footer">
+                  <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+                      target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+                      岂能尽如人意，但求无愧我心！</a></div>
+                  <div class="post-tags">
+                  </div>
+                  <div class="post-share">
+                    <div class="social-share sharehidden share-component"></div>
+                    <i class="iconfont show-share icon-forward"></i>
+                  </div>
+                </footer>.entry-footer -->
+          </article>
+          <!-- #post-## -->
+          <div class="toc" style="background: none;"></div>
+          <section class="post-squares nextprev">
+            
+              
+                <div class="post-nepre half previous">
+                  
+                        <a href="/2021/02/02/Js高阶/" rel="prev">
+                          <div class="background">
+                            <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsthree.jpg"
+                              style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                              onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsthree.jpg">
+                          </div>
+                          <span class="label">
+                            Previous Post</span>
+                          <div class="info">
+                            <h3>
+                              Javascript
+                            </h3>
+                            <hr>
+                          </div>
+                        </a>
+                    </div>
+                    
+                      
+                        
+                          <div class="post-nepre half next">
+                            
+                                  <a href="/2020/12/30/Js初阶/" rel="next">
+                                    <div class="background">
+                                      <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
+                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsone.jpg"
+                                        style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/jsone.jpg">
+                                    </div>
+                                    <span class="label">
+                                      Next Post</span>
+                                    <div class="info">
+                                      <h3>
+                                        Javascript
+                                      </h3>
+                                      <hr>
+                                    </div>
+                                  </a>
+                              </div>
+                              
+          </section>
+          
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function () {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz",
+        appKey: "9m413jYIug2cFvhs6TtILisl",
+        path: window.location.pathname,
+        placeholder: "想说什么，你就说吧 ...",
+        avatar: 'robohash',
+      })
+    }
+  </script>
+  
+            <section class="author-profile">
+              <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                <a href="javascript:;" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg" itemprop="image"
+                    alt="Ayu" height="70" width="70"></a>
+                <div class="meta">
+                  <span class="title">Author</span>
+                  <h3 itemprop="name">
+                    <a href="javascript:;" itemprop="url" rel="author">
+                      Ayu
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <hr>
+              <p><i class="iconfont icon-write"></i>
+                志不立，天下无可成之事。
+              </p>
+            </section>
+        </main><!-- #main -->
+      </div><!-- #primary -->
+    </div>
+
+    
+        </div>
+        <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+          <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ayu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+      <p style="font-family: 'Ubuntu', sans-serif;"><i class="iconfont icon-sakura rotating"
+          style="color: #ffc0cb;display:inline-block"></i>
+        <span style="color: #b9b9b9;">Where <a href="javascript:;"
+            style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">there</a> is a <a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);"></a><a
+            href="javascript:;" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">will</a>,
+          there is a way</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "close" }, "windowheight": "fixed", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  } else {
+    var Poi = { "pjax": "1", "movies": { "url": "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/movies", "name": "saygoodby.mp4", "live": "open" }, "windowheight": "auto", "codelamp": "close", "ajaxurl": "", "order": "asc", "formpostion": "bottom" };
+  }
+/* ]]> */
+
+</script>
+<script>
+  $(document).ready(function () {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+            <div class="openNav no-select" style="height: 50px;">
+              <div class="iconflat no-select" style="width: 50px; height: 50px;">
+                <div class="icon"></div>
+              </div>
+              <div class="site-branding search-form-submit">
+                <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+              </div>
+            </div>
+    </section>
+    <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+        <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+          <div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn">
+        <span id="open-skinMenu"> 切换主题
+            <i class="iconfont icon-gear inline-block rotating"></i>
+        </span>
+    </div>
+</div>
+            <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@1.9/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/PoorlifeAyu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6030188226" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/#" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/管理/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  管理
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  个人
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6848872288"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+  </body>
+
+  </html>
