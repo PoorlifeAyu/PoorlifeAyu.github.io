@@ -1,66 +1,150 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Javascript | Ordinary life</title>
-  
-    <link rel="shortcut icon" href="/images/favicon.ico">
-  
-  <meta http-equiv="x-dns-prefetch-control" content="on">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
-  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/lib.min.css" media="all">
-  <link rel="stylesheet" href="/css/font.css" media="all">
-  <link rel="stylesheet" href="/css/insight.css" media="all">
-  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
-  <link rel="stylesheet" href="/css/zoom.css" media="all">
-  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+    <title itemprop="name">
+      
+        Javascript | 
+            OrdinaryLife
+    </title>
+    
+      <link rel="shortcut icon" href="/images/favicon.ico">
+      
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+        <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+        <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/css/lib.min.css" media="all">
+        <link rel="stylesheet" href="/css/font.css" media="all">
+        <link rel="stylesheet" href="/css/insight.css" media="all">
+        <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+        <link rel="stylesheet" href="/css/zoom.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+        <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
 " type="text/css" media="all"> -->
-  <script>
-  /*Initial Variables*/
-  var mashiro_option = new Object();
-  var mashiro_global = new Object();
-  mashiro_option.NProgressON = true;
-  /* 
-   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
-   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
-   */
-  mashiro_option.email_domain = "";
-  mashiro_option.email_name = "";
-  mashiro_option.cookie_version_control = "";
-  mashiro_option.qzone_autocomplete = false;
-  mashiro_option.site_name = "个人博客Ayu";
-  mashiro_option.author_name = "Ayu";
-  mashiro_option.site_url = "";
-  mashiro_option.v_appId = "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz";
-  mashiro_option.v_appKey = "9m413jYIug2cFvhs6TtILisl";
-  mashiro_option.mathjax = "0";
-  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
-  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+        <script>
+          /*Initial Variables*/
+          var mashiro_option = new Object();
+          var mashiro_global = new Object();
+          mashiro_option.NProgressON = true;
+          /* 
+           * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+           * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+           */
+          mashiro_option.email_domain = "";
+          mashiro_option.email_name = "";
+          mashiro_option.cookie_version_control = "";
+          mashiro_option.qzone_autocomplete = false;
+          mashiro_option.site_name = "Ayu";
+          mashiro_option.author_name = "Ayu";
+          mashiro_option.site_url = "";
+          mashiro_option.v_appId = "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz";
+          mashiro_option.v_appKey = "9m413jYIug2cFvhs6TtILisl";
+          mashiro_option.mathjax = "0";
+          mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
+          mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
   // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
   // mashiro_option.float_player_on = true;
 
-  /*End of Initial Variables*/
-  </script>
-  <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(20).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(50).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(60).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(70).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(80).jpg.webp".split(",");
-  var bgindex = Math.floor(Math.random()*bg.length);
-  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-    alert('朋友，IE浏览器未适配哦~');
-  }
-  </script>
-  <style type="text/css">
-  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
-  </style>
-  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
-  </style>
-</head>
-</html>
+          /*End of Initial Variables*/
+        </script>
+        <script type="text/javascript">
+          var bg = "https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(20).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(30).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(40).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(60).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(70).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(80).jpg.webp,https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/cover/(90).jpg.webp".split(",");
+          var bgindex = Math.floor(Math.random() * bg.length);
+          if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('朋友，IE浏览器未适配哦~');
+          }
+        </script>
+        <style type="text/css">
+          .hljs-ln {
+            border-collapse: collapse
+          }
+
+          .hljs-ln td {
+            padding: 0
+          }
+
+          .hljs-ln-n:before {
+            content: attr(data-line-number)
+          }
+        </style>
+        <style type="text/css">
+          .site-top .lower nav {
+            display: block !important;
+          }
+
+          .author-profile i,
+          .post-like a,
+          .post-share .show-share,
+          .sub-text,
+          .we-info a,
+          span.sitename,
+          .post-more i:hover,
+          #pagination a:hover,
+          .post-content a:hover,
+          .float-content i:hover {
+            color: #FE9600
+          }
+
+          .feature i,
+          .download,
+          .navigator i:hover,
+          .links ul li:before,
+          .ar-time i,
+          span.ar-circle,
+          .object,
+          .comment .comment-reply-link,
+          .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
+            background: #FE9600
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background: #FE9600
+          }
+
+          .download,
+          .navigator i:hover,
+          .link-title,
+          .links ul li:hover,
+          #pagination a:hover,
+          .comment-respond input[type='submit']:hover {
+            border-color: #FE9600
+          }
+
+          .entry-content a:hover,
+          .site-info a:hover,
+          .comment h4 a,
+          #comments-navi a.prev,
+          #comments-navi a.next,
+          .comment h4 a:hover,
+          .site-top ul li a:hover,
+          .entry-title a:hover,
+          #archives-temp h3,
+          span.page-numbers.current,
+          .sorry li a:hover,
+          .site-title a:hover,
+          i.iconfont.js-toggle-search.iconsearch:hover,
+          .comment-respond input[type='submit']:hover {
+            color: #FE9600
+          }
+
+          .comments .comments-main {
+            display: block !important;
+          }
+
+          .comments .comments-hidden {
+            display: none !important;
+          }
+
+          background-position:center center;
+          background-attachment:inherit;
+          }
+        </style>
+</head></html>
 
   <body
     class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
@@ -68,14 +152,14 @@
     </div>
     <a href="#" class="cd-top faa-float animated"></a>
     <section id="main-container">
-      <div class="headertop filter-dot">
+      <div class="headertop ">
   <div id="banner_wave_1"></div>
   <div id="banner_wave_2"></div>
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
       <div class="header-tou">
         <a href="">
-          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/custom/avatar.jpg">
+          <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/custom/avatar.jpg">
         </a>
       </div>
       <div class="header-info">
@@ -91,7 +175,7 @@
               
                   <li>
                     <a href="https://github.com/PoorlifeAyu" target="_blank" class="social-github" title="github">
-                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/social/github.png">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/social/github.png">
                     </a>
                   </li>
                   
@@ -99,7 +183,7 @@
               
                   <li>
                     <a href="https://weibo.com/u/6030188226" target="_blank" class="social-github" title="sina">
-                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/social/sina.png">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/social/sina.png">
                     </a>
                   </li>
                   
@@ -107,7 +191,7 @@
               
                   <li>
                     <a href="https://music.163.com/" target="_blank" class="social-github" title="wangyiyun">
-                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/social/wangyiyun.png">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/social/wangyiyun.png">
                     </a>
                   </li>
                   
@@ -115,7 +199,7 @@
               
                   <li>
                     <a href="https://mail.qq.com/cgi-bin/frame_html?sid=0j3LVIvsrSzKXR5_&amp;r=c8c502b38f105671c3cf4b6fb70a0ebd" target="_blank" class="social-github" title="email">
-                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/social/email.svg">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/social/email.svg">
                     </a>
                   </li>
                   
@@ -123,10 +207,10 @@
               
                 <li class="wechat">
                   <a href="/#">
-                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/social/wechat.png">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/social/wechat.png">
                   </a>
                   <div class="wechatInner">
-                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/custom/wechat.jpg">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/custom/wechat.jpg">
                   </div>
                 </li>
                 
@@ -134,10 +218,10 @@
               
                 <li class="wechat">
                   <a href="/#">
-                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/social/qq.png">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/social/qq.png">
                   </a>
                   <div class="wechatInner">
-                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/custom/qq.jpg">
+                    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/custom/qq.jpg">
                   </div>
                 </li>
                 
@@ -145,7 +229,7 @@
               
                   <li>
                     <a href="https://blog.csdn.net/Ayuzz?spm=1000.2115.3001.5343" target="_blank" class="social-github" title="csdn">
-                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/social/csdn.png">
+                      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/social/csdn.png">
                     </a>
                   </li>
                   
@@ -182,7 +266,7 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">个人博客</span>
+            <span class="sakurasono"></span>
             <span class="shironeko">Ayu</span>
           </a>
         </span>
@@ -244,7 +328,7 @@
               </li>
             
               <li>
-                <a href="javascript:;">
+                <a href="/music/">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
                     清单
@@ -285,7 +369,7 @@
               </li>
             
               <li>
-                <a href="/">
+                <a href="/about/">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
                     关于
@@ -1068,7 +1152,7 @@ screen.height // 屏幕的高
 <h3 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h3><ul>
 <li>触发的键盘：键码值</li>
 </ul>
-<p><img src="/2021/01/22/Js中阶/键码值.png" alt></p>
+<p><img src="https://tva4.sinaimg.cn/large/006A63qqly8gsmsmnyuurj30av07hab0.jpg"></p>
 <ul>
 <li>键盘事件的监听</li>
 </ul>
@@ -1092,7 +1176,7 @@ screen.height // 屏幕的高
 </ol>
 </li>
 </ul>
-<p><img src="/2021/01/22/Js中阶/事件冒泡与捕获.png" alt></p>
+<p><img src="https://tva2.sinaimg.cn/large/006A63qqly8gsmsn544maj30i80djq4m.jpg"></p>
 <p><strong>注意</strong></p>
 <pre><code class="js">el.addEventListener(&#39;事件类型&#39;,触发执行函数fn,捕获 true/冒泡 false )
 </code></pre>
@@ -1143,8 +1227,8 @@ screen.height // 屏幕的高
             }
         })
 </code></pre>
-<h1 id="Ajax原理-重点"><a href="#Ajax原理-重点" class="headerlink" title="Ajax原理[重点]"></a>Ajax原理<strong>[重点]</strong></h1><h2 id="ajax基础概念"><a href="#ajax基础概念" class="headerlink" title="ajax基础概念"></a>ajax基础概念</h2><h3 id="很久以前的开发模式"><a href="#很久以前的开发模式" class="headerlink" title="很久以前的开发模式"></a>很久以前的开发模式</h3><p><img src="/2021/01/22/Js中阶/很久以前的数据请求方式.png" alt></p>
-<h3 id="ajax引擎"><a href="#ajax引擎" class="headerlink" title="ajax引擎"></a>ajax引擎</h3><p><img src="/2021/01/22/Js中阶/Ajax引擎.png" alt></p>
+<h1 id="Ajax原理-重点"><a href="#Ajax原理-重点" class="headerlink" title="Ajax原理[重点]"></a>Ajax原理<strong>[重点]</strong></h1><h2 id="ajax基础概念"><a href="#ajax基础概念" class="headerlink" title="ajax基础概念"></a>ajax基础概念</h2><h3 id="很久以前的开发模式"><a href="#很久以前的开发模式" class="headerlink" title="很久以前的开发模式"></a>很久以前的开发模式</h3><p><img src="https://tva3.sinaimg.cn/large/006A63qqly8gsmsnnnshtj30nw0aigmf.jpg"></p>
+<h3 id="ajax引擎"><a href="#ajax引擎" class="headerlink" title="ajax引擎"></a>ajax引擎</h3><p><img src="https://tva1.sinaimg.cn/large/006A63qqly8gsmso3cv9qj30mz0a4gmb.jpg"></p>
 <h3 id="ajax-get请求-4步"><a href="#ajax-get请求-4步" class="headerlink" title="ajax  get请求-4步"></a>ajax  get请求-4步</h3><pre><code class="js">    // get请求 4步
     //1. 实例化ajax 
     let xhr = new XMLHttpRequest();
@@ -1186,10 +1270,10 @@ screen.height // 屏幕的高
   301  //静态资源路径出错
   201   //成功
 </code></pre>
-<h2 id="ajax-4看排错法"><a href="#ajax-4看排错法" class="headerlink" title="ajax 4看排错法"></a>ajax 4看排错法</h2><h3 id="1看：请求地址-请求方式"><a href="#1看：请求地址-请求方式" class="headerlink" title="1看：请求地址+请求方式"></a>1看：请求地址+请求方式</h3><p><img src="/2021/01/22/Js中阶/ajax排错.png" alt></p>
-<h3 id="2看：http状态码"><a href="#2看：http状态码" class="headerlink" title="2看：http状态码"></a>2看：http状态码</h3><p><img src="/2021/01/22/Js中阶/ajax2看.png" alt></p>
-<h3 id="3看：请求参数"><a href="#3看：请求参数" class="headerlink" title="3看：请求参数"></a>3看：请求参数</h3><p><img src="/2021/01/22/Js中阶/ajax3看请求参数.png" alt></p>
-<h3 id="4看：返回参数"><a href="#4看：返回参数" class="headerlink" title="4看：返回参数"></a>4看：返回参数</h3><p><img src="/2021/01/22/Js中阶/ajax4看.png" alt></p>
+<h2 id="ajax-4看排错法"><a href="#ajax-4看排错法" class="headerlink" title="ajax 4看排错法"></a>ajax 4看排错法</h2><h3 id="1看：请求地址-请求方式"><a href="#1看：请求地址-请求方式" class="headerlink" title="1看：请求地址+请求方式"></a>1看：请求地址+请求方式</h3><p><img src="https://tva3.sinaimg.cn/large/006A63qqly8gsmsogaqpcj30px0b7myc.jpg"></p>
+<h3 id="2看：http状态码"><a href="#2看：http状态码" class="headerlink" title="2看：http状态码"></a>2看：http状态码</h3><p><img src="https://tva1.sinaimg.cn/large/006A63qqly8gsmsoqcz6cj30qi0buabr.jpg"></p>
+<h3 id="3看：请求参数"><a href="#3看：请求参数" class="headerlink" title="3看：请求参数"></a>3看：请求参数</h3><p><img src="https://tva1.sinaimg.cn/large/006A63qqly8gsmsp997i6j30ld0cojsu.jpg"></p>
+<h3 id="4看：返回参数"><a href="#4看：返回参数" class="headerlink" title="4看：返回参数"></a>4看：返回参数</h3><p><img src="https://tva1.sinaimg.cn/large/006A63qqly8gsmspk7ihbj30o40at3zj.jpg"></p>
 <h2 id="ajax-post-请求-5步"><a href="#ajax-post-请求-5步" class="headerlink" title="ajax post 请求-5步"></a>ajax post 请求-5步</h2><pre><code class="js">     // post请求 5句代码
 
     //1.实例化ajax
@@ -1242,8 +1326,8 @@ xhr.send(JSON.stringify(data))
                   <div class="reward-open">赏
                     <div class="reward-main">
                       <ul class="reward-row">
-                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/custom/donate/zfbQR.jpg"></li>
-                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/custom/donate/weixinQR.jpg"></li>
+                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/custom/donate/zfbQR.jpg"></li>
+                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/custom/donate/weixinQR.jpg"></li>
                       </ul>
                     </div>
                   </div>
@@ -1484,9 +1568,9 @@ xhr.send(JSON.stringify(data))
     </section>
     <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/custom/avatar.jpg">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/custom/avatar.jpg">
   </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Ayu</p>
   <p style="text-align: center; word-spacing: 20px;">
     
       
@@ -1539,7 +1623,7 @@ xhr.send(JSON.stringify(data))
       </li>
     
       <li>
-        <a href="javascript:;">
+        <a href="/music/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
             清单
@@ -1580,7 +1664,7 @@ xhr.send(JSON.stringify(data))
       </li>
     
       <li>
-        <a href="/">
+        <a href="/about/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
             关于
@@ -1699,9 +1783,9 @@ xhr.send(JSON.stringify(data))
 </div>
             <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.0/img/custom/avatar.jpg">
+    <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.1/img/custom/avatar.jpg">
   </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">个人博客Ayu</p>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Ayu</p>
   <p style="text-align: center; word-spacing: 20px;">
     
       
@@ -1754,7 +1838,7 @@ xhr.send(JSON.stringify(data))
       </li>
     
       <li>
-        <a href="javascript:;">
+        <a href="/music/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
             清单
@@ -1795,7 +1879,7 @@ xhr.send(JSON.stringify(data))
       </li>
     
       <li>
-        <a href="/">
+        <a href="/about/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
             关于

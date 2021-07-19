@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ordinary life</title>
+  <title>OrdinaryLife</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -61,7 +61,7 @@
     <link href="/2021/06/11/vue2.0/"/>
     <id>/2021/06/11/vue2.0/</id>
     <published>2021-06-11T01:48:53.000Z</published>
-    <updated>2021-07-16T15:53:09.897Z</updated>
+    <updated>2021-07-19T17:59:57.511Z</updated>
     
     <summary type="html">
     
@@ -81,7 +81,7 @@
     <link href="/2021/03/20/git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>/2021/03/20/git的基本使用/</id>
     <published>2021-03-20T13:48:09.000Z</published>
-    <updated>2021-07-10T19:54:48.010Z</updated>
+    <updated>2021-07-19T17:46:20.172Z</updated>
     
     <summary type="html">
     
@@ -101,7 +101,7 @@
     <link href="/2021/03/15/Node%E3%80%81Webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>/2021/03/15/Node、Webpack的基本使用/</id>
     <published>2021-03-15T08:16:13.000Z</published>
-    <updated>2021-07-10T20:02:53.217Z</updated>
+    <updated>2021-07-19T17:58:30.983Z</updated>
     
     <summary type="html">
     
@@ -121,7 +121,7 @@
     <link href="/2021/02/25/H5/"/>
     <id>/2021/02/25/H5/</id>
     <published>2021-02-25T02:46:33.000Z</published>
-    <updated>2021-07-10T20:01:38.404Z</updated>
+    <updated>2021-07-19T17:48:20.644Z</updated>
     
     <summary type="html">
     
@@ -141,7 +141,7 @@
     <link href="/2021/02/02/Js%E9%AB%98%E9%98%B6/"/>
     <id>/2021/02/02/Js高阶/</id>
     <published>2021-02-02T00:31:51.000Z</published>
-    <updated>2021-07-10T20:08:44.348Z</updated>
+    <updated>2021-07-19T17:53:10.647Z</updated>
     
     <summary type="html">
     
@@ -161,7 +161,7 @@
     <link href="/2021/01/22/Js%E4%B8%AD%E9%98%B6/"/>
     <id>/2021/01/22/Js中阶/</id>
     <published>2021-01-22T03:01:11.000Z</published>
-    <updated>2021-07-14T16:01:40.444Z</updated>
+    <updated>2021-07-19T17:58:10.015Z</updated>
     
     <summary type="html">
     
@@ -221,7 +221,7 @@
     <link href="/2020/10/15/Html/"/>
     <id>/2020/10/15/Html/</id>
     <published>2020-10-15T12:10:23.000Z</published>
-    <updated>2021-07-10T14:43:46.929Z</updated>
+    <updated>2021-07-19T18:17:05.643Z</updated>
     
     <summary type="html">
     
