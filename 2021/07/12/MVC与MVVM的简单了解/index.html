@@ -7,7 +7,7 @@
   
     <title itemprop="name">
       
-        music | 
+        MVC、MVVM | 
             OrdinaryLife
     </title>
     
@@ -410,76 +410,363 @@
   </div>
 </header>
 
-            <div class="pattern-center-blank"></div>
+            <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
 
-  <div class="pattern-center ">
-    <div class="pattern-attachment-img">
-      <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/banner/mc.jpg" class="lazyload" onerror="imgError(this,3)"
-        style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/mvvm.jpg);"
+      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/mvvm.jpg">
     </div>
-    <header class="pattern-header ">
+    <header class="pattern-header single-header">
       <h1 class="entry-title">
-        博主喜欢的音乐
+        MVC、MVVM
       </h1>
+      <p class="entry-census">
+        <span>
+          <a href="javascript:;">
+            <img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="javascript:;">
+            Ayu
+          </a>
+        </span>
+        <span class="bull">
+          ·</span>
+        2021-7-12<span class="bull">
+            ·</span>
+          <span id="busuanzi_value_page_pv"></span>次阅读
+      </p>
     </header>
   </div>
   
     <div id="content" class="site-content">
-      <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-        
-<meting-js server="tencent" type="playlist" id="8087902449" mutex="true">
-</meting-js>
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <article id="post-1"
+            class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+            <div class="toc"></div>
+            <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+            
+                <div class="entry-content">
+                  <h1 id="MVC-amp-MVVM"><a href="#MVC-amp-MVVM" class="headerlink" title="MVC&amp;MVVM"></a>MVC&amp;MVVM</h1><h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><ul>
+<li><p>在软件工程体系中，最重要的是易用、复用、解耦。因为大型应用开发过程中会有很多多变的需求，为了应对这些需求，有高手发明了一种软件开发的<strong>架构</strong>思想——MVC</p>
+</li>
+<li><p>MVC可以称之为软件架构鼻祖，它将软件应用氛围三个层面：</p>
+</li>
+</ul>
+<h3 id="M——Model"><a href="#M——Model" class="headerlink" title="M——Model"></a>M——<strong>Model</strong></h3><ul>
+<li>数据层</li>
+<li>往往一个软件应用的核心功能都是数据驱动的</li>
+</ul>
+<h3 id="V——View"><a href="#V——View" class="headerlink" title="V——View"></a>V——<strong>View</strong></h3><ul>
+<li>视图层</li>
+<li>将数据渲染到应用界面形成用户可以看到的界面视图</li>
+</ul>
+<h3 id="C——Controller"><a href="#C——Controller" class="headerlink" title="C——Controller"></a>C——Controller</h3><ul>
+<li>控制层</li>
+<li>控制数据如何驱动视图的过程</li>
+</ul>
+<h3 id="案列"><a href="#案列" class="headerlink" title="案列"></a>案列</h3><h4 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h4><p><a href="https://tva4.sinaimg.cn/large/006A63qqly8gst8fw3kzzj314f0psdl8.jpg" title="点击显示原始图片" target="_blank" rel="noopener"><img src="https://tva4.sinaimg.cn/thumbnail/006A63qqly8gst8fw3kzzj314f0psdl8.jpg"></a></p>
+<h4 id="js"><a href="#js" class="headerlink" title="js"></a>js</h4><p><a href="https://tva3.sinaimg.cn/large/006A63qqly8gst8geego3j315p0pujwa.jpg" title="点击显示原始图片" target="_blank" rel="noopener"><img src="https://tva3.sinaimg.cn/thumbnail/006A63qqly8gst8geego3j315p0pujwa.jpg"></a></p>
+<p><a href="https://tva1.sinaimg.cn/large/006A63qqly8gst8gzlf8fj314f0pvafd.jpg" title="点击显示原始图片" target="_blank" rel="noopener"><img src="https://tva1.sinaimg.cn/thumbnail/006A63qqly8gst8gzlf8fj314f0pvafd.jpg"></a></p>
+<h2 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h2><ul>
+<li><p>MVVM本质上是对MVC的升级，MVC实现了数据、视图、控制器的分离，但是控制器逻辑还是需要我们手动编写，MVVM的出现，让我们脱离了控制器的逻辑编写过程，让架构模式变得更简单智能。</p>
+</li>
+<li><p>MVVM将应用分成了三个方面：</p>
+</li>
+</ul>
+<h3 id="M——Model-1"><a href="#M——Model-1" class="headerlink" title="M——Model"></a>M——<strong>Model</strong></h3><ul>
+<li>数据层</li>
+<li>用于应用的数据模型，驱动应用</li>
+</ul>
+<h3 id="V——View-1"><a href="#V——View-1" class="headerlink" title="V——View"></a>V——<strong>View</strong></h3><ul>
+<li>视图层</li>
+<li>将数据渲染到应用界面</li>
+</ul>
+<h3 id="VM——ViewModel"><a href="#VM——ViewModel" class="headerlink" title="VM——ViewModel"></a>VM——<strong>ViewModel</strong></h3><ul>
+<li>数据视图层</li>
+<li>将视图和数据关联起来，数据和视图有一个发生了改变，那么另一个也会发生改变</li>
+<li><p>MVVM架构中VM不需要开发人员去维护，它会自动帮助我们将数据和视图双向绑定起来</p>
+</li>
+<li><p>MVVM架构中<code>Object.defineProperty</code>是一个很重要的概念</p>
+</li>
+</ul>
+<h3 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h3><ul>
+<li><p>该方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。</p>
+</li>
+<li><p>其主要参数为：</p>
+</li>
+<li><p>obj</p>
+<ul>
+<li>被配置的对象</li>
+</ul>
+</li>
+<li>property<ul>
+<li>对象上需要配置的属性</li>
+</ul>
+</li>
+<li><p>descriptor</p>
+<ul>
+<li>描述器</li>
+<li>描述器主要用于对属性进行配置</li>
+</ul>
+</li>
+<li><p>重点我们需要学习描述器，descriptor。它可以对属性进行配置描述，通过以下几个配置项：</p>
+</li>
+</ul>
+<h4 id="1-configureable"><a href="#1-configureable" class="headerlink" title="1.configureable"></a>1.configureable</h4><ul>
+<li>当且仅当该属性的 <code>configurable</code> 键值为 <code>true</code> 时，该属性的描述符才能够被改变，同时该属性也能从对应的对象上被删除。<strong>默认为</strong> <code>false</code>。</li>
+</ul>
+<pre><code class="js">{
+        /* 
+            configurable：设置属性是否可配 默认值 false
 
-<meting-js server="tencent" type="playlist" id="8087902113" mutex="true">
-</meting-js>
+                当configurable为false的时候，该属性不可重新设置configurable也不可删除
+        */
+        const obj = {
+            name: &#39;张三&#39;
+        }
 
-          <!-- .entry-content -->
+        Object.defineProperty(obj, &#39;name&#39;, {
+            configurable: false
+        })
+
+        // Object.defineProperty(obj, &#39;name&#39;, {
+        //     configurable: true
+        // })
+
+        delete obj.name;
+
+        // console.log(obj)
+    }
+</code></pre>
+<h4 id="2-enumerable"><a href="#2-enumerable" class="headerlink" title="2.enumerable"></a>2.enumerable</h4><ul>
+<li>当且仅当该属性的 <code>enumerable</code> 键值为 <code>true</code> 时，该属性才会出现在对象的枚举属性中。<br><strong>默认为 <code>false</code></strong>。</li>
+</ul>
+<pre><code class="js">  {
+        /* 
+            enumerable：配置该属性是否可枚举 默认值 false
+        */
+        const obj = {
+            name: &#39;张三&#39;,
+            age: 20
+        }
+
+        Object.defineProperty(obj, &#39;name&#39;, {
+            enumerable: false
+        })
+
+        // for (let key in obj) {
+        //     console.log(key)
+        // }
+    }
+</code></pre>
+<h4 id="3-value"><a href="#3-value" class="headerlink" title="3.value"></a>3.value</h4><ul>
+<li>该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。<br>**默认为 <code>undefined</code>。</li>
+</ul>
+<pre><code class="js">
+    {
+        /* 
+            value：配置属性值 默认值为undefined
+        */
+        const obj = {
+        }
+
+
+
+        Object.defineProperty(obj, &#39;name&#39;, {
+            value: &#39;李四&#39;
+        })
+
+        // console.log(obj)
+        obj.name = &#39;王五&#39;
+        // console.log(obj)
+    }
+</code></pre>
+<h4 id="4-writable"><a href="#4-writable" class="headerlink" title="4.writable"></a>4.writable</h4><ul>
+<li>当且仅当该属性的 <code>writable</code> 键值为 <code>true</code> 时，属性的值，也就是上面的 <code>value</code>，才能被[<code>赋值运算符</code> (en-US)改变。<strong>默认为 <code>false</code>。</strong></li>
+</ul>
+<pre><code class="js">{
+        /* 
+            writable: 配置该属性是否可写 默认值为false
+        */
+        const obj = {
+            name: &#39;张三&#39;
+        }
+
+        Object.defineProperty(obj, &#39;name&#39;, {
+            writable: false
+        })
+
+        obj.name = &#39;李四&#39;
+        // console.log(obj)
+    }
+</code></pre>
+<h4 id="5-amp-6-get、set"><a href="#5-amp-6-get、set" class="headerlink" title="5&amp;6.get、set"></a>5&amp;6.get、set</h4><ul>
+<li>属性的 getter 函数，如果没有 getter，则为 <code>undefined</code>。当访问该属性时，会调用此函数。执行时不传入任何参数，但是会传入 <code>this</code> 对象（由于继承关系，这里的<code>this</code>并不一定是定义该属性的对象）。该函数的返回值会被用作属性的值。<strong>默认为 [<code>undefined</code>]</strong>。</li>
+</ul>
+<pre><code class="js">  {
+        /* 
+            描述器内属性有两组类型不能共存：
+                - 数据描述器
+                    - value
+                    - writable
+                - 存取描述器
+                    - get
+                    - set
+        */
+
+        const obj = {
+            name: &#39;张三&#39;
+        }
+        // 此处，将数据保存到变量中非常重要，一定要这么做！
+        let nameVal = obj.name
+
+        Object.defineProperty(obj, &#39;name&#39;, {
+            get() {
+                console.log(&#39;你正在访问name&#39;)
+                return nameVal
+            },
+            set(val) {
+                console.log(&#39;你正在修改name&#39;)
+                nameVal = val
+            }
+        })
+
+        // console.log(obj.name);
+        // obj.name = &#39;李四&#39;
+        // console.log(obj.name);
+    }
+
+</code></pre>
+<ul>
+<li><strong>批量修改一个对象的所有属性，设置get和set</strong></li>
+</ul>
+<pre><code class="js"> {
+        /* 如何批量修改一个对象的所有属性，设置get和set */
+        const obj = {
+            name: &#39;张三&#39;,
+            age: 20
+        }
+
+        for (let key in obj) {
+            // 将每一个属性值存放到变量中
+            let keyVal = obj[key]
+
+            Object.defineProperty(obj, key, {
+                get() {
+                    console.log(`你正在访问${key}`)
+                    return keyVal
+                },
+                set(val) {
+                    console.log(`你正在修改${key}`)
+                    keyVal = val
+                }
+            })
+        }
+
+
+        obj.name = &#39;李四&#39;;
+        obj.age
+    }
+</code></pre>
+
+                </div>
+                <!-- .entry-content -->
+                <div class="single-reward">
+                  <div class="reward-open">赏
+                    <div class="reward-main">
+                      <ul class="reward-row">
+                        <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.2/img/custom/donate/zfbQR.jpg"></li>
+                        <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.2/img/custom/donate/weixinQR.jpg"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div style="text-align:center; width: 100%" class="social-share share-mobile"
+                  data-disabled="diandian, tencent"></div>
+                <!-- <footer class="post-footer">
+                  <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+                      target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+                      岂能尽如人意，但求无愧我心！</a></div>
+                  <div class="post-tags">
+                  </div>
+                  <div class="post-share">
+                    <div class="social-share sharehidden share-component"></div>
+                    <i class="iconfont show-share icon-forward"></i>
+                  </div>
+                </footer>.entry-footer -->
+          </article>
+          <!-- #post-## -->
+          <div class="toc" style="background: none;"></div>
+          <section class="post-squares nextprev">
+            
+                      
+                        
+                              <div class="post-nepre full next">
+                                
+                                  <a href="/2021/07/10/express的简单搭建/" rel="next">
+                                    <div class="background">
+                                      <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
+                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/express.jpg"
+                                        style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/express.jpg">
+                                    </div>
+                                    <span class="label">
+                                      Next Post</span>
+                                    <div class="info">
+                                      <h3>
+                                        express的简单搭建
+                                      </h3>
+                                      <hr>
+                                    </div>
+                                  </a>
+                              </div>
+                              
+          </section>
           
-            <div class="single-reward">
-              <div class="reward-open">赏
-                <div class="reward-main">
-                  <ul class="reward-row">
-                    <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.2/img/custom/donate/zfbQR.jpg"></li>
-                    <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.2/img/custom/donate/weixinQR.jpg"></li>
-                  </ul>
+  <div id="vcomments"></div>
+  <script>
+    window.onload = function () {
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "eS6XilkcXen8vTgjYowRgQSn-gzGzoHsz",
+        appKey: "9m413jYIug2cFvhs6TtILisl",
+        path: window.location.pathname,
+        placeholder: "想说什么，你就说吧 ...",
+        avatar: 'robohash',
+      })
+    }
+  </script>
+  
+            <section class="author-profile">
+              <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                <a href="javascript:;" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/custom/avatar.jpg" itemprop="image"
+                    alt="Ayu" height="70" width="70"></a>
+                <div class="meta">
+                  <span class="title">Author</span>
+                  <h3 itemprop="name">
+                    <a href="javascript:;" itemprop="url" rel="author">
+                      Ayu
+                    </a>
+                  </h3>
                 </div>
               </div>
-            </div>
-            <div style="text-align:center; width: 100%" class="social-share share-mobile"
-              data-disabled="diandian, tencent"></div>
-            <!-- <footer class="post-footer">
-              <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
-                  target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
-                  生活的理想，就是为了理想的生活。</a></div>
-              <div class="post-tags">
-              </div>
-              <div class="post-share">
-                <div class="social-share sharehidden share-component"></div>
-                <i class="iconfont show-share icon-forward"></i>
-              </div>
-            </footer>.entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn@2.2/img/custom/avatarone.jpg" itemprop="image"
-              alt="Ayu" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-              <a href="" itemprop="url" rel="author">
-                Ayu
-              </a>
-            </h3>
-          </div>
-        </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>
-          谁给我一滴水，我便回报他整个大海。
-        </p>
-      </section>
-    </div><!-- #primary -->
+              <hr>
+              <p><i class="iconfont icon-write"></i>
+                哪里有理性智慧，哪里就有尊严。
+              </p>
+            </section>
+        </main><!-- #main -->
+      </div><!-- #primary -->
     </div>
+
+    
         </div>
         <div class="ins-search">
     <div class="ins-search-mask"></div>

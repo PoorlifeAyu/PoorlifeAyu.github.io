@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2021-07-14T15:34:23.740Z</updated>
+  <updated>2021-07-25T08:53:16.833Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MVC、MVVM</title>
+    <link href="/2021/07/12/MVC%E4%B8%8EMVVM%E7%9A%84%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3/"/>
+    <id>/2021/07/12/MVC与MVVM的简单了解/</id>
+    <published>2021-07-11T23:20:55.000Z</published>
+    <updated>2021-07-25T08:53:16.833Z</updated>
+    
+    <summary type="html">
+    
+      MVC与MVVM的基础认知
+    
+    </summary>
+    
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="MVC、MVVM" scheme="/tags/MVC%E3%80%81MVVM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>express的简单搭建</title>
     <link href="/2021/07/10/express%E7%9A%84%E7%AE%80%E5%8D%95%E6%90%AD%E5%BB%BA/"/>
     <id>/2021/07/10/express的简单搭建/</id>
     <published>2021-07-10T08:41:55.000Z</published>
-    <updated>2021-07-14T15:34:23.740Z</updated>
+    <updated>2021-07-25T08:36:47.973Z</updated>
     
     <summary type="html">
     
@@ -29,7 +49,7 @@
     
     </summary>
     
-      <category term="管理" scheme="/categories/%E7%AE%A1%E7%90%86/"/>
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="express" scheme="/tags/express/"/>
@@ -81,7 +101,7 @@
     <link href="/2021/03/20/git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>/2021/03/20/git的基本使用/</id>
     <published>2021-03-20T13:48:09.000Z</published>
-    <updated>2021-07-19T17:46:20.172Z</updated>
+    <updated>2021-07-25T09:16:49.682Z</updated>
     
     <summary type="html">
     
