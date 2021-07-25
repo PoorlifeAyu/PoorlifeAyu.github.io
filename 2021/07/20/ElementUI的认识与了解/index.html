@@ -7,7 +7,7 @@
   
     <title itemprop="name">
       
-        Node Js、Webpack | 
+        ElementUI | 
             OrdinaryLife
     </title>
     
@@ -416,12 +416,12 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/nodejs.jpg);"
-      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/nodejs.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/element.jpg);"
+      src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/element.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-        Node Js、Webpack
+        ElementUI
       </h1>
       <p class="entry-census">
         <span>
@@ -436,7 +436,7 @@
         </span>
         <span class="bull">
           ·</span>
-        2021-3-15<span class="bull">
+        2021-7-20<span class="bull">
             ·</span>
           <span id="busuanzi_value_page_pv"></span>次阅读
       </p>
@@ -452,606 +452,626 @@
             <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
             
                 <div class="entry-content">
-                  <h1 id="Node-Js入门及配置"><a href="#Node-Js入门及配置" class="headerlink" title="Node Js入门及配置"></a>Node Js入门及配置</h1><h2 id="Node安装"><a href="#Node安装" class="headerlink" title="Node安装"></a>Node安装</h2><ul>
-<li><p>下载msi文件</p>
-</li>
-<li><p>傻瓜式安装</p>
-<blockquote>
-<p>nodejs  安装路径：C:\Program Files\nodejs\</p>
-</blockquote>
-</li>
-<li><p>打开cmd命令行工具</p>
-<pre><code class="js">node -v
+                  <h1 id="ElementUI"><a href="#ElementUI" class="headerlink" title="ElementUI"></a>ElementUI</h1><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="js">//在 main.js 中写入以下内容：
+import ElementUI from &#39;element-ui&#39;;
+import &#39;element-ui/lib/theme-chalk/index.css&#39;;
 
-npm -v 
+Vue.use(ElementUI);
 </code></pre>
-</li>
-</ul>
-<h2 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h2><ul>
-<li><p>dir    查询目录及目录下所有文件</p>
-</li>
-<li><p>cd 路径     跳转到某个路径</p>
-</li>
-<li><p>盘符：     切换路径到某个盘符</p>
-</li>
-<li><p>cls        清屏</p>
-</li>
-<li><p>ctrl+c    中断程序</p>
-</li>
-<li><p>快捷进入某个目录</p>
-<blockquote>
-<p>直接在目录的路径上 输入 cmd</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><ul>
-<li>此电脑–右键–属性</li>
-<li>高级系统设置</li>
-<li>环境变量</li>
-<li>path </li>
-<li>添加 C:\Program Files\nodejs\  到path 的最后</li>
-</ul>
-<h2 id="Node运行js代码"><a href="#Node运行js代码" class="headerlink" title="Node运行js代码"></a>Node运行js代码</h2><ul>
-<li><p>直接运行js文件</p>
-<pre><code class="js">node js文件路径
-</code></pre>
-</li>
-<li><p>直接运行js代码</p>
-<pre><code class="cmd">node 
-</code></pre>
-<pre><code class="js">let a=100;let b=1000;conosle.log(a+b);
-</code></pre>
-</li>
-</ul>
-<h2 id="Node模块"><a href="#Node模块" class="headerlink" title="Node模块"></a>Node模块</h2><ul>
-<li>一个js文件就是 一个模块</li>
-<li>模块与模块之间 有 依赖关系</li>
-<li><p>包：多个模块组合起来的</p>
-</li>
-<li><p>主模块：整个项目的入口</p>
-</li>
-</ul>
-<h2 id="模块的导入与导出"><a href="#模块的导入与导出" class="headerlink" title="模块的导入与导出"></a>模块的导入与导出</h2><blockquote>
-<p>注意：js模块中能够导入任何的文件格式  css  .mp4 .jpg  </p>
-</blockquote>
+<hr>
 <ul>
-<li><p>js模块导入其他文件格式的语法</p>
-<pre><code class="js">require(&#39;文件路径&#39;)     // 相对路径 绝对路径 完整的url地址
-</code></pre>
-</li>
-<li><p>js模块导入js模块的语法</p>
-<ul>
-<li>js模块导出</li>
+<li><strong>具体参照官网快速上手</strong></li>
 </ul>
-<pre><code class="js">//a.js
-let str = &#39;xxzczxczxcxzc&#39;;
-let arr = [12112, 48, 45, 54, 45];
-let name = &#39;张麻子&#39;;
-
-//导出语句-暴露
-module.exports = {
-    str,
-    arr,
-    name
+<h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><ul>
+<li>在引入 Element 时，可以传入一个全局配置对象。该对象目前支持 <code>size</code> 与 <code>zIndex</code> 字段。<code>size</code> 用于改变组件的默认尺寸，<code>zIndex</code> 设置弹框的初始 z-index（默认值：2000）。</li>
+</ul>
+<pre><code class="js">import Vue from &#39;vue&#39;;
+import Element from &#39;element-ui&#39;;
+Vue.use(Element, { size: &#39;small&#39;, zIndex: 3000 });
+</code></pre>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>element-ui的颜色设计语言有必要记忆<ul>
+<li>danger — 危险 — 红色</li>
+<li>success — 成功 — 绿色</li>
+<li>primary — 操作 — 蓝色</li>
+<li>info — 信息 — 灰色</li>
+<li>warning — 警告 — 橘黄色</li>
+</ul>
+</li>
+</ul>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
+<li>使用elementUI中的container布局容器组件，来实现管理系统架构布局<ul>
+<li>el-container<ul>
+<li>最大的布局容器，后续的容器都需要使用container包裹才能实现合理布局效果</li>
+<li>el-container内部如果含有header或者footer容器的时候为——垂直布局，否则为——水平布局</li>
+</ul>
+</li>
+<li>el-header<ul>
+<li>头部栏布局容器</li>
+</ul>
+</li>
+<li>el-aside<ul>
+<li>侧边栏布局容器</li>
+</ul>
+</li>
+<li>el-main<ul>
+<li>主体内容布局容器</li>
+</ul>
+</li>
+<li>el-footer<ul>
+<li>底部布局容器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="侧边栏"><a href="#侧边栏" class="headerlink" title="侧边栏"></a>侧边栏</h3><ul>
+<li>aside</li>
+</ul>
+<pre><code class="js">&lt;el-container&gt;
+  &lt;el-aside width=&quot;200px&quot;&gt;Aside&lt;/el-aside&gt;
+  &lt;el-container&gt;
+    &lt;el-header&gt;Header&lt;/el-header&gt;
+    &lt;el-main&gt;Main&lt;/el-main&gt;
+  &lt;/el-container&gt;
+&lt;/el-container&gt;
+</code></pre>
+<h3 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h3><ul>
+<li><strong>图片引用可以使用三种方式：</strong></li>
+</ul>
+<pre><code class="vue">&lt;template&gt;
+    &lt;!-- 基于img标签实现 --&gt;
+    &lt;img src=&quot;~@/assets/imgs/logo.png&quot; alt=&quot;&quot; srcset=&quot;&quot;&gt;
+    &lt;!-- 基于webpack模块引用语法实现，使用commonJS规范引入图片资源 --&gt;
+    &lt;el-image :src=&quot;require(&#39;@/assets/imgs/logo.png&#39;)&quot;&gt;&lt;/el-image&gt;
+    &lt;!-- 先引入图片，存放到data中定义的数据，再到template中使用 --&gt;
+    &lt;el-image :src=&quot;img&quot;&gt;&lt;/el-image&gt;
+&lt;/template&gt;
+</code></pre>
+<h2 id="el-form表单"><a href="#el-form表单" class="headerlink" title="el-form表单"></a>el-form表单</h2><ul>
+<li><p>el-form表单基本语法代码：</p>
+<ul>
+<li>el-form</li>
+</ul>
+</li>
+<li><p>最外层form主体</p>
+<ul>
+<li>el-form-item</li>
+<li>内部表单项，所有的表单组件都写在表单项标签内</li>
+</ul>
+</li>
+</ul>
+<h2 id="axios封装处理（拦截器）"><a href="#axios封装处理（拦截器）" class="headerlink" title="axios封装处理（拦截器）"></a>axios封装处理（拦截器）</h2><ul>
+<li><p>首先需要配置一个index.js文件，内部对axios做一个预处理：</p>
+</li>
+<li><p>创建axios实例——axios.create({options配置})</p>
+<ul>
+<li>有时候一个管理系统项目中可能会遇到：多个请求地址、多种请求体</li>
+<li>创建axios实例，可以让我们应对多种请求场景</li>
+</ul>
+</li>
+<li>配置axios的拦截器<ul>
+<li>有的时候你的请求需要提前做一些预操作，比如：post请求某些情况下需要将请求数据进行转义<ul>
+<li>如果说，后端要求的请求数据参数为x-www-form-urlencoded类型的时候，往往前端需要使用vue/cli内置的依赖——Qs来帮助我们实现参数转义</li>
+</ul>
+</li>
+<li>请求拦截器<ul>
+<li>axios.interceptors.request.use(config=&gt;{},error=&gt;{})<ul>
+<li>回调中，config必须return，否则报错</li>
+<li>error，可以使用Promise.reject返回，便于捕获。<code>return Promise.reject(error)</code></li>
+</ul>
+</li>
+<li>请求拦截器中可以得到本次请求几乎全部相关信息</li>
+</ul>
+</li>
+<li>响应拦截器<ul>
+<li>axios.interceptors.responese.use(config=&gt;{},error=&gt;{})<ul>
+<li>回调中，config必须return，否则报错！</li>
+<li>error，可以使用Promise.reject返回，同request拦截器</li>
+</ul>
+</li>
+<li>响应拦截器可以得到本次请求几乎全部响应信息</li>
+</ul>
+</li>
+<li>拦截器存在的意义<ul>
+<li>所有xiaos请求，在发送request之前或者得到response之前，都可以对相关信息进行预处理<ul>
+<li>比如发送前对post请求进行序列化查询字符串转义</li>
+<li>比如得到响应前，对response的响应状态进行统一处理，比如500则全局处理服务端报错</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="el-form表单验证"><a href="#el-form表单验证" class="headerlink" title="el-form表单验证"></a>el-form表单验证</h2><ul>
+<li>el-form表单验证分两大体系<strong>：elementui基本验证和自定义校验</strong>但是，el-form表单验证前的操作统一遵循以下原则：<ul>
+<li>关联——必须为el-form设置【:model】属性<ul>
+<li>将表单对象赋给:model，此后，表单对象内所有的字段就可以和当前表单关联起来，便于后续使用表单项去映射对应字段</li>
+</ul>
+</li>
+<li>规则——必须为el-form设置【:rules】属性</li>
+<li>:rules属性主要设置表单所有字段的验证规则，所以rules中的字段必须和表单对象中的字段保持一致</li>
+<li>实例——【必须】为el-form设置【 ref 】属性<ul>
+<li>ref可以帮助我们获得表单组件的实例，从而调用表单组件的全局校验方法</li>
+</ul>
+</li>
+<li>映射——必须为el-form-item设置prop属性，且属性值为字段名</li>
+<li>由于前面:model将表单对象和表单关联起来，此时，只需要通过设置el-form-item的prop即可实现表单项和字段的映射关系</li>
+</ul>
+</li>
+</ul>
+<h3 id="表单rules规则书写语法："><a href="#表单rules规则书写语法：" class="headerlink" title="表单rules规则书写语法："></a>表单rules规则书写语法：</h3><pre><code class="js">{
+    rules:{
+        account:[
+            {    //常规校验规则定义
+                required:true,    //是否必填
+                message:&#39;请输入账号&#39;，    //提示信息
+                trigger:&#39;blur&#39;        //触发器，一般指原生事件
+            }
+        ]
+    }
 }
 </code></pre>
 <ul>
-<li>js模块导入</li>
-</ul>
-<pre><code class="js">//b.js---主模块
-//导入的文件
-//接收暴露的数据
-let a = require(&#39;./a.js&#39;);
-console.log(a);
-console.log(a.str);
-</code></pre>
+<li><p>如果要实现自定义校验的话，我们需要使用校验规则内一个叫做validator的属性：</p>
+</li>
+<li><p>先定义一个函数，其参数有：</p>
 <ul>
-<li>cmd Node环境运行</li>
-</ul>
-<pre><code class="js">node b.js
-</code></pre>
-</li>
-</ul>
-<h2 id="css文件相互引入"><a href="#css文件相互引入" class="headerlink" title="css文件相互引入"></a>css文件相互引入</h2><pre><code class="css">/*base.css*/
-p {
-    font-size: 40px;
-    font-weight: 600;
-}
-</code></pre>
-<pre><code class="css">/*index.css*/
-/*css文件引入其他的css文件 方法*/
-@import url(&#39;./base.css&#39;);
-p {
-    color: red;
-}
-</code></pre>
-<h2 id="三方包的使用"><a href="#三方包的使用" class="headerlink" title="三方包的使用"></a>三方包的使用</h2><h3 id="npm的用法"><a href="#npm的用法" class="headerlink" title="npm的用法"></a>npm的用法</h3><ul>
-<li>作用：三方包管理工具<ul>
-<li>npm官网</li>
-<li>淘宝镜像</li>
+<li>rules——当前字段校验规则</li>
+<li>value——当前字段收集的值</li>
+<li>callback——是否对当前校验放行<ul>
+<li>如果校验不通过则callback(new Error(错误信息通知))</li>
+<li>如果校验通过则直接放行callback()</li>
 </ul>
 </li>
 </ul>
-<h4 id="npm常用命令"><a href="#npm常用命令" class="headerlink" title="npm常用命令"></a>npm常用命令</h4><pre><code class="js">npm init       # 创建项目/初始化项目
-npm install 包名       # 下载三方包
-npm install 包名@版本号  # 下载具体的某个版本的包
-npm install 包名 -D     #下载开发环境使用的包
-npm install -g  包名    #全局安装某个包 
-npm uninstall 包名     # 卸载三方包
-npm install            # 下载所有的包
-</code></pre>
-<h4 id="npm-init创建项目"><a href="#npm-init创建项目" class="headerlink" title="npm init创建项目"></a>npm init<strong>创建项目</strong></h4><ul>
-<li><p>作用：创建/初始化项目–package.json 文件</p>
-<pre><code class="json">{
-  &quot;name&quot;: &quot;demo&quot;,   //项目名
-  &quot;version&quot;: &quot;1.0.1&quot;,   //版本号
-  &quot;description&quot;: &quot;&quot;,    //描述信息
-  &quot;main&quot;: &quot;index.js&quot;,   //入口文件--主模块
-  &quot;scripts&quot;: {          //命名工具
-    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
-  },
-  &quot;author&quot;: &quot;&quot;,      //作者
-  &quot;license&quot;: &quot;ISC&quot;   //开源协议
-}
-</code></pre>
+</li>
+<li><p>在新的校验规则中将自定义校验方法赋给validator属性</p>
+</li>
+<li><p><strong>以上全部概念，其实都是从element-ui官方文档上得出的经验，它或许能在某些程度上帮到你，但更希望你在以后的工作中，若是form相关业务无法处理的时候，请务必回归官方文档，仔细查阅示例+配置文档，你会得到很多收获。一个小时的研究，可以支撑你未来五年左右相关问题开发</strong></p>
 </li>
 </ul>
-<h2 id="案列示范（导入jQuery包）"><a href="#案列示范（导入jQuery包）" class="headerlink" title="案列示范（导入jQuery包）"></a>案列示范（导入jQuery包）</h2><pre><code class="js">//在项目根目录下 
-npm install jquery  
-</code></pre>
-<pre><code class="js">//在入口文件-主模块 index.js
-let jquery  = require(&#39;jquery&#39;);
-console.log(jquery);
-</code></pre>
-<h2 id="yarn安装"><a href="#yarn安装" class="headerlink" title="yarn安装"></a>yarn安装</h2><ul>
-<li><p>作用：三方包管理工具</p>
-<pre><code class="js">npm install -g yarn 
-</code></pre>
-<pre><code class="js">C:\Users\Administrator\AppData\Roaming\npm 
-删除所有的 .ps1文件
-</code></pre>
-<pre><code class="js">yarn init -y     #快速创建/初始化项目
-yarn add 包名    # 安装三方包
-yarn add 包名@版本号   #安装某个版本号的包
-yarn add 包名 -D      #安装本地开发环境的三方包
-yarn add global 包名    # 全局安装三方包
-yarn remove 包名        #删除包
-yarn                   #一次性安装所有的包
-</code></pre>
-</li>
-</ul>
-<p><strong><em>[注意]</em></strong>全局安装使用npm</p>
-<p>​        项目依赖安装使用yarn</p>
-<h2 id="设置镜像源"><a href="#设置镜像源" class="headerlink" title="设置镜像源"></a>设置镜像源</h2><h3 id="npm设置淘宝镜像"><a href="#npm设置淘宝镜像" class="headerlink" title="npm设置淘宝镜像"></a>npm设置淘宝镜像</h3><pre><code class="js">npm config set registry  https://registry.npm.taobao.org
-</code></pre>
-<pre><code class="js">npm config get registry
-</code></pre>
-<h3 id="yarn设置淘宝镜像"><a href="#yarn设置淘宝镜像" class="headerlink" title="yarn设置淘宝镜像"></a>yarn设置淘宝镜像</h3><pre><code class="js">yarn config set registry  https://registry.npm.taobao.org 
-</code></pre>
-<pre><code class="js">yarn config get registry  
-</code></pre>
-<h1 id="Webpack的基本使用"><a href="#Webpack的基本使用" class="headerlink" title="Webpack的基本使用"></a>Webpack的基本使用</h1><p><img src="https://tva3.sinaimg.cn/large/006A63qqly8gsmsq7faq4j30i1088t96.jpg"></p>
-<h2 id="webpack作用"><a href="#webpack作用" class="headerlink" title="webpack作用"></a>webpack作用</h2><ul>
-<li>将node环境下 js代码及各种资源文件转换为 浏览器可运行的静态资源</li>
-<li>将大文件 进行压缩</li>
-<li>将代码进行混淆</li>
-</ul>
-<p>webpack处理的文件</p>
-<ul>
-<li>js文件</li>
-<li><p>css 文件 less sass stylus  scss</p>
-</li>
-<li><p>图片</p>
-</li>
-</ul>
-<h2 id="webpack5大核心概念【重点】"><a href="#webpack5大核心概念【重点】" class="headerlink" title="webpack5大核心概念【重点】"></a>webpack5大核心概念<strong>【重点】</strong></h2><ol>
-<li>entry   入口文件</li>
-<li>output  出口文件 </li>
-<li>loader   解释器</li>
-<li>plugins   插件</li>
-<li>mode   环境</li>
+<h3 id="mixin混入"><a href="#mixin混入" class="headerlink" title="mixin混入"></a>mixin混入</h3><ul>
+<li>vue为我们提供了一个api叫做mixin，这个api可以帮助我们将组件内部的script代码解耦出去。<ol>
+<li>mixin书写格式和组件实例书写格式一模一样</li>
 </ol>
-<h2 id="webpack安装及初始化项目"><a href="#webpack安装及初始化项目" class="headerlink" title="webpack安装及初始化项目"></a>webpack安装及初始化项目</h2><ul>
-<li><p>全局安装 webpack webpack-cli</p>
-<pre><code class="js">npm install webpack@5.11.0 webpack-cli  -g
-</code></pre>
 </li>
-<li><p>删除npm 文件中所有的 .ps1 文件【避坑】</p>
-<pre><code class="js">目录： C:\Users\Administrator\AppData\Roaming\npm
-</code></pre>
-</li>
-<li><p>项目初始化</p>
-<pre><code class="js">yarn init -y
-yarn add webpack@5.11.0 webpack-cli -D
-</code></pre>
-</li>
+<li>mixin在组件实例中使用mixins属性来注册</li>
 </ul>
-<h2 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h2><pre><code class="js">webpack-demo
-├── src
-│   ├── css
-│   ├── fonts
-│   ├── img
-│   ├── js
-│   └── index.html
-├── package.json
-├── webpack.config.js
-└── yarn.lock
-</code></pre>
-<h2 id="配置webpack-config-js"><a href="#配置webpack-config-js" class="headerlink" title="配置webpack.config.js"></a>配置webpack.config.js</h2><pre><code class="js">/**webpack 打包配置文件
- * author:cometang 2021-06-12
- */
-module.exports = {
-    //五大概念导出
-    //入口
-    entry: &#39;&#39;,
-    //出口
-    output: {
-        filename: &#39;bundle.js&#39;
-    },
-    // loader 解释器
-    module: {
-        rules: [
-            //使用什么loader  对什么格式的文件 进行解释
-            { test: /\.css$/, use: &#39;&#39; }
-        ]
-    },
-    //plugins 插件
-    plugins: [
+<pre><code class="js">//引入
+import validateMixin from &quot;./mixins/validateMixin&quot;;
 
-    ],
-    //mode 环境
-    //development 本地开发环境
-    // production 线上生成环境
-    mode: &quot;development&quot;
-}
+//
+mixins: [validateMixin],
 </code></pre>
-<h2 id="打包js文件"><a href="#打包js文件" class="headerlink" title="打包js文件"></a>打包js文件</h2><ul>
-<li><p>目的：让原来不能够在浏览器运行的js文件能够支持运行</p>
-<blockquote>
-<p>前提工作： 创建 index.html  index.js  main.js(主模块) </p>
-</blockquote>
+<ul>
+<li>mixin内部定义的属性、方法如果与组件内的冲突了，以组件内为准</li>
+<li>mixin内生命周期和组件内冲突了，则合并在一起，一块儿执行</li>
+</ul>
+<h3 id="知识点回顾"><a href="#知识点回顾" class="headerlink" title="知识点回顾"></a>知识点回顾</h3><h3 id="es6的模块规范"><a href="#es6的模块规范" class="headerlink" title="es6的模块规范"></a>es6的模块规范</h3><ul>
+<li><p>es6模块规范主要需要大家关注两个关键词：<code>export</code>和<code>import</code></p>
+</li>
+<li><p><strong>export主要用于暴露声明（块）</strong></p>
+</li>
+<li><p>export主要用于暴露声明和块，代码演示如下：</p>
 </li>
 </ul>
-<pre><code class="js">webpack-demo
-├── .vscode
-│   └── settings.json
-├── dist
-│   └── bundle.js
-├── src
-│   ├── css
-│   ├── fonts
-│   ├── img
-│   ├── js
-│   │   ├── index.js
-│   │   └── main.js
-│   └── index.html
-├── package.json
-├── webpack.config.js
-└── yarn.lock
+<pre><code class="javascript">// 暴露声明：var、let、const、function
+export var a = 10
+
+// 暴露块
+let b = 20
+export { b }
 </code></pre>
 <ul>
-<li>修改webpack.config.js 配置</li>
+<li>同时，export还支持暴露默认块</li>
 </ul>
-<pre><code class="js">//导入 nodejs 内直模块  获取项目根目录绝对路径
-const path = require(&#39;path&#39;);
-</code></pre>
-<pre><code class="js"> //入口
-  entry: &#39;./src/js/main.js&#39;,
-</code></pre>
-<pre><code class="js">//出口
-    output: {
-        // 出口文件 放置的位置  必须是绝对路径
-        // 出口文件的 文件名
-        path: path.resolve(__dirname, &#39;dist&#39;),
-        filename: &#39;bundle.js&#39;
-    },
-</code></pre>
-<pre><code class="js">&lt;body&gt;
-    &lt;script src=&quot;../dist/bundle.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
+<pre><code class="javascript">// 默认暴露
+let c = 30
+export default c
 </code></pre>
 <ul>
-<li>项目根目录下-cmd 命令行窗口 输入打包命令</li>
+<li>另外，export在暴露的时候还支持别名</li>
 </ul>
-<pre><code class="js">webpack 
+<pre><code class="javascript">// 暴露块
+let b = 20
+// 为暴露的变量起别名
+export { b as numB }
 </code></pre>
-<h2 id="打包css文件"><a href="#打包css文件" class="headerlink" title="打包css文件"></a>打包css文件</h2><ul>
-<li>css文件支持打包</li>
-<li>css相互引入之后一样可以打包</li>
-<li>js中导入的css文件可以打包</li>
-</ul>
-<p>修改配置文件</p>
 <ul>
-<li>下载 css-loader   style-loader</li>
-<li>配置loader <code>module</code></li>
+<li>那么引入的时候，就必须引入别名了</li>
 </ul>
-<pre><code class="js">yarn add css-loader style-loader -D
+<h2 id="import主要用于引入块"><a href="#import主要用于引入块" class="headerlink" title="import主要用于引入块"></a>import主要用于引入块</h2><ul>
+<li>如果是暴露的声明或者块，则需要解构引入。</li>
+</ul>
+<pre><code class="javascript">// 引入a
+import { a } from &#39;./module1.js&#39;
+console.log(a)
+
+// 引入b
+import { b } from &#39;./module1.js&#39;
+console.log(b)
 </code></pre>
-<pre><code class="js">  // loader 解释器
-    module: {
-        rules: [
-            //使用什么loader  对什么格式的文件 进行解释
-            //css-loader  让webpack 可以打包css代码
-            //style-loader   将打包完成之后的css代码 添加页面的 head-style标签中
-            { test: /\.css$/, use: [&#39;style-loader&#39;,&#39;css-loader&#39;] }
-        ]
-    },
+<ul>
+<li>如果是暴露的默认块，则直接引入即可</li>
+</ul>
+<pre><code class="javascript">// 引入c
+import c from &#39;./module1.js&#39;
+console.log(c)
 </code></pre>
-<h2 id="打包less文件"><a href="#打包less文件" class="headerlink" title="打包less文件"></a>打包less文件</h2><h3 id="less语法"><a href="#less语法" class="headerlink" title="less语法"></a>less语法</h3><pre><code class="js">/*变量*/
-@bgcolor:#f60;
-@fsize:14px;
-/*嵌套语法 嵌套层数不要超过三层*/
-.box{
-    width:200px;
-    height: 200px;
-    background-color: aqua;
-    .box1{
-        width: 150px;
-        height: 150px;
-        background-color: @bgcolor;
-        .box2{
-            width: 100px;
-            height: 100px;
-            background-color: #000;
+<ul>
+<li>引入的时候，也可以为变量起一个别名</li>
+</ul>
+<pre><code class="javascript">// 引入别名
+import { a as newA } from &#39;./module1.js&#39;
+console.log(newA)
+
+// 引入默认块并起别名
+import * as newC from &#39;./module1.js&#39;
+console.log(newC)
+</code></pre>
+<h2 id="路由守卫"><a href="#路由守卫" class="headerlink" title="路由守卫"></a>路由守卫</h2><ul>
+<li>路由前置守卫beforeEach的作用是在路由跳转前获得本次跳转相关信息，接受一个回调函数，回调函数有三个参数：<ul>
+<li>to<ul>
+<li>目标路由对象</li>
+</ul>
+</li>
+<li>from<ul>
+<li>起始路由对象</li>
+</ul>
+</li>
+<li>next<ul>
+<li>若不希望跳转到目标路由，则可以使用next(path)来重定向</li>
+<li>若放行，则直接next()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="访问修饰器"><a href="#访问修饰器" class="headerlink" title="访问修饰器"></a>访问修饰器</h3><ul>
+<li>作用：访问修饰符可以让我们实现安全、可控的内部变量暴露操作：<ul>
+<li>get访问修饰符<ul>
+<li>必须是修饰函数</li>
+<li>必须return</li>
+</ul>
+</li>
+<li>set修改修饰符<ul>
+<li>必须是修饰函数</li>
+<li>必须传值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="nextTick"><a href="#nextTick" class="headerlink" title="$nextTick"></a>$nextTick</h2><h3 id="el-form更多体现"><a href="#el-form更多体现" class="headerlink" title="el-form更多体现"></a>el-form更多体现</h3><h4 id="label"><a href="#label" class="headerlink" title="label"></a>label</h4><ul>
+<li>在el-form-item表单项标签上设置label，可以让表单项具备标题</li>
+</ul>
+<h4 id="label-width"><a href="#label-width" class="headerlink" title="label-width"></a>label-width</h4><ul>
+<li>如果不设置label-width，那么垂直排列的表单会呈现表单项和表单组件一上一下的布局形态，设置label-width以后，表单项和表单组件会强制保持一行</li>
+</ul>
+<h4 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h4><ul>
+<li>为el-form表单主体标签设置inline属性为true，可以实现表单水平排列布局</li>
+</ul>
+<h3 id="el-table"><a href="#el-table" class="headerlink" title="el-table"></a>el-table</h3><ul>
+<li>书写el-table需要具备以下条件：<ul>
+<li>el-table<ul>
+<li>表格体</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>el-table必须传入一个:data属性<ul>
+<li>data属性接收一个对象数组格式的数据</li>
+</ul>
+</li>
+<li>el-table-column<ul>
+<li>表格列</li>
+</ul>
+</li>
+<li>el-table-column使用prop来映射对象中的字段</li>
+<li>el-table-column通过label来设置表头</li>
+</ul>
+<h2 id="vuex中的module"><a href="#vuex中的module" class="headerlink" title="vuex中的module"></a>vuex中的module</h2><ul>
+<li><p>在vuex中，如果业务板块较多，且复杂的时候。我们往往会使用module来协助vuex仓库的解耦。</p>
+</li>
+<li><p>使用module需要注意以下几点：</p>
+<ul>
+<li><p>创建对应业务板块的module文件</p>
+<ul>
+<li>module文件结构其实就是一个独立的vuex对象结构</li>
+</ul>
+</li>
+<li><p>module内定义state的语法与根仓库state语法有区别</p>
+<ul>
+<li>语法结构为：</li>
+</ul>
+</li>
+<li><pre><code class="javascript">{
+    state(){
+        return {
+
         }
     }
 }
 </code></pre>
-<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><ul>
-<li><p>下载loader  及less</p>
-<pre><code class="js">yarn add less-loader less -D
-</code></pre>
-</li>
-<li><p>配置loader </p>
-<pre><code class="js"> module: {
-        rules: [
-            //使用什么loader  对什么格式的文件 进行解释
-            //css-loader  让webpack 可以打包css代码
-            //style-loader   将打包完成之后的css代码 添加页面的 head-style标签中
-            { test: /\.css$/, use: [&#39;style-loader&#39;, &#39;css-loader&#39;] },
-            { test: /\.less$/, use: [&#39;style-loader&#39;, &#39;css-loader&#39;, &#39;less-loader&#39;] }
-        ]
-    },
-</code></pre>
 </li>
 </ul>
-<h2 id="打包css中的图片"><a href="#打包css中的图片" class="headerlink" title="打包css中的图片"></a>打包css中的图片</h2><ul>
-<li><p>下载loader   url-loader  file-loader</p>
 </li>
-<li><p>配置loader</p>
-<pre><code class="js">yarn add url-loader file-loader -D
-</code></pre>
-<pre><code class="js"> {
-                test: /\.(jpg|png|gif)$/,
-                loader: &#39;url-loader&#39;,
-                /** 详细配置*/
-                options: {
-                    //hash 随机32为字符  ext 获取文件后缀
-                    name: &#39;[hash:16].[ext]&#39;,
-                    //小于20kb base64压缩  大于20kb 不进行压缩
-                    limit: 20 * 1024
-                }
-   }
-</code></pre>
+<li><p>module最好搭配命名空间使用</p>
+<ul>
+<li>为每一个module设置namespaced属性，为true</li>
+</ul>
+</li>
+<li><p>最终module需要引入到store配置页面，然后传入到storeObj对象的modules中去注册</p>
 </li>
 </ul>
-<h2 id="打包html中的图片"><a href="#打包html中的图片" class="headerlink" title="打包html中的图片"></a>打包html中的图片</h2><ul>
-<li>思路：因为html中的图片 是img src属性，直接打包html 页面就可以附带实现图片的打包<ul>
-<li>下载loader plugin   html-loader   html-webpack-plugin </li>
-<li>配置loader</li>
-<li>配置plugin</li>
+<h2 id="token"><a href="#token" class="headerlink" title="token"></a>token</h2><ul>
+<li>项目中某些接口需要token来进行接口鉴权，所以我们往往会在请求拦截器中获取本地缓存的token，并将其付给headers请求头：</li>
+</ul>
+<pre><code class="javascript">// 获取本地token
+let token = storage.token
+// 将token放到请求头上
+config.headers[&#39;Authorization&#39;] = token
+</code></pre>
+<h3 id="表格自定义渲染"><a href="#表格自定义渲染" class="headerlink" title="表格自定义渲染"></a>表格自定义渲染</h3><ul>
+<li><p>前面使用表格进行了字段映射，此处我们需要实现表格内容自定义渲染，需要注意以下事项：</p>
+</li>
+<li><p><strong>表格自定义渲染，本质上其实是通过作用域插槽来获得表格组件内的数据</strong></p>
+</li>
+</ul>
+<h3 id="请求类型（面试高频）"><a href="#请求类型（面试高频）" class="headerlink" title="请求类型（面试高频）"></a>请求类型（面试高频）</h3><ul>
+<li>常用符合restFullApi规范的请求方法有：<ul>
+<li>get<ul>
+<li>查询资源操作</li>
+<li>有缓存机制，第一次请求后会有服务缓存，后续刷新其实是从缓存中获取内容</li>
+</ul>
+</li>
+<li>post<ul>
+<li>新增资源操作<ul>
+<li>请求会叠加，多次post会新增多条数据</li>
 </ul>
 </li>
 </ul>
-<pre><code class="js">yarn add html-loader@1.3.2  html-webpack-plugin@5.0.0-beta.1 -D
-</code></pre>
-<pre><code class="js">   { test: /\.html$/, loader: &#39;html-loader&#39; }
-</code></pre>
-<pre><code class="js">//导入三方插件包
-const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
-</code></pre>
-<pre><code class="js"> //plugins 插件
-    plugins: [
-        new HtmlWebpackPlugin({
-            //以哪个页面作为打包的页面模板--打包哪个页面
-            template: &#39;./src/index.html&#39;
-        })
-    ],
-</code></pre>
-<blockquote>
-<p><strong>注意</strong>:配置完成之后，删除html文件中的 bundle.js引入</p>
-</blockquote>
-<h2 id="打包js中的图片"><a href="#打包js中的图片" class="headerlink" title="打包js中的图片"></a>打包js中的图片</h2><pre><code class="js">let picDom = document.querySelector(&#39;.pic&#39;);
-let img = document.createElement(&#39;img&#39;);
-//以模块的方式导入图片
-img.src = require(&#39;../img/1.jpg&#39;);
-picDom.appendChild(img);
-</code></pre>
-<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="html中引入静态资源路径设置为相对路径"><a href="#html中引入静态资源路径设置为相对路径" class="headerlink" title="html中引入静态资源路径设置为相对路径"></a>html中引入静态资源路径设置为相对路径</h3><pre><code class="js">  //出口
-    output: {
-        // 出口文件 放置的位置  必须是绝对路径
-        // 出口文件的 文件名
-        path: path.resolve(__dirname, &#39;dist&#39;),
-        filename: &#39;bundle.js&#39;,
-        //设置静态资源请求的 相对路径
-        publicPath: &#39;./&#39;
-    },
-</code></pre>
-<h3 id="图片打包-用ES规范进行打包压缩"><a href="#图片打包-用ES规范进行打包压缩" class="headerlink" title="图片打包 用ES规范进行打包压缩"></a>图片打包 用ES规范进行打包压缩</h3><pre><code class="js"> {
-                test: /\.(jpg|png|gif)$/,
-                loader: &#39;url-loader&#39;,
-                /** 详细配置*/
-                options: {
-                    //hash 随机32为字符  ext 获取文件后缀
-                    name: &#39;[hash:16].[ext]&#39;,
-                    //小于20kb base64压缩  大于20kb 不进行压缩
-                    limit: 20 * 1024,
-                    esModule: false   //图片打包设置为 Es规范进行打包 不使用commonjs规范
-                }
-  },
-</code></pre>
-<h2 id="打包字体图标"><a href="#打包字体图标" class="headerlink" title="打包字体图标"></a>打包字体图标</h2><ul>
-<li><p>下载loader   file-loader</p>
 </li>
-<li><p>配置loader</p>
-<pre><code class="js">yarn add file-loader -D
-</code></pre>
-<pre><code class="js">  { test: /\.(svg|ttf|eot|woff|woff2)$/, loader: &quot;file-loader&quot; }
-</code></pre>
-<p>主模块引入iconfont.css</p>
-<pre><code class="js">/*导入字体图标 css文件 */
-require(&#39;../fonts/iconfont.css&#39;)
-</code></pre>
+<li>put<ul>
+<li>更新资源操作</li>
+<li>请求不会叠加，多次put，只会执行最后一次操作</li>
+</ul>
+</li>
+<li>delete<ul>
+<li>删除资源操作</li>
+<li>没有缓存机制，传参方式和get一致</li>
+</ul>
 </li>
 </ul>
-<h2 id="ES6转ES5"><a href="#ES6转ES5" class="headerlink" title="ES6转ES5"></a>ES6转ES5</h2><ul>
-<li><p>下载loader 和plugin </p>
 </li>
-<li><p>配置loader</p>
+</ul>
+<h3 id="v-model语法糖原理"><a href="#v-model语法糖原理" class="headerlink" title="v-model语法糖原理"></a>v-model语法糖原理</h3><ul>
+<li><p>v-model语法在vue原生生态中其实仅支持原生表单html元素的双向绑定。但是基于自定义事件和model属性，我们可以实现自己的v-model双向绑定组件。</p>
 </li>
-<li><p>项目根目录下 创建 并配置 .babelrc 文件</p>
-<pre><code class="js">yarn add babel-core babel-loader@7.1.5 babel-preset-es2015 -D
+<li><p>v-model语法糖的书写语法主要需要注意：</p>
+</li>
+</ul>
+<h4 id="一进"><a href="#一进" class="headerlink" title="一进"></a>一进</h4><ul>
+<li>通过model属性<strong>指定</strong>一个prop，用于接收外界传递的数据</li>
+<li>在props中定义一个model指定的prop属性</li>
+</ul>
+<h4 id="一出"><a href="#一出" class="headerlink" title="一出"></a>一出</h4><ul>
+<li>通过model属性【指定】一个event事件名，用于将内部数据传递到外界</li>
+<li>在合适的时机，触发model指定的事件名，将内部数据发送到外界</li>
+</ul>
+<h3 id="vue实例的data之谜"><a href="#vue实例的data之谜" class="headerlink" title="vue实例的data之谜"></a>vue实例的data之谜</h3><ul>
+<li>vue实例中的data方法常常会被问到以下两个问题：<ol>
+<li>data为什么是一个方法（函数）</li>
+<li>data中的数据后续手动添加为什么不再与视图双向绑定了？</li>
+</ol>
+</li>
+</ul>
+<h3 id="data为什么是一个方法（函数）"><a href="#data为什么是一个方法（函数）" class="headerlink" title="data为什么是一个方法（函数）"></a><strong>data为什么是一个方法（函数）</strong></h3><ul>
+<li>vue的组件都是VueComponent的实例对象，内部数据如果直接使用对象来定义的话，基于引用类型特性，会发生多个组件实例公用一份数据地址的情况。使用函数返回的方式，可以保证每一个组件的数据独立</li>
+</ul>
+<h3 id="data中的数据后续手动添加为什么不再与视图双向绑定了？"><a href="#data中的数据后续手动添加为什么不再与视图双向绑定了？" class="headerlink" title="data中的数据后续手动添加为什么不再与视图双向绑定了？"></a><strong>data中的数据后续手动添加为什么不再与视图双向绑定了？</strong></h3><ul>
+<li><p>vue框架原理中，一旦data数据返回对象之后，vue内部会遍历这个对象，对每一个属性进行监听，一旦组件初始化完成，这个监听过程也就结束了。所以后续添加的数据不会被监听了</p>
+</li>
+<li><p>上面第二个问题，如何解决呢？</p>
+</li>
+<li><p>vue官方提供了一个api——$set，它可以帮助我们手动监听新增的数据。</p>
+</li>
+</ul>
+<pre><code class="javascript">vm.$set(obj,key,value)
 </code></pre>
-<pre><code class="js">   {
-                test: /\.js$/,
-                loader: &#39;babel-loader&#39;,    // loader 编译es6为es5
-                exclude: /node_modules/  // 排除
-            }
-</code></pre>
-<p>.babelrc</p>
-<pre><code class="js">{
-    &quot;presets&quot;: [
-        &quot;es2015&quot;
-    ]
+<h2 id="wangeditor"><a href="#wangeditor" class="headerlink" title="wangeditor"></a>wangeditor</h2><ul>
+<li>使用wangeditor来实现富文本双向绑定组件，我们的目标有以下几个：</li>
+</ul>
+<ol>
+<li>安装</li>
+</ol>
+<pre><code class="js">npm 安装     npm i wangeditor --save
+
+import E from &#39;wangeditor&#39;
+mouted () {
+    const editor = new E(&#39;#div1&#39;)
+    // 或者 const editor = new E( document.getElementById(&#39;div1&#39;) )
+    editor.create()
 }
 </code></pre>
-</li>
-</ul>
-<h2 id="配置开发服务"><a href="#配置开发服务" class="headerlink" title="配置开发服务"></a>配置开发服务</h2><ul>
-<li>下载插件</li>
-<li>配置  webpack.config.js</li>
-<li>配置package.json</li>
-</ul>
-<pre><code class="js">yarn add webpack-dev-server -D 
-</code></pre>
-<pre><code class="js">//开发服务配置
-    devServer: {
-        contentBase: path.resolve(__dirname, &#39;dist&#39;), // 启动服务器目录
-        compress: true, // 启动gzip
-        port: 8081,  // 端口  8080 80  8081 8082
-        open: true, // 自动打开服务
-        publicPath: &#39;/&#39;, // 静态资源查找路径
-        openPage: &#39;index.html&#39;, // 打开的页面
-    },
-    target: &#39;web&#39;, // 目标是浏览器
-</code></pre>
-<pre><code class="js">  &quot;scripts&quot;: {
-    &quot;serve&quot;: &quot;webpack serve&quot;, 
-    &quot;build&quot;: &quot;webpack&quot;
-  },
-</code></pre>
-<h3 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h3><pre><code class="js">npm run serve 
-
-yarn serve
-</code></pre>
-<h3 id="打包线上的服务"><a href="#打包线上的服务" class="headerlink" title="打包线上的服务"></a>打包线上的服务</h3><pre><code class="js">npm run build 
-
-yarn build 
-</code></pre>
-<h2 id="单页应用优化-多页应用打包"><a href="#单页应用优化-多页应用打包" class="headerlink" title="单页应用优化-多页应用打包"></a>单页应用优化-多页应用打包</h2><h3 id="单页应用优化：文件整理"><a href="#单页应用优化：文件整理" class="headerlink" title="单页应用优化：文件整理"></a>单页应用优化：文件整理</h3><h4 id="js文件整理"><a href="#js文件整理" class="headerlink" title="js文件整理"></a>js文件整理</h4><pre><code class="js"> output: {
-        // 出口文件 放置的位置  必须是绝对路径
-        // 出口文件的 文件名
-        path: path.resolve(__dirname, &#39;dist&#39;),
-        filename: &#39;js/[name].js&#39;,
-        //设置静态资源请求的 相对路径
-        publicPath: &#39;./&#39;
-    },
-</code></pre>
-<h4 id="css文件整理"><a href="#css文件整理" class="headerlink" title="css文件整理"></a>css文件整理</h4><ul>
-<li>将js中的css代码提取出来 生成独立的css文件  安装两个插件</li>
-<li>将css文件引入到html </li>
-</ul>
-<p>修改配置文件</p>
+<ol start="2">
+<li><p>初始化</p>
 <ul>
-<li>安装插件</li>
+<li>参考官网</li>
 </ul>
-<pre><code class="js">yarn add mini-css-extract-plugin  optimize-css-assets-webpack-plugin -D 
+</li>
+<li><p>监听内容变化</p>
+<ul>
+<li>参考官网</li>
+</ul>
+</li>
+<li><p>v-model语法糖</p>
+</li>
+</ol>
+<h2 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h2><p style="background:red;color:#fff;font-size:20px;text-align:center">前端在进行权限管理开发的时候，一定要明白：用户角色决定了这个用户是否可以访问该功能</p>
+
+<h3 id="route-meta"><a href="#route-meta" class="headerlink" title="$route.meta"></a>$route.meta</h3><ul>
+<li>在vue的路由数据对象中有一个meta属性，这个属性可以为路由对象添加元信息</li>
+</ul>
+<h3 id="v-for和v-if"><a href="#v-for和v-if" class="headerlink" title="v-for和v-if"></a>v-for和v-if</h3><ul>
+<li>v-for和v-if不能在同一个节点上使用，因为v-for权重大于v-if，那么每一次循环都会同时执行一次判断，造成性能浪费，合理的做法是在v-for作用域内，使用template来进行v-if判断。</li>
+</ul>
+<h3 id="addRoute"><a href="#addRoute" class="headerlink" title="addRoute"></a>addRoute</h3><ul>
+<li><p>addRoute可以帮助我们动态的为router实例添加新的路由规则，从而使得路由得以动态更新。</p>
+</li>
+<li><p>往往在实现路由权限的时候，我们会遵循以下原则：</p>
+<ol>
+<li><p>先组织一个默认的静态路由数组</p>
+<ul>
+<li>静态路由其实指的是所有角色均可访问，无需鉴权的路由</li>
+</ul>
+</li>
+<li><p>获取本地角色，通过角色来过滤筛选动态路由</p>
+</li>
+<li><p>筛选完的路由依次追加到最开始的router中</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="项目跨域问题"><a href="#项目跨域问题" class="headerlink" title="项目跨域问题"></a>项目跨域问题</h2><h3 id="何为跨域？"><a href="#何为跨域？" class="headerlink" title="何为跨域？"></a>何为跨域？</h3><h4 id="跨域针对谁？"><a href="#跨域针对谁？" class="headerlink" title="跨域针对谁？"></a><strong>跨域针对谁？</strong></h4><ul>
+<li>跨域只在浏览器平台上存在</li>
+<li>跨域是浏览器本身的特性</li>
+</ul>
+<h4 id="跨域如何产生？"><a href="#跨域如何产生？" class="headerlink" title="跨域如何产生？"></a><strong>跨域如何产生？</strong></h4><ul>
+<li>浏览器针对网站请求有同源策略限制</li>
+</ul>
+<h4 id="何为同源策略？"><a href="#何为同源策略？" class="headerlink" title="何为同源策略？"></a><strong>何为同源策略？</strong></h4><ul>
+<li>协议一致</li>
+<li>ip一致</li>
+<li><p>端口一致</p>
+</li>
+<li><p>以上都保持一致视为同源。往往同源策略出现在ajax请求中，要求客户端请求所在位置的【协议】、【ip】、【端口】和服务端完全一致 才可以请求成功</p>
+</li>
+<li><p>前端vue开发的时候如果出现跨域，那么可以在项目【根目录】内创建一个<code>vue.config.js</code>文件，用于配置vue-cli脚手架，达到修改默认项目特性的目的。</p>
+</li>
+</ul>
+<h3 id="要想实现跨域，我们需要配置："><a href="#要想实现跨域，我们需要配置：" class="headerlink" title="要想实现跨域，我们需要配置："></a>要想实现跨域，我们需要配置：</h3><ul>
+<li><p>devServer    该配置用于设置本地localhost：8080</p>
+<ul>
+<li>proxy    给配置用于设置本地代理（推荐百度）</li>
+</ul>
+</li>
+<li><p>此时配置好代理以后所有接口都可以请求通过。但是——本地img图片地址拼接怎么办？！</p>
+</li>
+<li><p><strong>请记住，html标签的src并不被同源策略限制。所以以前没有脚手架的时候，我们会利用src属性进行跨域请求，这种方式我们成为jsonp跨域解决方案（强烈推荐百度）</strong></p>
+</li>
+</ul>
+<h3 id="美化项目滚动条"><a href="#美化项目滚动条" class="headerlink" title="美化项目滚动条"></a>美化项目滚动条</h3><ul>
+<li><p>在element-ui内实际上有一个隐藏组件——el-scrollbar</p>
+</li>
+<li><p>这个组件是一个美化的滚动条，element-ui官网、el-select等等都在使用，我们在注册过ElementUI基类之后就能直接使用了</p>
+</li>
+</ul>
+<h4 id="使用滚动条需要注意："><a href="#使用滚动条需要注意：" class="headerlink" title="使用滚动条需要注意："></a>使用滚动条需要注意：</h4><ol>
+<li><p>el-scrollbar包裹需要设置滚动的内容</p>
+</li>
+<li><p>el-scrollbar需要设置一个高度</p>
+</li>
+<li><p>el-scrollbar__wrap需要设置：</p>
+<ul>
+<li><p>设置overflow-x：hidden</p>
+</li>
+<li><p>由于样式作用域，我们直接设置无法起效，需要深度选择器来实现样式应用</p>
+<ul>
+<li>/deep/</li>
+<li>>>></li>
+<li>::v-deep</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><ul>
+<li><p>定义：环境变量是vue-cli提供的一种全局设置的机制，它通过node.env全局对象来实现数据共享。</p>
+</li>
+<li><p>一般环境变量的使用必须同时具备以下条件：</p>
+<ul>
+<li><p>必须具备一个.env打头的文件，并且务必在根目录创建。如：<code>.env.development</code>就代表开发环境</p>
+<ul>
+<li>vue-cli默认给了我们三个环境变量：<code>development</code>，<code>production</code>，<code>test</code></li>
+<li>我们还可以定义自己的环境变量文件名，比如在debug阶段，你可能需要创建一个<code>.env.debug</code>的环境变量文件</li>
+<li><strong>请务必注意！你的环境变量第二个文件名就是当前启动模式名称</strong></li>
+</ul>
+</li>
+<li><p>该文件内部变量声明必须全大写（规范）,并且命名方式有两种：</p>
+<ul>
+<li>第一种：纯大写全称，比如：BASE_URL = <a href="http://www.localhost:8080" target="_blank" rel="noopener">http://www.localhost:8080</a><ul>
+<li>该命名的变量只能在vue.config.js内使用</li>
+</ul>
+</li>
+<li>第二种：<code>VUE_APP_</code>前缀的名称，比如：VUE_APP_UPLOAD_URL = <a href="http://localhost:5000/upload/img/goods" target="_blank" rel="noopener">http://localhost:5000/upload/img/goods</a><ul>
+<li>该命名的变量只能在项目客户侧js代码中使用（如：router.js,  vuex.js, xxx.vue的script，axios内）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>获取环境变量文件内的变量语法：</p>
+<pre><code class="javascript">process.env.变量名
+</code></pre>
+</li>
+<li><p>设置好环境变量后，若你创建的是非<code>test | production | development</code>这三个默认模式以外的环境变量的话。必须修改启动脚本：</p>
+<pre><code class="javascript">&quot;debug&quot;: &quot;vue-cli-service serve --mode debug&quot;,
 </code></pre>
 <ul>
-<li>配置</li>
+<li><code>--mode debug</code>中的<code>debug</code>其实就是你环境变量第二个文件名（.env.debug）</li>
 </ul>
-<pre><code class="js">//css提取并通过link方式引导页面的插件
-const MiniCssExtractPlugin = require(&#39;mini-css-extract-plugin&#39;);
-const OptimizeCssAssetsWebpackPlugin = require(&#39;optimize-css-assets-webpack-plugin&#39;);
-</code></pre>
-<pre><code class="js">  //plugins 插件
-    plugins: [
-        new HtmlWebpackPlugin({
-            //以哪个页面作为打包的页面模板--打包哪个页面
-            template: &#39;./src/index.html&#39;
-        }),
-        new MiniCssExtractPlugin({
-            filename: &#39;css/[name].css&#39; // 输出到css文件夹里
-        }),
-        new OptimizeCssAssetsWebpackPlugin()
-
-    ],
-</code></pre>
-<pre><code class="js">//取消 style-loader 的加载方式 更换为 link引入  
-{ test: /\.css$/, use: [MiniCssExtractPlugin.loader, &#39;css-loader&#39;] },
- { test: /\.less$/, use: [MiniCssExtractPlugin.loader, &#39;css-loader&#39;, &#39;less-loader&#39;] },
-</code></pre>
-<h4 id="图片文件整理"><a href="#图片文件整理" class="headerlink" title="图片文件整理"></a>图片文件整理</h4><pre><code class="js"> {
-                test: /\.(jpg|png|gif)$/,
-                loader: &#39;url-loader&#39;,
-                /** 详细配置*/
-                options: {
-                    //hash 随机32为字符  ext 获取文件后缀
-                    name: &#39;[hash:16].[ext]&#39;,
-                    //小于20kb base64压缩  大于20kb 不进行压缩
-                    limit: 20 * 1024,
-                    esModule: false,   //图片打包设置为 Es规范进行打包 不使用commonjs规范
-                    outputPath: &#39;img&#39;
-                }
-            },
-</code></pre>
-<h4 id="字体图标文件整理"><a href="#字体图标文件整理" class="headerlink" title="字体图标文件整理"></a>字体图标文件整理</h4><pre><code class="js">    {
-                test: /\.(svg|ttf|eot|woff|woff2)$/, loader: &quot;file-loader&quot;,
-                options: {
-                    outputPath: &#39;fonts&#39;   //输出的目录
-                }
-            },
-</code></pre>
-<h4 id="修复-css中背景图的路径问题"><a href="#修复-css中背景图的路径问题" class="headerlink" title="修复 css中背景图的路径问题"></a>修复 css中背景图的路径问题</h4><pre><code class="js">  {
-                test: /\.css$/, use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        publicPath: &#39;../&#39;
-                    }
-                }, &#39;css-loader&#39;]
-            },
-            {
-                test: /\.less$/, use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        publicPath: &#39;../&#39;
-                    }
-                }, &#39;css-loader&#39;, &#39;less-loader&#39;]
-            },
-</code></pre>
-<h4 id="自动清除dist"><a href="#自动清除dist" class="headerlink" title="自动清除dist"></a>自动清除dist</h4><ul>
-<li><p>下载插件</p>
-</li>
-<li><p>配置插件</p>
-<pre><code class="js">yarn add clean-webpack-plugin -D
-</code></pre>
-<pre><code class="js">//自动清除dist 
-const { CleanWebpackPlugin } = require(&#39;clean-webpack-plugin&#39;)
-//plugin 添加
-new CleanWebpackPlugin()
-</code></pre>
 </li>
 </ul>
+<h1 id="项目基本准备"><a href="#项目基本准备" class="headerlink" title="项目基本准备"></a>项目基本准备</h1><h2 id="项目开发-生产依赖"><a href="#项目开发-生产依赖" class="headerlink" title="项目开发+生产依赖"></a>项目开发+生产依赖</h2><ol>
+<li>vue</li>
+<li>vue-router</li>
+<li>vuex</li>
+<li>axios</li>
+<li>elementUI</li>
+<li>less</li>
+<li>less-loader</li>
+</ol>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><ol>
+<li><p>assets</p>
+<ul>
+<li>存放静态资源（图片，字体等等）</li>
+</ul>
+</li>
+<li><p>components</p>
+<ul>
+<li>存放全局公共组件</li>
+</ul>
+</li>
+<li><p>api</p>
+<ul>
+<li>所有接口方法</li>
+</ul>
+</li>
+<li><p>views</p>
+<ul>
+<li>存放业务页面</li>
+</ul>
+</li>
+<li><p>router</p>
+<ul>
+<li>路由管理目录</li>
+</ul>
+</li>
+<li><p>store</p>
+<ul>
+<li>vuex数据仓库</li>
+</ul>
+</li>
+<li><p>utils</p>
+<ul>
+<li>工具类目录</li>
+</ul>
+</li>
+</ol>
 
                 </div>
                 <!-- .entry-content -->
@@ -1083,42 +1103,22 @@ new CleanWebpackPlugin()
           <div class="toc" style="background: none;"></div>
           <section class="post-squares nextprev">
             
-              
-                <div class="post-nepre half previous">
-                  
-                        <a href="/2021/03/20/git的基本使用/" rel="prev">
-                          <div class="background">
-                            <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/git.jpg"
-                              style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
-                              onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/git.jpg">
-                          </div>
-                          <span class="label">
-                            Previous Post</span>
-                          <div class="info">
-                            <h3>
-                              Git
-                            </h3>
-                            <hr>
-                          </div>
-                        </a>
-                    </div>
-                    
                       
                         
-                          <div class="post-nepre half next">
-                            
-                                  <a href="/2021/02/25/H5/" rel="next">
+                              <div class="post-nepre full next">
+                                
+                                  <a href="/2021/07/12/MVC与MVVM的简单了解/" rel="next">
                                     <div class="background">
                                       <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
-                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/hfive.jpg"
+                                        data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/mvvm.jpg"
                                         style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
-                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/hfive.jpg">
+                                        onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/mvvm.jpg">
                                     </div>
                                     <span class="label">
                                       Next Post</span>
                                     <div class="info">
                                       <h3>
-                                        H5
+                                        MVC、MVVM
                                       </h3>
                                       <hr>
                                     </div>
@@ -1157,7 +1157,7 @@ new CleanWebpackPlugin()
               </div>
               <hr>
               <p><i class="iconfont icon-write"></i>
-                人若有志，万事可为。
+                你要记住，永远要愉快地多给别人，少从别人那里拿取。
               </p>
             </section>
         </main><!-- #main -->
