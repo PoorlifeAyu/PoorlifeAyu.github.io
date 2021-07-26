@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2021-07-25T19:26:11.728Z</updated>
+  <updated>2021-07-26T17:10:09.526Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/2021/07/20/ElementUI%E7%9A%84%E8%AE%A4%E8%AF%86%E4%B8%8E%E4%BA%86%E8%A7%A3/"/>
     <id>/2021/07/20/ElementUI的认识与了解/</id>
     <published>2021-07-20T07:20:43.000Z</published>
-    <updated>2021-07-25T19:26:11.728Z</updated>
+    <updated>2021-07-26T17:10:09.526Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="随笔" scheme="/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="ElementUI的使用" scheme="/tags/ElementUI%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
@@ -78,10 +78,10 @@
   
   <entry>
     <title>VueX</title>
-    <link href="/2021/07/02/VUEX/"/>
-    <id>/2021/07/02/VUEX/</id>
+    <link href="/2021/07/02/Vuex/"/>
+    <id>/2021/07/02/Vuex/</id>
     <published>2021-07-02T03:30:33.000Z</published>
-    <updated>2021-07-25T19:29:23.021Z</updated>
+    <updated>2021-07-26T15:59:10.718Z</updated>
     
     <summary type="html">
     
@@ -141,7 +141,7 @@
     <link href="/2021/03/20/git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>/2021/03/20/git的基本使用/</id>
     <published>2021-03-20T13:48:09.000Z</published>
-    <updated>2021-07-25T19:26:54.008Z</updated>
+    <updated>2021-07-26T17:06:24.580Z</updated>
     
     <summary type="html">
     
@@ -158,10 +158,10 @@
   
   <entry>
     <title>Node Js、Webpack</title>
-    <link href="/2021/03/15/Node%E3%80%81Webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>/2021/03/15/Node、Webpack的基本使用/</id>
+    <link href="/2021/03/15/NodeJs%E3%80%81Webpack%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>/2021/03/15/NodeJs、Webpack的基本使用/</id>
     <published>2021-03-15T08:16:13.000Z</published>
-    <updated>2021-07-25T19:28:35.725Z</updated>
+    <updated>2021-07-26T16:43:38.455Z</updated>
     
     <summary type="html">
     

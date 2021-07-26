@@ -403,6 +403,16 @@
                 
               </li>
             
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
           </ul>
         </nav>
       </div>
@@ -452,10 +462,15 @@
             <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
             
                 <div class="entry-content">
-                  <h1 id="VUEX"><a href="#VUEX" class="headerlink" title="VUEX"></a>VUEX</h1><h2 id="VUEX的定义"><a href="#VUEX的定义" class="headerlink" title="VUEX的定义"></a>VUEX的定义</h2><ul>
+                  <h1 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h1><h2 id="Vuex的定义"><a href="#Vuex的定义" class="headerlink" title="Vuex的定义"></a>Vuex的定义</h2><ul>
 <li>定义：vuex是一个vue里面的数据管理仓储中心，用于分发数据到具体组件。</li>
+<li>每一个 Vuex 应用的核心就是 store（仓库）。“store”基本上就是一个容器，它包含着你的应用中大部分的<strong>状态 (state)</strong>。Vuex 和单纯的全局对象有以下两点不同：<ol>
+<li>Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。</li>
+<li>你不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地<strong>提交 (commit) mutation</strong>。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。</li>
+</ol>
+</li>
 </ul>
-<h2 id="什么时候使用vuex"><a href="#什么时候使用vuex" class="headerlink" title="什么时候使用vuex"></a>什么时候使用vuex</h2><ul>
+<h2 id="什么时候使用Vuex"><a href="#什么时候使用Vuex" class="headerlink" title="什么时候使用Vuex"></a>什么时候使用Vuex</h2><ul>
 <li>当复杂数据被两个组件以上使用的时候，我们可以考虑vuex来协助</li>
 </ul>
 <h2 id="vuex配置"><a href="#vuex配置" class="headerlink" title="vuex配置"></a>vuex配置</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ul>
@@ -496,7 +511,21 @@ const store = new Vuex.Store({
 </li>
 </ol>
 <h3 id="state—源数据"><a href="#state—源数据" class="headerlink" title="state—源数据"></a>state—源数据</h3><ul>
+<li><p><strong>请注意！</strong></p>
+<ul>
+<li><code>state</code>里面的数据只能由<code>mutations</code>里面的方法来更新。</li>
+</ul>
+</li>
 <li><p>state中定义的是仓库里的初始数据，组件内state的获取方式主要有以下几种：</p>
+</li>
+<li><p>定义</p>
+<pre><code class="js">  state:{
+        string:&#39;一路向北&#39;,
+        number:999,
+        boolean:&#39;true&#39;,
+        ...
+    },
+</code></pre>
 </li>
 <li><p>在【计算属性】中直接通过$store来访问<code>this.$store.state.xxx</code></p>
 <pre><code class="javascript">test(){
@@ -510,15 +539,14 @@ const store = new Vuex.Store({
 </code></pre>
 </li>
 </ul>
-<ul>
-<li>==Tips: state的数据在组件内，都是放在计算属性中获取的==</li>
-</ul>
+<p style="background:red;text-align:center;color:#fff">Tips: state的数据在组件内，都是放在计算属性中获取的</p>
+
 <h3 id="getters—计算数据"><a href="#getters—计算数据" class="headerlink" title="getters—计算数据"></a>getters—计算数据</h3><ul>
 <li><p>拿到state中的源数据去计算一个新的数据，一旦state源数据发生改变，getters中的数据会重新计算</p>
 </li>
 <li><p><strong>getters中计算数据的默认参数：state</strong></p>
 </li>
-<li><p><strong>初级语法：</strong></p>
+<li><p><strong>初级语法：（必须是函数）</strong></p>
 </li>
 </ul>
 <pre><code class="javascript">getters:{
@@ -530,7 +558,7 @@ const store = new Vuex.Store({
 <ul>
 <li><p><strong>getters中计算数据还可以传第二个参数：getters(可以访问当前仓库整个getters，也就是可以借助其他getters计算数据来参与当前数据的计算)</strong></p>
 </li>
-<li><p><strong>进阶语法：</strong></p>
+<li><p><strong>进阶语法：（必须是函数）</strong></p>
 </li>
 </ul>
 <pre><code class="javascript">getters:{
@@ -544,21 +572,39 @@ const store = new Vuex.Store({
 <ul>
 <li><p><strong>组建中获取getters内的数据</strong></p>
 </li>
-<li><p><strong>getters中的数据也都是放到computed计算属性中！</strong></p>
+<li><p><strong>getters中的数据也都是放到computed计算属性中获取！</strong></p>
 </li>
 </ul>
 <ol>
 <li><p>直接<code>this.$store.getters.xxx</code>获取对应的getters</p>
-<pre><code class="javascript">this.$store.getters.dGoods
+<pre><code class="javascript">this.$store.getters.newData
 </code></pre>
 </li>
 <li><p>借助mapGetters来获取对应的getters</p>
+<pre><code class="js">import { mapGetters } from &#39;vuex&#39;
+...mapGetters([&#39;newData&#39;])
+</code></pre>
 </li>
 </ol>
+<p style="background:red;text-align:center;color:#fff">Tips: getters的数据在组件内，也是放在计算属性中获取的</p>
+
 <h3 id="mutations—同步修改源数据"><a href="#mutations—同步修改源数据" class="headerlink" title="mutations—同步修改源数据"></a>mutations—同步修改源数据</h3><ul>
-<li><strong>请注意！</strong></li>
+<li><p><strong>请注意！</strong></p>
+<ul>
+<li><code>mutations</code>内的方法只能够修改<code>state</code>内的数据。</li>
 </ul>
-<p></p><p style="font-weight:bold;color:#fff;background:red;text-indent:2em">mutations中的方法不能直接使用！</p><p></p>
+</li>
+<li><p>定义</p>
+<pre><code class="js">    mutations:{
+        changeString(state,payload){
+            state.string = payload
+        }
+    },
+</code></pre>
+</li>
+</ul>
+<p style="font-weight:bold;color:#fff;background:red;text-indent:2em">mutations中的方法不能直接使用！</p>
+
 <ul>
 <li>mutations中定了同步修改state 的方法，在组建中调用的时候，可以这样：</li>
 </ul>
@@ -1060,6 +1106,16 @@ this.$store.commit(&#39;movies/dealMovieList&#39;)
         
       </li>
     
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
   </ul>
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
@@ -1279,6 +1335,16 @@ this.$store.commit(&#39;movies/dealMovieList&#39;)
               </li>
             
           </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
         
       </li>
     

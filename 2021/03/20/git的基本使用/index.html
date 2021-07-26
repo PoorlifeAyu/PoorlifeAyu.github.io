@@ -403,6 +403,16 @@
                 
               </li>
             
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
           </ul>
         </nav>
       </div>
@@ -577,29 +587,32 @@ yarn-error.log*
 *.sln
 *.sw*
 </code></pre>
-<h1 id="git的详细使用"><a href="#git的详细使用" class="headerlink" title="git的详细使用"></a>git的详细使用</h1><h2 id="git快速入门"><a href="#git快速入门" class="headerlink" title="git快速入门"></a>git快速入门</h2><h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><ul>
+<h1 id="git的详细使用"><a href="#git的详细使用" class="headerlink" title="git的详细使用"></a>git的详细使用</h1><h2 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h2><ul>
 <li>定义：仓库从字面上来看，就是用于存储东西的。git本意是一个代码版本控制器，它可以在你的本地（或远程）为你生成一个用于管理代码版本的目录，我们将这个可以管理代码的目录称之为仓库。</li>
 </ul>
-<h4 id="git和github和gitLab和gitee和coding有什么关系呢？"><a href="#git和github和gitLab和gitee和coding有什么关系呢？" class="headerlink" title="git和github和gitLab和gitee和coding有什么关系呢？"></a><strong>git和github和gitLab和gitee和coding有什么关系呢？</strong></h4><ul>
+<h3 id="git和github和gitLab和gitee和coding有什么关系呢？"><a href="#git和github和gitLab和gitee和coding有什么关系呢？" class="headerlink" title="git和github和gitLab和gitee和coding有什么关系呢？"></a><strong>git和github和gitLab和gitee和coding有什么关系呢？</strong></h3><ul>
 <li><p>其实真正意义上来看，有关系的是后面几个，不是git和他们。</p>
 </li>
 <li><p>github、gitLab、gitee、coding这几个东西都是用于发布和管理远程在线仓库的平台，他们都是基于git的在线代码管理中台。</p>
 </li>
 </ul>
-<h4 id="git和svn的区别"><a href="#git和svn的区别" class="headerlink" title="git和svn的区别"></a><strong>git和svn的区别</strong></h4><h5 id="git"><a href="#git" class="headerlink" title="git"></a>git</h5><ul>
+<h3 id="git和svn的区别"><a href="#git和svn的区别" class="headerlink" title="git和svn的区别"></a><strong>git和svn的区别</strong></h3><h4 id="git"><a href="#git" class="headerlink" title="git"></a>git</h4><ul>
 <li>分布式版本管理系统</li>
 <li>每一个成员都能完整拷贝所有代码，且如果作为中枢服务的成员电脑宕机了，那么立即就可以有另一个成员作为中枢，用于所有人的代码提交和拉取</li>
 </ul>
-<h5 id="svn"><a href="#svn" class="headerlink" title="svn"></a>svn</h5><ul>
+<h4 id="svn"><a href="#svn" class="headerlink" title="svn"></a>svn</h4><ul>
 <li>集中式版本管理系统</li>
 <li>必须有一台中枢电脑（服务），所有成员只能提交到中枢服务上。一旦中枢服务宕机，那么只能重新搭建新的服务，成员们重新拉取或重新映射服务</li>
 </ul>
-<p><strong>git与svn的各有千秋</strong></p>
-<ul>
+<p style="background:skyblue;color:#fff;text-align:center">Git本地不联网就可以提交，联网后，再同步多次提交的记录，而SVN的提交必须联网</p>
+
+<p style="background:skyblue;color:#fff;text-align:center">切换分支的成本：Git可以快速切分支（快照原理），秒切，而SVN的分支其实就是文件目录，切分支要进行文件的重新下载</p>
+
+<h4 id="git与svn哪一个比较好"><a href="#git与svn哪一个比较好" class="headerlink" title="git与svn哪一个比较好"></a><strong>git与svn哪一个比较好</strong></h4><ul>
 <li>git对于代码管理非常友好和灵活</li>
 <li>svn对于文件管理非常方便</li>
 </ul>
-<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><h4 id="本地仓库初始化"><a href="#本地仓库初始化" class="headerlink" title="本地仓库初始化"></a>本地仓库初始化</h4><ul>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="本地仓库初始化"><a href="#本地仓库初始化" class="headerlink" title="本地仓库初始化"></a>本地仓库初始化</h3><ul>
 <li>在需要初始化的目录内，右键打开bash，再运行命令：</li>
 </ul>
 <pre><code class="js">git init
@@ -612,7 +625,7 @@ yarn-error.log*
 <li><p>这是告知你，当前本地仓库初始化完成，你拥有了一个空仓库</p>
 </li>
 </ul>
-<h4 id="默认分支"><a href="#默认分支" class="headerlink" title="默认分支"></a>默认分支</h4><ul>
+<h3 id="默认分支"><a href="#默认分支" class="headerlink" title="默认分支"></a>默认分支</h3><ul>
 <li>在空仓库创建完成后，你运行以下命令：</li>
 </ul>
 <pre><code class="js">git branch // 查看本地分支
@@ -634,30 +647,29 @@ git commit -m &#39;创建文本文件——xxx&#39;
 <ul>
 <li>一切搞定后，再运行查看分支命令，会发现：master出现了</li>
 </ul>
-<h4 id="认识分支"><a href="#认识分支" class="headerlink" title="认识分支"></a>认识分支</h4><ul>
+<h3 id="认识分支"><a href="#认识分支" class="headerlink" title="认识分支"></a>认识分支</h3><ul>
 <li>分支，其实就是当前仓库内容的一个拷贝，每一个分支是一份独立的仓库内容。</li>
 </ul>
-<h5 id="查看分支，命令："><a href="#查看分支，命令：" class="headerlink" title="查看分支，命令："></a><strong>查看分支</strong>，命令：</h5><pre><code class="js">git branch // 查看本地分支
+<h4 id="查看分支，命令："><a href="#查看分支，命令：" class="headerlink" title="查看分支，命令："></a><strong>查看分支</strong>，命令：</h4><pre><code class="js">git branch // 查看本地分支
 git branch -a // 查看本地所有分支
 git branch -r // 查看远程分支
 </code></pre>
-<h5 id="创建分支，命令："><a href="#创建分支，命令：" class="headerlink" title="创建分支，命令："></a><strong>创建分支</strong>，命令：</h5><pre><code class="js">git checkout -b 分支名        //创建并进入新分支
+<h4 id="创建分支，命令："><a href="#创建分支，命令：" class="headerlink" title="创建分支，命令："></a><strong>创建分支</strong>，命令：</h4><pre><code class="js">git checkout -b 分支名        //创建并进入新分支
 </code></pre>
 <ul>
 <li>这个过程中，我<strong>基于当前所处分支，将所有内容拷贝了一份，成立了一个新的分支</strong>，<strong>这是基于最新代码，创建开发分支最常用的方式</strong></li>
 </ul>
-<h5 id="切换分支，命令："><a href="#切换分支，命令：" class="headerlink" title="切换分支，命令："></a><strong>切换分支</strong>，命令：</h5><pre><code class="js">git checkout 分支名
+<h4 id="切换分支，命令："><a href="#切换分支，命令：" class="headerlink" title="切换分支，命令："></a><strong>切换分支</strong>，命令：</h4><pre><code class="js">git checkout 分支名
 </code></pre>
-<h5 id="修改分支名，命令："><a href="#修改分支名，命令：" class="headerlink" title="修改分支名，命令："></a><strong>修改分支名</strong>，命令：</h5><pre><code class="js">git branch -m 旧的分支名 新的分支名
+<h4 id="修改分支名，命令："><a href="#修改分支名，命令：" class="headerlink" title="修改分支名，命令："></a><strong>修改分支名</strong>，命令：</h4><pre><code class="js">git branch -m 旧的分支名 新的分支名
 </code></pre>
-<h5 id="删除分支，命令："><a href="#删除分支，命令：" class="headerlink" title="删除分支，命令："></a><strong>删除分支</strong>，命令：</h5><pre><code class="js">// 先切换到别的分支，才可以删除当前分支。
+<h4 id="删除分支，命令："><a href="#删除分支，命令：" class="headerlink" title="删除分支，命令："></a><strong>删除分支</strong>，命令：</h4><pre><code class="js">// 先切换到别的分支，才可以删除当前分支。
 git branch -D 分支名
 </code></pre>
-<p><strong>分支的区别</strong></p>
-<ul>
+<h4 id="分支的区别"><a href="#分支的区别" class="headerlink" title="分支的区别"></a><strong>分支的区别</strong></h4><ul>
 <li>每一个分支都是独立的，不会相互影响。你在某个分支内进行的所有操作，都仅限于当前分支，一旦切换分支后，就会只呈现你切换到的那个分支内容了。</li>
 </ul>
-<h4 id="主分支"><a href="#主分支" class="headerlink" title="主分支"></a>主分支</h4><ul>
+<h3 id="主分支"><a href="#主分支" class="headerlink" title="主分支"></a>主分支</h3><ul>
 <li>每一个仓库都会有一个主分支，一般情况下以<code>master</code>作为主分支。主分支的作用是：</li>
 </ul>
 <ol>
@@ -681,7 +693,7 @@ git branch -D 分支名
 <li>下班前务必更新一次master，拿到所有人最新代码</li>
 <li>第二天上班后，要做的第一件事——在master拉取最新代码</li>
 </ol>
-<h3 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h3><ul>
+<h2 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h2><ul>
 <li>在本地仓库内，当你做完一部分修改的时候，你需要执行以下两个步骤才能将修改提交到仓库内：</li>
 </ul>
 <ol>
@@ -694,7 +706,7 @@ git branch -D 分支名
 <li><p>在本地仓库，有一个缓存空间，我们将其称为暂存区，暂存区的内容是时刻紧跟分支走的。<strong>如果你在错误的分支进行了add，想要把add的内容带到正确的分支，你可以直接checkout切换分支即可</strong></p>
 </li>
 </ul>
-<h3 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h3><ul>
+<h2 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h2><ul>
 <li><p>工作区对应的是commit操作，当执行commit后，你的修改会被添加到工作区。一个分支就是一个工作区。如果你需要将某个工作区的commit切换到另一个工作区，那么你需要执行以下步骤：</p>
 </li>
 <li><p>总结：先合并，再回退</p>
@@ -706,13 +718,13 @@ git branch -D 分支名
 </ul>
 </li>
 </ul>
-<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><ul>
+<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><ul>
 <li>合并代码有两种方式：</li>
 </ul>
-<h4 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a><code>git merge</code></h4><ul>
+<h3 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a><code>git merge</code></h3><ul>
 <li>一般合并后不会出现vi编辑器来编辑相关信息</li>
 </ul>
-<h4 id="git-rebase-i-需要合并的分支"><a href="#git-rebase-i-需要合并的分支" class="headerlink" title="git rebase -i 需要合并的分支"></a><code>git rebase -i 需要合并的分支</code></h4><ul>
+<h3 id="git-rebase-i-需要合并的分支"><a href="#git-rebase-i-需要合并的分支" class="headerlink" title="git rebase -i 需要合并的分支"></a><code>git rebase -i 需要合并的分支</code></h3><ul>
 <li><p>一般合并后会出现vi编辑器来编辑信息</p>
 </li>
 <li><p>rebase的时候，一旦成功，多数情况下会出现一个vi命令行编辑器的界面。我们对这个界面需要了解一些简单操作：</p>
@@ -723,11 +735,13 @@ git branch -D 分支名
 <li>按下键盘ESC，（同时观察左下角什么标识都不会出现），代表当前退出了编辑模式</li>
 <li>按下ESC紧接着按下:wq（同时观察左下角，你输入的:wq会出现）,代表保存并退出</li>
 </ol>
-<p>git merge和git rebase -i的区别，主要体现在时间线！</p>
 <ul>
-<li>总结一句话：<strong>站在自己的分支合并master最新代码应该使用rebase -i，主动用master去合并自己分支的代码应该使用merge。</strong></li>
+<li><p>git merge和git rebase -i的区别，主要体现在时间线！</p>
+</li>
+<li><p>总结一句话：<strong>站在自己的分支合并master最新代码应该使用rebase -i，主动用master去合并自己分支的代码应该使用merge。</strong></p>
+</li>
 </ul>
-<h3 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h3><ul>
+<h2 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h2><ul>
 <li><p>在没有连续时间线的前提下，对同一个文件，同一个地方进行了修改则会造成冲突！</p>
 </li>
 <li><p>什么叫做连续时间线？</p>
@@ -736,14 +750,14 @@ git branch -D 分支名
 </ul>
 </li>
 </ul>
-<h4 id="识别冲突"><a href="#识别冲突" class="headerlink" title="识别冲突"></a>识别冲突</h4><ul>
+<h3 id="识别冲突"><a href="#识别冲突" class="headerlink" title="识别冲突"></a>识别冲突</h3><ul>
 <li>如果你在合并的时候，你的分支出现以下症状：<ul>
 <li>分支名变成了<strong>(分支名 | merging 或 rebae)</strong></li>
 <li>git同时提示你很多信息，在提示的信息中，你找到了<strong>conflict</strong>关键词</li>
 </ul>
 </li>
 </ul>
-<h4 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h4><ul>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><ul>
 <li><p>当冲突发生后，你应该做的事。</p>
 <ul>
 <li>rebase的情况下<ul>
@@ -773,7 +787,7 @@ git branch -D 分支名
 </ul>
 </li>
 </ul>
-<h3 id="远程-amp-本地"><a href="#远程-amp-本地" class="headerlink" title="远程&amp;本地"></a>远程&amp;本地</h3><ul>
+<h2 id="远程-amp-本地"><a href="#远程-amp-本地" class="headerlink" title="远程&amp;本地"></a>远程&amp;本地</h2><ul>
 <li><p>远程：大家一起玩儿</p>
 </li>
 <li><p>本地：自己跟自己玩儿</p>
@@ -792,14 +806,16 @@ git branch -D 分支名
 <li>浏览器打开远程仓库控制台，基于自己的分支发送<strong>合并请求</strong></li>
 <li>管理员审批合并请求，<strong>务必查看分支是否冲突！以及仔细甄别成员修改的文件列表！</strong></li>
 </ol>
-<h3 id="提交错误时"><a href="#提交错误时" class="headerlink" title="提交错误时"></a>提交错误时</h3><ul>
-<li><p>当你修改后commit提交到工作区了，此时后悔的话，可以使用版本回退。如何实现呢？</p>
-</li>
-<li><p>使用git log来找到你希望回退到的版本号</p>
-</li>
+<h2 id="提交错误时"><a href="#提交错误时" class="headerlink" title="提交错误时"></a>提交错误时</h2><ul>
+<li>当你修改后commit提交到工作区了，此时后悔的话，可以使用版本回退。如何实现呢？</li>
+<li>使用git log来找到你希望回退到的版本号</li>
 <li>复制你想回退到的版本号（一小段即可）</li>
 <li>运行命令<code>git reset --hard 复制的版本号</code></li>
 </ul>
+<p><a href="https://tva1.sinaimg.cn/large/006A63qqly8gsuubhl0dbj31bm0ok78g.jpg" title="点击显示原始图片" target="_blank" rel="noopener"><img src="https://tva1.sinaimg.cn/thumbnail/006A63qqly8gsuubhl0dbj31bm0ok78g.jpg"></a></p>
+<p><a href="https://tva4.sinaimg.cn/large/006A63qqly8gsuudln1ohj31aa0pd782.jpg" title="点击显示原始图片" target="_blank" rel="noopener"><img src="https://tva4.sinaimg.cn/thumbnail/006A63qqly8gsuudln1ohj31aa0pd782.jpg"></a></p>
+<p><a href="https://tva2.sinaimg.cn/large/006A63qqly8gsuufhirsqj31300pigqe.jpg" title="点击显示原始图片" target="_blank" rel="noopener"><img src="https://tva2.sinaimg.cn/thumbnail/006A63qqly8gsuufhirsqj31300pigqe.jpg"></a></p>
+<p><a href="https://tva4.sinaimg.cn/large/006A63qqly8gsuuhwm9bij31g50p2wjn.jpg" title="点击显示原始图片" target="_blank" rel="noopener"><img src="https://tva4.sinaimg.cn/thumbnail/006A63qqly8gsuuhwm9bij31g50p2wjn.jpg"></a></p>
 
                 </div>
                 <!-- .entry-content -->
@@ -855,7 +871,7 @@ git branch -D 分支名
                         
                           <div class="post-nepre half next">
                             
-                                  <a href="/2021/03/15/Node、Webpack的基本使用/" rel="next">
+                                  <a href="/2021/03/15/NodeJs、Webpack的基本使用/" rel="next">
                                     <div class="background">
                                       <img class="lazyload" src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/loader/orange.progress-bar-stripe-loader.svg"
                                         data-src="https://cdn.jsdelivr.net/gh/PoorlifeAyu/cdn/img/article/nodejs.jpg"
@@ -1179,6 +1195,16 @@ git branch -D 分支名
         
       </li>
     
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
   </ul>
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
@@ -1398,6 +1424,16 @@ git branch -D 分支名
               </li>
             
           </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
         
       </li>
     
