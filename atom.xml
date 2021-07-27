@@ -97,6 +97,26 @@
   </entry>
   
   <entry>
+    <title>TypeScript</title>
+    <link href="/2021/06/29/TypeScript/"/>
+    <id>/2021/06/29/TypeScript/</id>
+    <published>2021-06-29T02:25:33.000Z</published>
+    <updated>2021-07-27T10:13:36.771Z</updated>
+    
+    <summary type="html">
+    
+      TypeScript的基础知识
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="TypeScript" scheme="/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue3.0</title>
     <link href="/2021/06/28/vue3.0/"/>
     <id>/2021/06/28/vue3.0/</id>
