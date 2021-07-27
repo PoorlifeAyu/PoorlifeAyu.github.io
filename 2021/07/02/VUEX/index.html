@@ -473,7 +473,7 @@
 <h2 id="什么时候使用Vuex"><a href="#什么时候使用Vuex" class="headerlink" title="什么时候使用Vuex"></a>什么时候使用Vuex</h2><ul>
 <li>当复杂数据被两个组件以上使用的时候，我们可以考虑vuex来协助</li>
 </ul>
-<h2 id="vuex配置"><a href="#vuex配置" class="headerlink" title="vuex配置"></a>vuex配置</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ul>
+<h2 id="Vuex配置"><a href="#Vuex配置" class="headerlink" title="Vuex配置"></a>Vuex配置</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><ul>
 <li><p>引入Vue和Vuex</p>
 <pre><code class="javascript">// 1.引入
 import Vue from &#39;vue&#39;
@@ -539,7 +539,7 @@ const store = new Vuex.Store({
 </code></pre>
 </li>
 </ul>
-<p style="background:red;text-align:center;color:#fff">Tips: state的数据在组件内，都是放在计算属性中获取的</p>
+<p style="background:green;text-align:center;color:#fff">Tips: state的数据在组件内，都是放在计算属性中获取的</p>
 
 <h3 id="getters—计算数据"><a href="#getters—计算数据" class="headerlink" title="getters—计算数据"></a>getters—计算数据</h3><ul>
 <li><p>拿到state中的源数据去计算一个新的数据，一旦state源数据发生改变，getters中的数据会重新计算</p>
@@ -586,7 +586,7 @@ const store = new Vuex.Store({
 </code></pre>
 </li>
 </ol>
-<p style="background:red;text-align:center;color:#fff">Tips: getters的数据在组件内，也是放在计算属性中获取的</p>
+<p style="background:purple;text-align:center;color:#fff">Tips: getters的数据在组件内，也是放在计算属性中获取的</p>
 
 <h3 id="mutations—同步修改源数据"><a href="#mutations—同步修改源数据" class="headerlink" title="mutations—同步修改源数据"></a>mutations—同步修改源数据</h3><ul>
 <li><p><strong>请注意！</strong></p>
@@ -603,7 +603,7 @@ const store = new Vuex.Store({
 </code></pre>
 </li>
 </ul>
-<p style="font-weight:bold;color:#fff;background:red;text-indent:2em">mutations中的方法不能直接使用！</p>
+<p style="font-weight:bold;color:#fff;background:orange;text-align:center">mutations中的方法不能直接使用！</p>
 
 <ul>
 <li>mutations中定了同步修改state 的方法，在组建中调用的时候，可以这样：</li>
